@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("/media/images/menu.png")!important;
+    background-image: url("/static/media/images/menu.png")!important;
 }
 
 .navbar-light .navbar-toggler {
@@ -60,7 +60,7 @@ body {
 
 footer {
     width: 100vw;
-    background: url("/media/images/index/footer.png");
+    background: url("/static/media/images/index/footer.png");
     background-size: cover;
     margin-top: -7.3%;
 }

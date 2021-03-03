@@ -6,7 +6,7 @@
 .top {
     width: 100vw;
     height: 100vh;
-    background: url("/media/images/index/top-bg.png");
+    background: url("/static/media/images/index/top-bg.png");
     background-size: cover;
     position: relative;
     padding: 0!important;
@@ -44,7 +44,7 @@
 
 .about {
     width: 100vw;
-    background: url("/media/images/index/about-bg.png");
+    background: url("/static/media/images/index/about-bg.png");
     background-size: cover;
 }
 
@@ -99,7 +99,7 @@
 .academics {
     position: relative;
     width: 100vw;
-    background: url("/media/images/index/SRM-UB.png");
+    background: url("/static/media/images/index/SRM-UB.png");
     background-size: cover;
     padding: 20px;
 }
@@ -227,7 +227,7 @@
 
 .events {
     width: 100vw;
-    background: url("/media/images/index/events-bg.png");
+    background: url("/static/media/images/index/events-bg.png");
     background-size: cover;
     padding: 20px;
 }
@@ -263,7 +263,7 @@
 .events .card {
     width: 480px;
     height: 335px;
-    background: url("/media/images/index/event-card.png");
+    background: url("/static/media/images/index/event-card.png");
     background-size: cover;
     border-radius: 10px;
     margin: 40px auto;
