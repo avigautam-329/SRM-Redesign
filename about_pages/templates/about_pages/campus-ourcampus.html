@@ -1,0 +1,280 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Campus</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                    <li><a href="#">CAMPUS TOUR</a></li>
+                    <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                    <li><a href="#">BUILDING DETAILS</a></li>
+                    <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                        <li><a href="#">CAMPUS TOUR</a></li>
+                        <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                        <li><a href="#">BUILDING DETAILS</a></li>
+                        <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus > Our Campus</h4>
+                <h1>Our Campus</h1>
+                <p style="font-size:22px">LEARN, LEAP AND LEAD</p>
+                <p>SRM Institute of Science and Technology (formerly known as SRM University) has been consistent to maintain excellence in the academic standards since its inception. Learning is an enjoyable experience here, with experienced faculty, 
+                inspiring libraries and stimulating discussion rooms, large playgrounds and state-of-the-art labs. With a view to impart quality education SRM Institute of Science and Technology (formerly known as SRM University) functions at four  campuses.</p>
+                <p>The main campus at Kattankulathur consists of three colleges and one school.</p>
+                <p>
+                    <ul>
+                        <li><b>College of Engineering and Technology</b></li>
+                        <li><b>College of Medicine and Health Sciences</b></li>
+                        <li><b>College of Science and Humanities</b></li>
+                        <li><b>School of Management</b></li>
+                    </ul>
+                </p>
+                <p>Kattankulathur Campus also houses the SRM Medical College Hospital and Research Center and SRM Hostel. 
+                The SRM hospital could accommodate 1200 in-patients with 25 specializations in PG education in medical science. Round the clock security, ATM, Post Office, departmental stores, restaurants and numerous canteens are some of the facilities available in the campus.</p>
+                <p><b>The highlights of Kattankulathur Campus are as follows:</b></p>
+                <p>
+                    <ul>
+                        <li>42 blocks, spread over 250 acres</li>
+                        <li>The 3-star SRM Hotel with swimming pool, banquet halls</li>
+                        <li>A Central Library with vast resources</li>
+                        <li>Air-conditioned auditorium that can accommodate over 4,000 people</li>
+                        <li>Information Technology and Knowledge Management supporting over 5,000 computer systems and IT applications of the University</li>
+                        <li>Internet Connection - a dedicated leased line that keeps information flowing rapidly at 32 megabytes per second</li>
+                        <li>Modern Lecture Halls & "Smart Classrooms"</li>
+                        <li>Wireless-enabled lab and campus</li>
+                        <li>Language Lab - specializing in English, German, Japanese, French & Chinese</li>
+                        <li>Around 40 Buses - AC & non-AC - that ply regularly between the college and the city</li>
+                        <li>15 Canteens - from fast-food to full-fledged cafeterias, spread throughout the campus</li>
+                        <li>Retail outlets - Higginbothams book store, Airtel phone booths, Reynolds teller machines, Super Markets, Reliance Webworld with Java Cafe - all within the campus</li>
+                        <li>Prayer halls for all major religions.</li>
+                    </ul>
+                </p>
+                <p>The other campuses are as follows:</p>
+                <br>
+                <p style="font-size:18px"><a href='https://srmrmp.edu.in/'>Ramapuram Campus, Chennai</a></p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">About Ramapuram Campus</h2>
+                                    <p>A serene and charming enclave consists of 5 academic blocks spread over 27 acres, with all the necessary facilities and infrastructure for medical and health science students. 
+                                    Ramapuram Campus also houses the College of Engineering and Technology, Dental College, School of Management and College of Science and Humanities.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Facilities at Ramapuram</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Air conditioned Auditorium</li>
+                                            <li>8 Mbps internet leased line</li>
+                                            <li>A General Hospital with 150 beds</li>
+                                            <li>Separate hostels for men and women</li>
+                                            <li>25 buses</li>
+                                            <li>Banking and DTP facilities</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+               <p style="font-size:18px"><a href='https://www.srmist.edu.in/vadapalani/'>Vadapalani Campus, Chennai</a></p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">About Vadapalani Campus</h2>
+                                    <p>Spread across six acres in the heart of the city</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Facilities at Vadapalani</h2>
+                                    <p>
+                                        <ul>
+                                            <li>12 Mbps internet connectivity</li>
+                                            <li>Smart Classrooms</li>
+                                            <li>Lecture Halls</li>
+                                            <li>Library</li>
+                                            <li>Conference Halls</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p style="font-size:18px"><a href='https://www.srmup.in/'>NCR Campus, Delhi</a></p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">About NCR Campus</h2>
+                                    <p>Spread across 25 acres of land, this campus houses the faculties of Engineering & Technology, Management and Teacher Education.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Facilities at NCR Campus</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Air conditioned classrooms</li>
+                                            <li>Academic block with plinth area of 5 lakh sq ft</li>
+                                            <li>Auditorium and conference halls</li>
+                                            <li>Separate hostels for men and women</li>
+                                            <li>Indoor and outdoor sports facilities</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

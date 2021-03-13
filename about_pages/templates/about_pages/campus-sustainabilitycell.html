@@ -1,0 +1,216 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Campus</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                    <li><a href="#">CAMPUS TOUR</a></li>
+                    <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                    <li><a href="#">BUILDING DETAILS</a></li>
+                    <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                        <li><a href="#">CAMPUS TOUR</a></li>
+                        <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                        <li><a href="#">BUILDING DETAILS</a></li>
+                        <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus > Sustainability Cell</h4>
+                <h1>SUSTAINABILITY CELL</h1>
+                <p>The SRMIST prides itself on the work it has done so far in meeting our sustainability responsibilities targets. This first Annual sustainability Report illustrates the excellent work our staff and students have delivered in helping us maintain our leading role in the sector. 
+                This sustainability report provides an insight into the sustainability policy and results of SRMIST sustainability initiatives for the period 2012 to June 2018. We have made significant progress in fully integrating sustainability into our SRMIST. 
+                We achieved our interim targets for the first five-year period. Now, we have defined our goals and ambitions for the target year 2022.</p>
+                <br>
+                <img src="{% static "media/images/about/SRM-IST-sustainability.jpg" %}">
+                <br>
+                <br>
+                <p>We aim for an overall efficiency improvement of performance in all our targets as compared to 2012. Our approach to sustainability continued to evolve in the following years, 
+                becoming more systematic and addressing an increasing number of environmental and social challenges along our value chain. 
+                SRMIST will continue to work on innovation and improvement directed to a healthy population and a healthy living environment using research, advice, and addressing implementation in 2015. Because we are committed to health and sustainability.</p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h2 class="text-center">About Sustainability</h2>
+                                    <p>The SRMIST is committed to maximizing its positive impact and minimizing its negative environmental impact to help develop a more sustainable world. SRMIST have a healthy approach to sustainability, incorporating social economic and environmental principles that have been in place for nearly a decade. SRMIST has short and long-term objectives for sustainability. </p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Our Policy</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Embed sustainability into the campus, curriculum, community, and culture of the university through the establishment of good leadership and management practices.</li>
+                                            <li>Raise sustainability and environmental awareness and promote sound environmentally and ethically responsible behaviors in all staff and students.</li>
+                                            <li>Develop and maintain the Estate, and the surrounding landscape, with due regard to environmental impact and social value.</li>
+                                            <li>Develop and implement effective and efficient utility and procurement management measures, policies and procedures.</li>
+                                            <li>Develop and implement waste management practices that prioritize disposal in line with the waste hierarchy to reduce the institutions waste output to landfill.<a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/SRMIST-sustainablity-policy.pdf'> Read more</a></li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Our Team</h2>
+                                    <p>The SMB is the group responsible for the development and reporting of the sustainability strategy and key actions of the university. Our SMB has responsibilities to help develop and implement our strategy and to help achieve our goals. 
+                                    The SMB has developed a framework that helps those with responsibility for delivering sustainability for better understanding how sustainability relates to their areas and others, 
+                                    the policies of the university, appropriate laws and reporting requirements and helps set benchmarks, targets and actions for improvements.<a href='https://www.srmist.edu.in/sustainability/management-board'> Management Board</a></p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p style="font-size:22px"><b>Our Initiatives</b></p>
+                <p>
+                    <ul>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/structure-and-infrastructure.pdf'>Structure & Infrastructure</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/biodiversity.pdf'>Biodiversity</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/srm-urban-farm-center.pdf'>Urban Farm Center</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/carbon-mitigation.pdf'>Carbon Mitigation</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/solid-waste-management.pdf'>Solid Waste Management</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/travel-transport.pdf'>Travel and Transport</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/water-management.pdf'>Water Management</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/education-and-research.pdf'>Education & Research</a></li>
+                    </ul>
+                </p>
+                </br>
+                <p style="font-size:22px"><b>Sustainability Related Events</b></p>
+                <p>
+                    <ul>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/downloads/2020/fdp-sap-report.pdf'>FDP on Swachhta Action Plan (SAP)</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/aaruush.pdf'>Aaruush</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/cse-sustainability.pdf'>CSE Sustainability</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/green-sustainabilitycell-activities.pdf'>Green Sustainability cell Activities</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/srm-core-group-meeting.pdf'>SRM Core Group Meeting on SDGs</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/srm-roundtable-confernce.pdf'>SRM Roundtable Conference on SDGs</a></li>
+                        <li>Waste Management and Social Entrepreneurship</li>
+                    </ul>
+                </p>
+                <br>
+                <p style="font-size:22px"><b>Other Activities</b></p>
+                <p>
+                    <ul>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/UI-Green-Metric-University-world-Ranking-2018.pdf'>UI Green Metric World University Ranking - 2018</a></li>
+                        <li>UI Green Metric World University Ranking - 2019</li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/world-environment-day-2018.pdf'>World Environment Day 2018</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/world-environment-day-2019.pdf'>World Environment Day 2019</a></li>
+                        <li>World Environment Day 2020</li>
+                    </ul>
+                </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

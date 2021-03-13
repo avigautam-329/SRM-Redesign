@@ -24,7 +24,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.HomePage.as_view(),name='home'),
-    url(r'^about/$',views.AboutPage.as_view(),name='aboutpage'),
+    url(r'^About/',include('about_pages.urls',namespace='aboutpages')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

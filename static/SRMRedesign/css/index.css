@@ -44,6 +44,7 @@
 
 .about {
     width: 100vw;
+    height: 100vh;
     background: url("/static/media/images/index/about-bg.png");
     background-size: cover;
 }
@@ -482,7 +483,7 @@
 @media(max-width:500px) {
     .events .sub-col {
         height: 75px;
-        width: 350px;
+        width: 300px;
     }
     .sub-col h1 {
         position: absolute;
@@ -500,7 +501,7 @@
         position: absolute;
         width: 207px;
         height: 31px;
-        left: 132px;
+        left: 87px;
         top: 33px;
         font-style: normal;
         font-weight: 600;
@@ -511,12 +512,41 @@
     }
     .hclip {
         height: 100%;
+        width: 30%;
+    }
+    .sub-col .date {
+        left: 0;
     }
     .events .white-box {
         width: 175px;
     }
     .events .card {
-        width: 350px;
+        width: 300px;
+    }
+    .size {
+        font-size: 10px!important;
+        margin-top: 62px!important;
+    }
+    .events .card h3 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        text-transform: capitalize;
+        color: #DDC467;
+        text-align: left;
+        margin-left: 40px;
+        width: 150px;
+    }
+    .vclip {
+        right: 20px;
+    }
+    .events .date-1 {
+        right: 33px;
+    }
+    .circle-img {
+        left: 44%;
     }
     .white-box p {
         font-style: normal;
@@ -526,5 +556,205 @@
         text-align: justify;
         color: #0B192C;
         padding: 34px 20px;
+    }
+    .about h3 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        font-variant: small-caps;
+        color: #E5E5E5;
+    }
+    .icon-abt {
+        margin: 0;
+    }
+    .about img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+    .carousel-p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px!important;
+        line-height: 15px!important;
+        color: #FFFFFF!important;
+        margin-bottom: 42px!important;
+        margin-left: 6%!important;
+    }
+    .carousel-p img {
+        position: absolute;
+        top: 70%!important;
+        left: 28%!important;
+        width: 150px;
+        height: 80px;
+    }
+    .box h4 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .box {
+        height: 140px;
+    }
+    .research h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;
+        color: #222222;
+        margin-top: 62px;
+    }
+    .research .underline {
+        width: 50%;
+    }
+    .research h3,
+    .events h3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .research .card {
+        width: 75%;
+    }
+    .about h1 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .about .underline {
+        width: 130px;
+        height: 9px;
+        background: #F3B141;
+        border-radius: 10px;
+        margin: -10% auto;
+    }
+    .about p {
+        margin-top: 0%;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 24px;
+        color: #B6D3F8;
+        margin-bottom: 5%;
+    }
+    .academics h1,
+    .events h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 0;
+    }
+    .academics .underline {
+        width: 140px;
+    }
+    .academics h3 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .box img {
+        width: 50px;
+        height: 50px;
+    }
+    .events .underline {
+        width: 90px;
+    }
+    .campus-life h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .campus-life .underline {
+        width: 150px;
+    }
+    .campus-life h3 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .resize-lg {
+        margin: 15px auto 14px 30px;
+        height: 200px;
+    }
+    .campus-life .lg-overlay {
+        margin: 16px auto -1px 30px;
+    }
+    .resize-sm {
+        width: 268px;
+        height: 175px;
+        margin: 14px auto 50px 30px;
+    }
+    .campus-life .sm-overlay {
+        position: absolute;
+        bottom: 20%;
+        width: 271px;
+        height: 37px;
+        background: rgba(0, 0, 0, 0.7);
+        left: 27px;
+    }
+    footer {
+        margin-top: -25%;
+    }
+    .top-space img {
+        margin-top: 30%;
+    }
+    footer .row {
+        padding: 50px 0;
+    }
+    .gold {
+        text-align: left!important;
+    }
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF!important;
+    margin-bottom: 200px!important;
+    text-align: justify;
+    margin-left: 30%;
+}
+
+.carousel-p img {
+    position: absolute;
+    top: 54%;
+    left: 18%;
+    float: left;
+    width: 150px;
+    height: 80px;
+}
+
+.carousel-p .bold {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+@media(max-width:1030px) {
+    .carousel-p img {
+        position: absolute;
+        top: 65%;
+        left: 14%;
+        float: left;
+        width: 150px;
+        height: 80px;
+    }
+}
+
+@media(max-width:900px) {
+    .carousel-p img {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        float: left;
+        width: 150px;
+        height: 80px;
     }
 }

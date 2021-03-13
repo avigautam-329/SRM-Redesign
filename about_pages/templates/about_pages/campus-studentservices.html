@@ -1,0 +1,181 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Campus</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                    <li><a href="#">CAMPUS TOUR</a></li>
+                    <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                    <li><a href="#">BUILDING DETAILS</a></li>
+                    <li><a href="#">SUSTAINABILITY CELL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                        <li><a href="#">CAMPUS TOUR</a></li>
+                        <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                        <li><a href="#">BUILDING DETAILS</a></li>
+                        <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus > Student Services</h4>
+                <h1>STUDENT SERVICES</h1>
+                <p style="font-size:22px"><b>Placement & Training Cell </b></p>
+                <p>The Placement and Training Cell, headed by a Senior Professor, helps students plan their career. It organizes:</p>
+                <p>
+                    <ul>
+                        <li>Interviews and group discussions - to familiarize students with standard selection procedures</li>
+                        <li>Campus interviews - in association with large industrial and commercial firms and corporate bodies</li>
+                    </ul>
+                </p>
+                <p>As a result, students of SRM have benefited every year with progressively remunerative and rewarding placements in reputed organizations.</p>
+                <br>
+                <p style="font-size:22px"><b>Computer Centre</b></p>
+                <p>A fully air-conditioned and state-of-the-art computer centre with more than 200 terminals functions at the SRM campus. 
+                Students are encouraged to make full use of the facility to train themselves in modern computer applications and software development - and for academic learning. Students can also acquire practical experience in hardware technology as quite a number of computers are assembled internally at the college workshop.</p>
+                <br>
+                <p style="font-size:22px"><b>Healthcare</b></p>
+                <p>Students of SRM have access to medical facilities at various places, apart from a 24-hour dispensary which has been set up on campus with a doctor on call. The SRM Hospital at West Mambalam has facilities for several diagnostic procedures such as ECG, X-Ray and laboratory investigation.</p>
+                <p>Health insurance cover for all students is one of the additional services under active consideration.</p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h2 class="text-center">Transportation</h2>
+                                    <p>The SRM group runs a fleet of buses for transporting students to and from the city and to other areas. There are two vans and several cars too. Public transport buses and trains also ply to points near the campuses.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Institutional Visits</h2>
+                                    <p>SRM has tie-ups with various organizations, so students of various disciplines can visit their plants to get a direct insight into the multi-functional processes at these organizations. In-plant training is also organized whenever necessary.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Shopping</h2>
+                                    <p>A mini supermarket functions within the campus, to supply necessities. The canteen also offers a range of snacks and beverages.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Banking</h2>
+                                    <p>Nationalized banks run extension counters at the Kattankulathur and Ramapuram premises, making it convenient for students and staff to transact business at the campus itself.</p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

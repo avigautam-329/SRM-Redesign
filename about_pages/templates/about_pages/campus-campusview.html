@@ -1,0 +1,173 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Campus</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}" class="active">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                    <li><a href="#">CAMPUS TOUR</a></li>
+                    <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                    <li><a href="#">BUILDING DETAILS</a></li>
+                    <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ourcampus' %}">OUR CAMPUS</a></li>
+                        <li><a href="#">CAMPUS TOUR</a></li>
+                        <li><a href="{% url 'about_pages:campusview' %}">CAMPUS VIEW</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:studservices' %}">STUDENT SERVICES</a></li>
+                        <li><a href="#">BUILDING DETAILS</a></li>
+                        <li><a href="{% url 'about_pages:suscell' %}">SUSTAINABILITY CELL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus > Campus View</h4>
+                <h1>CAMPUS VIEW</h1>
+                <p style="font-size:22px"><b>UNIVERSITY OF THE FUTURE...</b></p>
+                <p>SRM Institute of Science and Technology (formerly known as SRM University)'s 250 acre campus at Kattankulathur, near Chennai is well landscaped with ample greenery - and is connected by road and rail. 
+                The 43 lakh sq ft built up area comprises state-of-the art infrastructure and facilities, while sculptures and paintings dot the campus, serving as a source of inspiration and relaxation.</p>
+                <p>The campus is equipped with all the latest facilities such as:</p>
+                <p>
+                    <ul>
+                        <li><b>Video-conferencing -</b> interconnecting SRM Institute of Science and Technology (formerly known as SRM University) campuses</li>
+                        <li><b>Wireless-enabled</b> lab and campus</li>
+                        <li><b>State-of-the-art</b>, high capacity, Servers with multiple operating systems</li>
+                        <li><b>A Central Library</b> with vast knowledge resources - printed and electronic</li>
+                        <li><b>High capacity 32 Mbps</b> Internet Connectivity through multiple fiber links</li>
+                        <li><b>1 GB link with 155mbps internet</b> bandwidth through National Knowledge Network (NKN)</li>
+                    </ul>
+                </p>
+                <p style='font-size:18px'>REACHING THE HEIGHTS</p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p>To meet the changing needs of learning and research, SRM Institute of Science and Technology (formerly known as SRM University) has added many new facilities to the existing infrastructure.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Features:</h2>
+                                    <p>
+                                        <ul>
+                                            <li>A 16-storeyed IT block, with over 3 lakh sq ft built up space</li>
+                                            <li>A 16-storeyed Library and Administrative Block with over 3 lakh sq ft built up space</li>
+                                            <li>Auditorium to seat 4500, with several Conference Halls and Discussion Rooms</li>
+                                            <li>Four 10-storeyed Hostel Blocks to house 3500 students</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,282 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}
+
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > Ethics</h4>
+                <h1>ETHICS</h1>
+                <p style="text-align:center;font-size:22px">CODE OF ETHICS FOR TEACHERS AND ENGINEERS FOR TEACHERS</p>
+                <p><b>The following Code of Professional Conduct and Ethics shall be applicable to office bearers and members of all categories of the Society:</b></p>
+                <p>
+                    <ul style="list-style-type:circle">
+                        <li>Members should at all times preserve the dignity and interest of the professionand of the Society by 
+                        maintaining a high standard of professional and personal conduct.</li>
+                        <li>They should work in the best interest of the Society.</li>
+                        <li>They should neither engage in personal advertisement, nor canvas for an 
+                        appointment, nor take any action which is detrimental to sister Institutions.</li>
+                        <li>They should at all times endeavour to establish and maintain the best possible
+                        conditions of service for their colleagues and other staff.</li>
+                        <li>When a Member represents the Society, he should as far as possible state the 
+                        policy of the Society. If he has any disagreement with a policy of the Society, he 
+                        may so inform the Society. The Executive Council will then decide the further 
+                        course of action (including the question of the Society’s representation) that is to be taken.</li>
+                        <li>Where, having regard to this Code of Conduct a Member wishes to make a 
+                        complaint against another Member of the Society, he should do so in writing to 
+                        the Executive Council. If the Executive Council is of the opinion that prima-facie 
+                        case of infringement of the Code of Conduct has been established it will appoint a 
+                        Committee for investigation. On the basis of the report of the Committee, the 
+                        Executive Council will take a final decision on the matter.</li>
+                    </ul>
+                </p>
+                <p style="text-align:center;font-size:22px">FOR ENGINEERING TEACHERS DEALING WITH STUDENTS</p>
+                <p>
+                    <ul>
+                        <li>Deal justly and impartially with students regardless of their social, economic, regional and religious background.</li>
+                        <li>Recognise the differences among students and seek to meet their individual needs.</li>
+                        <li>Encourage students to work for higher individual goals. Aid students to develop 
+                        an understanding and appreciation not only of opportunities and benefits but also responsibilities.</li>
+                        <li>Inculcate in students respect for teachers, love towards fellow students and loyalty to institution and the country.</li>
+                        <li>Acquaint students with civic responsibilities and environmental protection.</li>
+                        <li>Never use students to solve his/her personal problems.</li>
+                        <li>Accept no remuneration for tutoring except in accordance with approved policies of Government / Institutions.</li>
+                    </ul>
+                </p>
+                <p style="text-align:center;font-size:22px">DEALING WITH SOCIETY</p>
+                <p>
+                    <ul>
+                        <li>Adhere to any reasonable pattern of behavior accepted by the Society for professional persons.</li>
+                        <li>Respect the community in which employed and be loyal to the institute system and the country.</li>
+                        <li>Render possible assistance to the development of the Society and use your knowledge and skill for enhancement of human welfare.</li>
+                    </ul>
+                </p>
+                <p style="text-align:center;font-size:22px">DEALING WITH EMPLOYER</p>
+                <p>
+                    <ul>
+                        <li>Strive to fulfill one's obligation to the Institute for maintaining a high level of professional service.</li>
+                        <li>Maintain the dignity and interest of the profession by maintaining high standard of professional and personal conduct.</li>
+                        <li>Co-operate in the development and implementation of institutional policies and programmes.</li>
+                        <li>Conduct professional business through proper channel.</li>
+                        <li>Refrain from discussing confidential and official information with unauthorised persons.</li>
+                        <li>Accept no compensation from equipment suppliers and other agencies. Never engage in any gainful employment outside the institution where the employment 
+                        affects adversely the professional status or standing with students, associates and society.</li>
+                    </ul>
+                </p>
+                <p style="text-align:center;font-size:22px">GENERAL BEHAVIOUR</p>
+                <p>
+                    <ul>
+                        <li>Seek to make professional growth continuous by such procedures as study, research, and attending conferences, professional meetings and continuing education programmes.</li>
+                        <li> Make the teaching profession so attractive in ideals and practices that sincere and able young men / women want to enter it.</p>
+                        <li>Be punctual and regular in teaching work, correspondence with others and keeping appointments with other persons.</p>
+                        <li>Encourage one's fellow teachers to adhere to proper ethical behaviour.</li>
+                        <li>Speak constructively of other teachers but report honestly to responsible persons in matters involving the welfare of students, institution system and the profession.</li>
+                        <li>Maintain active membership in professional organisation and through participation, strive to attain the objectives that justify such organisations.</li>
+                        <li>Never engage in personal advertisement of canvass for an appointment.</li>
+                        <li>Never seek self-enhancement through expressing evaluations or comparisons damaging to other professional workers.</li>
+                    </ul>
+                </p>
+                <br>
+                <p style="text-align:center;font-size:22px">CODE OF ETHICS FOR ENGINEERS</p>
+                <p style="text-align:left;font-size:18px">Preamble</p>
+                <p><b>Engineers are committed to promote and practice the profession of engineering for the common good of the community bearing in mind the following concerns:</b></p>
+                <p>
+                    <ul>
+                        <li>Concern for ethical standard.</li>
+                        <li>Concern for social justice, social order and human rights.</li>
+                        <li>Concern for protection of the environment.</li>
+                        <li>Concern for sustainable development.</li>
+                        <li>Public safety and tranquility.</li>
+                    </ul>
+                </p>
+                <p style="text-align:left;font-size:18px">The Tenets of the Code of Ethics</p>
+                <p>
+                    <ul>
+                        <li>An Engineer shall utilize his knowledge and expertise for the welfare, health and safety of the community without any discrimination for sectional or  
+                        private interests.</li>
+                        <li>An Engineer shall maintain the honor, integrity and dignity in all his professional actions to be worthy of the trust of the community and the 
+                        profession.</li>
+                        <li>An Engineer shall act only in the domains of his competence and with diligence, care, sincerity and honesty.</li>
+                        <li>An Engineer shall apply his knowledge and expertise in the interest of his employer or the clients for whom he shall work without compromising with 
+                        other obligations to these Tenets.</li>
+                        <li>An Engineer shall not falsify or misrepresent on his own or his associates' qualifications, experience, etc.</li>
+                        <li>An Engineer, wherever necessary and relevant, shall take all reasonable steps to inform himself, his employer or clients, of the environmental, 
+                        economic, and social and other possible consequences, which may arise out of his actions.</li>
+                        <li>An Engineer shall maintain utmost honesty and fairness in making statements or giving witness and shall do so on the basis of adequate knowledge.</li>
+                        <li>An Engineer shall not directly or indirectly injure the professional reputation of another member.</li>
+                        <li>An Engineer shall reject any kind of offer that may involve unfair practice or may cause avoidable damage to the ecosystem.</li>
+                        <li>An Engineer shall be concerned about and shall act in the best of his abilities for maintenance of sustainability of the process of development.</li>
+                        <li>An Engineer shall not act in any manner which may injure the reputation of the Institution or which may cause any damage to the Institution financially or otherwise.</li>
+                    </ul>
+                </p>
+                <p style="text-align:left;font-size:18px">General Guidance</p>
+                <p>The Tenets of the Code of Ethics are based on the recognition that –</p>
+                <p>
+                    <ul>
+                        <li>A common tie exists among the humanity and that The Engineers (India) derives its value from the people, so that the actions of them should 
+                        indicate the member’s highest regard for equality of opportunity, social justice and fairness.</li>
+                        <li>The Engineers hold a privileged position in the community so as to make it a necessity for their not using the position for personal and sectional interests.</li>
+                    </ul>
+                </p>
+                <p style="text-align:left;font-size:18px">General Guidance</p>
+                <p>
+                    <ul>
+                        <li>Should keep his employer or client fully informed on all matters in respect 
+                        of his assignment which are likely to lead to a conflict of interest or when, 
+                        in his judgment, a project will not be viable on the basis of commercial, technical, environmental or any other risks.</li>
+                        <li>Should maintain confidentiality of any information with utmost sincerity 
+                        unless expressly permitted to disclose such information or unless such permission, if withheld, may adversely affect the welfare, health and safety of the community.</li>
+                        <li>Should neither solicit nor accept financial or other considerations from anyone related to a project or assignment of which he is in the charge.</li>
+                        <li>Should neither pay nor offer direct or indirect inducements to secure work.</li>
+                        <li>Should compete on the basis of merit alone.</li>
+                        <li>Should refrain from inducing a client to breach a contract entered into with another duly appointed engineer.</li>
+                        <li>should, if asked by the employer or a client, to review the work of another person or organization, discuss the review with the other person or 
+                        organization to arrive at a balanced opinion.</li>
+                        <li>Should make statements or give evidence before a tribunal or a court of law 
+                        in an objective and accurate manner and express any opinion on the basis 
+                        of adequate knowledge and competence. And</li>
+                        <li>Should reveal the existence of any interest – pecuniary or otherwise – 
+                        which may affect the judgment while giving an evidence or making a statement.</li>
+                    </ul>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}
+<div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > Research</h4>
+                <h1>RESEARCH</h1>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">RESEARCH AT SRM</h2>
+                                    <p>SRM is committed to creation of knowledge through research across all academic disciplines. Focus areas include Nanotechnology, Bio engineering, Info, Energy, Environment, Materials and Embedded systems. 
+                                    Joint research project on rural healthcare, in collaboration with Queen's University, Canada.</p>
+                                    <img src="{% static "media/images/about/research_rd.jpg" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">RESEARCH INSTITUTE</h2>
+                                    <p>SRM Research Institute, a Unit of the university, has been established to catalyze proactive applied research to help solve industry's technical problems and is positioned to address and contribute to the market and society needs. 
+                                    It focuses on four domains - Education to research, and develop tools and techniques to address the needs of a university, faculty members, students, and prospective students, 
+                                    Wireless Healthcare to research and propose solutions in the area of Telemedicine, Multimedia for comprehensive and supportive audio, video, and text processing, and Next Generation Networks.</p>
+                                    <img src="{% static "media/images/about/research_institute_0.jpg" %}">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

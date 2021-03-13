@@ -10,6 +10,7 @@ body {
 .navbar-light .navbar-toggler {
     border: none;
     font-size: 2rem;
+    margin-right: 40px;
 }
 
 .row {
@@ -69,7 +70,7 @@ footer ul li {
     list-style-type: none;
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 10px;
     line-height: 20px;
     text-transform: capitalize;
     color: #fff;
@@ -108,5 +109,9 @@ footer .row {
     }
     .container-fluid {
         padding: 0;
+    }
+    .fixed-top.scrolled .navbar-brand img,
+    .navbar-brand img {
+        padding: 0px 10px;
     }
 }

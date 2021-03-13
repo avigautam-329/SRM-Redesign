@@ -1,0 +1,181 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > History</h4>
+                <h1>HISTORY OF SRM GROUP OF INSTITUTIONS</h1>
+                <br>
+                <p>
+                    <ul>
+                        <li><b>1969 -</b> Inception of Florence Nightingale Primary School.</li>
+                        <li><b>1981 -</b> Upgrading the Primary School to the status of Matriculation Higher Secondary School.</li>
+                        <li><b>1984 -</b> Launch of Valliammai Polytechnic Institute.</li>
+                        <li><b>1985 -</b> Launch of SRM Engineering College in Kattankulathur, near Chennai.</li>
+                        <li><b>1992 - 93 -</b> Launch of SRM College of Nursing and SRM College of Pharmacy.</li>
+                        <li><b>1993 - 94 -</b> Launch of SRM School of Nursing and SRM College of Physiotherapy.</li>
+                        <li><b>1993 -</b> Launch of SRM Institute of Hotel Management in Chennai and Trichy.</li>
+                        <li><b>1993 - 94 -</b> Launch of SRM Arts & Science affiliated to the University of Madras.</li>
+                        <li><b>1995 - 96 -</b> Launch of SRM Dental College.</li>
+                        <li><b>1996 -</b> Launch of SRM Polytechnic Institute.</li>
+                        <li><b>1996 - 97 -</b> Launch of Easwari Engineering College affiliated to the Anna University.</li>
+                        <li><b>1996 - 97 -</b> Launch of SRM College of Occupational Therapy.</li>
+                        <li><b>1997 - 98 -</b> Launch of SRM Institute of Management & Technology, Delhi.</li>
+                        <li><b>1999 -</b> Launch of Valliammai Engineering College affiliated to the Anna University.</li>
+                        <li><b>2002 -</b> UGC has declared the SRM Institute of Science and Technology, Chennai comprising SRM Dental College, Ramapuram as deemed to be University under Sec. 3 of the UGC Act 1956.</li>
+                        <li><b>2003 -</b> SRM Engineering, Kattankulathur, Chennai was brought under the ambit of SRMIST, Chennai a deemed to be University.</li>
+                        <li><b>2005 - 06 -</b> SRM Medical College Hospital and Research Centre, Chennai, was started in the SRMIST, the deemed to be University. And School of Education, Faculty of Science and Humanities, Kattankulathur.</li>
+                        <li><b>2005 -</b> SRM College of Pharmacy, Nursing, Physiotherapy, Occupational Therapy, in Chennai and SRM Institute of Management and Technology, Modinagar, Delhi was brought under the ambit of SRM Institute of Science and Technology (formerly known as SRM University).</li>
+                        <li><b>2006 -</b> The UGC in September 2006 permitted the Deemed to be Universities to be called as Universities under Sec. 3 of the UGC Act 1956. Since then SRMIST deemed to be University is called as SRM Institute of Science and Technology (formerly known as SRM University).</li>
+                        <li><b>2007 -</b> SRM Kattankuthur Dental College was started under the ambit of SRM Institute of Science and Technology (formerly known as SRM University).</li>
+                        <li><b>2007 -</b> Launch of SRM Community Radio.</li>
+                        <li><b>2009 - 10 -</b> Launch of Chennai Medical College, Trichy.</li>
+                        <li><b>2010 -</b> Inter Disciplinary School of Indian System of Medicine.</li>
+                        <li><b>2010 - 2011 -</b> TRP Engineering College, Trichy, Affiliated to the Anna University.</li>
+                        <li><b>2011 -</b> Launch of Faculty of Science and Humanities, Vadapalani Campus, SRM Institute of Science and Technology (formerly known as SRM University).</li>
+                        <li><b>2013 -</b> Launch of SRM Institute of Science and Technology (formerly known as SRM University), Haryana.</li>
+                        <li><b>2014 -</b> Launch of SRM Institute of Science and Technology (formerly known as SRM University), Sikkim.</li>
+                    </ul>
+                </p>
+                <p>Growth at a Glance:</p>
+                <img src="{% static "media/images/about/srm-group.jpg" %}">
+            </div>
+        </div>
+    </div>
+{% endblock %}

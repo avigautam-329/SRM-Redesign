@@ -1,0 +1,195 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}
+<div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > Core Values</h4>
+                <h1>CORE VALUES</h1>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">EXCELLENCE, INTEGRITY AND ACADEMIC FREEDOM</h2>
+                                    <p>The University is committed to be a leading player in academic 
+                                    world through excellence in teaching and research, while placing 
+                                    utmost value in the freedom to conduct academic activities, subject to the highest standards of academic integrity.</p>
+                                    <img src="{% static "media/images/about/AE.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">GLOBAL VISION AND LOCAL COMMITMENT</h2>
+                                    <p>The University positions itself as a leading academic institution with global influence. SRM IST bring together global thought 
+                                    leaders to make significant contribution to the economic and social development both locally and nationally. 
+                                    In addition, SRM encourages its faculty, staff and students to dedicate themselves to service to the local community.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">INCLUSIVENESS, DIVERSITY AND RESPECT</h2>
+                                    <p>The University values and respects the differences of individuals, whether they are of different geographies, socio-economic status, 
+                                    cultural backgrounds, religion, and will strive to embrace these diverse forces to foster an inclusive and caring environment. This 
+                                    will allow us to harness the richness of ideas and perspectives for the benefit of the whole community.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

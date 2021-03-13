@@ -1,0 +1,268 @@
+{% extends 'about-base.html' %} 
+{% load static %}
+{% load bootstrap5 %}
+
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > SRM In Focus</h4>
+                <h1>SRM IN FOCUS</h1>
+                <p>Education is all about creating an environment of academic freedom, where bright minds meet, discover and learn. One would experience top of the world living and learning experience at SRM.
+
+                </p>
+                <p> SRM Institute of Science and Technology (formerly known as SRM University) - where you have the freedom to take wings.
+                </p>
+                <p>
+                    SRM Institute of Science and Technology is one of the top ranking universities in India with over 52,000 full time students and more than 3200 faculty across all the campuses - Kattankulathur, Ramapuram, Vadapalani Campus – all in and around Chennai,
+                    and Modinagar, NCR, Delhi - offering a wide range of undergraduate, postgraduate and doctoral programs in six Faculties – Engineering & Technology, Management, Medicine & Health sciences, Science & Humanities, Law and Agricultural
+                    Sciences
+                </p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">ACADEMIC ENVIRONMENT</h2>
+                                    <p>Foreign faculty, flexible and dynamic curriculum, exciting research and global connections are the features that set SRM apart. Students have a wide choice of cutting edge programs including nanotechnology, genetic
+                                        engineering, remote sensing and GIS, embedded systems or computer forensics to choose from. Most of these courses are offered in close collaboration with foreign universities. Even at UG level specialized engineering
+                                        programs like Artificial Intelligence, Big Data Analytics, IoT etc. are offered. All the programs offered are approved by UGC and applicable Statutory Councils like AICTE etc.</p>
+                                    <img src="{% static "media/images/about/AE.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">DIVERSITY OF STUDENTS</h2>
+                                    <p>70% of students are from outside Tamil Nadu, with students from USA, Europe, China and other countries.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">SEMESTER ABROAD PROGRAM</h2>
+                                    <p>Over 200 students sponsored to more than 35 foreign universities like MIT, Carnegie Mellon, UC Davis, Warwick and Western Australia every year.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">INTERNATIONAL ADVISORY BOARD</h2>
+                                    <p>57 members from top universities across the world including MIT, Stanford, UC Berkeley, Cambridge and NUS help set Global Standards.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>                                
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">CORPORATE ADVISORY BOARD</h2>
+                                    <p>Over 50 top executives from leading corporate institutions constantly interact with faculty and students to help in formulating academics and research.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">ACCREDITATION</h2>
+                                    <p>SRM Institute of Science and Technology has been accredited by NAAC with the Highest 'A++' Grade in the year 2018, valid for the next 5 years. SRM IST is placed in Category I with 12 B Status by MHRD-UGC.<br>
+                                    Five engineering undergraduate programs of Kattankulathur campus are accredited by different commissions of ABET (www.abet.org) and four other engineering undergraduate programs by IET (UK).</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">RANKING</h2>
+                                    <p>SRMIST has been ranked 35 nationally under Universities Category by NIRF (National Institutional Ranking Framework) in 2020. It regularly gets ranked by world ranking agencies like QS (UK) and Times Higher Education (UK).</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">RATING</h2>
+                                    <p>SRMIST is globally rated as ‘Four Star’ University by renowned ranking agency QS and given ‘Diamond’ Rating by QS-IGAUGE in Indian context.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">INFRASTRUCTURE</h2>
+                                    <p>Nearly 400  acres replete with a variety of facilities, State-of-the-art labs, libraries, Wi-Fi, knowledge center, 4000 capacity AC auditorium, 100 online smart classrooms, Hostels with premium facilities,
+                                     endless convenience on campus including ATM's, bookstores, dining options, cafeterias, prayer halls, gym and more.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">PLACEMENT</h2>
+                                    <p>600+ companies visit SRMIST every year to place 75-80% of registered students in well-known companies like TCS, Wipro, Cognizant, Infosys, Siemens, L&T, and others.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">SCHOLARSHIPS</h2>
+                                    <p>Under various scholarship schemes more than Rs. 32 crores are awarded benefitting 3200+ students every year.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">LOANS</h2>
+                                    <p>On-the-spot sanction of bank educational loans during counseling.</p>
+                                    <img src="{% static "media/images/index/life2.png" %}">
+                                </div>   
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

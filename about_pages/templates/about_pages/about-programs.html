@@ -1,0 +1,209 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}" class="active">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="#">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="#">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="#">ACHIEVEMENTS</a>
+                </li>
+                <li>
+                    <a href="#">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="#">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="#">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                    <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                    <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                    <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                    <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                    <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    <li><a href="#">RANKING</a></li>
+                    <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                    <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                    <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:srminfocus' %}">SRM IN FOCUS</a></li>
+                        <li><a href="{% url 'about_pages:visionandmission' %}">VISION AND MISSION</a></li>
+                        <li><a href="{% url 'about_pages:corevalues' %}">CORE VALUES</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:ethics' %}">ETHICS</a></li>
+                        <li><a href="{% url 'about_pages:history' %}">HISTORY</a></li>
+                        <li><a href="{% url 'about_pages:administration' %}">ADMINISTRATION</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/Organizational-Chart/">ORGANISATION CHART</a></li>
+                        <li><a href="{% url 'about_pages:programmes' %}">PROGRAMS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="#">RANKING</a></li>
+                        <li><a href="{% url 'about_pages:research' %}">RESEARCH AT SRM</a></li>
+                        <li><a href="#">INTERNATIONAL BOARD</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:stratalliance' %}">STRATEGIC ALLIANCE</a></li>
+                        <li><a href="{% url 'about_pages:foreignfaculty' %}">PANEL OF FOREIGN FACULTY</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Facts > Programmes</h4>
+                <h1>PROGRAMMES</h1>
+                <p style="font-size:22px">Undergraduates</p>
+                <p><b>To know the various Undergraduate Programs:</b></p>
+                <p>
+                    <ul style="list-style-type:circle">
+                        <li><a href='https://www.srmist.edu.in/admission-india/engineering/programs-offered'>Click here</a> for Faculty of Engineering and Technology.</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/medical-health-sciences/programs-offered'>Click here</a> for Faculty of Medicine and Health Sciences.</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/science-and-humanities/programs-offered'>Click here</a> for Faculty of Science & Humanities.</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/management/programs-offered'>Click here</a> for Faculty of Management.</li>
+                    </ul>
+                </p>
+                <br>
+                <p style="font-size:22px">Postgraduates</p>
+                <p><b>To know the various Postgraduate Programs:</b></p>
+                <p>
+                    <ul style="list-style-type:circle">
+                        <li><a href='https://www.srmist.edu.in/admission-india/courses-offered/engineering-and-technology'>Click here</a> for Faculty of Engineering and Technology</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/medicine-and-health-sciences'>Click here</a> for Faculty of Medicine and Health Sciences</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/courses-offered/science-and-humanities'>Click here</a> for Faculty of Science & Humanities</li>
+                        <li><a href='https://www.srmist.edu.in/admission-india/courses-offered/management'>Click here</a> for Faculty of Management</li>
+                    </ul>
+                </p>
+                <p style="font-size:22px">Professional</p>
+                <p style="font-size:18px"><b>Ph.D</b></p>
+                <p>Scholars seeking a doctorate can choose from any of the disciplines available in the faculty of Engineering and Science & Humanities.</p>
+                <p>More than a hundred scholars are currently pursuing their Ph.D.s at SRM Institute of Science and Technology (formerly known as SRM University). Faculty and students have published over 1000 papers so far, many of which have been selected for presentation at various national/ international conferences like the European Management and Technology Conference, Rome and international conferences in Beijing, China and Hong Kong.</p>
+                <br>
+                <p style="font-size:18px"><b>Engineering & Technology</b></p>
+                <p>Ph.D. in all disciplines.</p>
+                <br>
+                <p style="font-size:18px"><b>Medicine & Health Sciences</b></p>
+                <p>Ph.D. in all disciplines.</p>
+                <br>
+                <p style="font-size:18px"><b>Science & Humanities</b></p>
+                <p>Ph.D. in all disciplines.</p>
+                <br>
+                <p style="font-size:22px">Diploma and Certificate</p>
+                <p style="font-size:18px"><b>Medicine & Health Sciences</b></p>
+                <p>
+                    <ul>
+                        <li>Diploma Courses</li>
+                        <li>Diploma in Nursing</li>
+                        <li>Diploma in Optometry</li>
+                        <li>Diploma in Medical Laboratory Technology</li>
+                        <li>Diploma in Medical Record Science</li>
+                        <li>Pharm.D</li>
+                        <li>Certificate Courses</li>
+                        <li>Certificate course in Ophthalmic Technology</li>
+                        <li>Certificate in Blood Bank Technology</li>
+                        <li>Health Inspector</li>
+                    </ul>
+                </p>
+                <p style="font-size:18px"><b>Science & Humanities</b></p>
+                <p>
+                    <ul>
+                        <li>Diploma Courses</li>
+                        <li>Hotel Management & Catering Technology</li>
+                        <li>Teacher Education (D.T.Ed)</li>
+                        <li>D.F.A (Film Acting)</li>
+                        <li>PG Diploma Course</li>
+                        <li>Journalism</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
