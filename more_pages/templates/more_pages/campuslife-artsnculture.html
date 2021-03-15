@@ -1,0 +1,212 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>CAMPUS LIFE</h1>
+                </div>
+                <div>
+                    <p>Home > More > Campus Life</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}" class="active">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}" class="active">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                    <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                    <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                        <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                        <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                        <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                        <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus Life > Arts & Culture</h4>
+                <h1>ARTS & CULTURE</h1>
+
+                <p style:'font-size=20px'>Looking Beyond Academics...</p>
+                <p>It's our firm belief at SRM Institute of Science and Technology (formerly known as SRM University), 
+                that to enhance the skills of our students, they must be provided with opportunities to explore their creativity.</p>
+                <p>Cultural programs are organized several times during the year to encourage creative pursuits and nurture talent. 
+                Students form teams and share responsibility in organizing the events.</p>
+                <p style:'font-size=20px'>An abstract</p>
+                <p>As one subsides and steps onto the campus, he/she comes across a divergent and distinguished culture bubbling with effervescence and efficiency. 
+                Every individual here learns and lucubrates to follow his and her passion with dedication and dynamism, 
+                also efficaciously managing their academics. 
+                They're enlightened and edified with human values and competently complete with the challenges of their lives.</p>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h2 class="text-center">Milan - The Cultural Fest</h2>
+                                    <p>The very name translates to a get-together, sure, but Milan, the cultural extravaganza of SRM Institute of Science and Technology (formerly known as SRM University) offers so much more. 
+                                    Milan is a National level cultural event that hosts events for tens of thousands of students who fly in from various parts of the country. 
+                                    There is a plethora of variety in the events that take place, which to name a few are, "Fashion Show"for the aspiring models, "Talkathon" for the wannabe debators, "Short film screening" for the upcoming 'James Cameroons' and a DJ Night, for the nocturnals. Over a period of time, Milan has evolved to a great extent that CHIEF celebrities from the film industry like, Kamal Haasan, John Abraham,  'Chiyaan' Vikram, Shreya Ghoshal and et al A-listers have graced the occasion. 
+                                    An absolute delight to look forward to, for it caters to the craving minds of thrill-seekers, philosophers and the educational enthusiasts. 
+                                    One wouldn't want to miss the "Sunburn of the south", with fun manifold, would they?</p>
+                                </div>
+                                <div class="carousel-item ">
+                                    <h2 class="text-center">Tarana - The SRM Talent Fest</h2>
+                                    <p>Tarana happens once a year and it's the perfect opportunity for all talented students from colleges and 
+                                    institutions under the SRM banner to participate in the competitions and showcase their creative talent.</p>
+                                    <p>Dance, light music, classical music, fashion show, literary debates, 
+                                    craft and lots of other events are organized and leading celebrities are invited to judge the events.</p>
+                                    <p>There's competition and a spirit of camaraderie too as students from various streams come together to participate, compete and win prizes.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Shuru - The Icebreaker</h2>
+                                    <p>Marked as "The Beginning, Shuru is an extravagant round of competitions where the Freshers are given an opportunity, 
+                                    encouraged to indulge themselves in various Clubs such as music, dance, theatre and what not. </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Celebrations</h2>
+                                    <p>All major Indian festivals are celebrated in the campus with complete enthusiasm and enjoyment. 
+                                    Lushing lunches are explicitly made in students' hostels to mark these festivities and to give the students a taste of the region's culinary traditions.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Gokulashtami</h2>
+                                    <p>This is one of the festivals celebrated with complete enchantment and zeal. Marking the birth of Lord Krishna, a grand warrior, a hero, a dynamic teacher and philosopher.
+                                     The celebrations start with the onset of the day and go on throughout, comprising bhajans, 
+                                     a dance profoundly known as Rashleela along with the most striking event of the evening - "the Matki breaking." </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Yoga</h2>
+                                    <p>The nature of yoga is to shine the light of awareness into the darkest corners of the body, it's a journey of the self, to the self and through the self. 
+                                    Yoga sessions are conducted for the students here on a regular basis, honing their inner selves, to making them better, efficient individuals. </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Anti Ragging</h2>
+                                    <p>The college's campus is a dwelling and domicile one, where students create admirable and astounding memories that they cherish and reminisce a complete lifespan. 
+                                    Therefore we, here at SRM bly condemn any kind of ragging practices. 
+                                    A stable anti-ragging committee works tirelessly to take care of such mishaps and promptly adhere to them, accordingly. </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Matki Breaking</h2>
+                                    <p>'Matki' breaking ceremony was held which reminded the entire campus of the mischieves of Lord Krishna. 
+                                    Bhajans and songs made the evening unforgettable.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Mini India on campus</h2>
+                                    <p>Beautiful it is; God's raw land; home, happiness, love, freedom; all hand in hand - a paradox; A place of morals in a time of Westernization. A land where humanity presents itself in its most dazzling way, with a creative burst of culture and religions, races and tongues. 
+                                    Feel, cherish, love, admire and adore - a perfect description of not just India but the mini-India on the grand campus of SRM as well. 
+                                    The wonderful spectacle of 'Unity in Diversity' can be well witnessed here in the campus. </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Students' Grievances and Redressal</h2>
+                                    <p>Under this department we introduce not officials and committee members but people who act like a "Mother", 
+                                    a Mother knows about her child in the most perfect manner and has solutions to et al problems her beloved faces. 
+                                    The committee hears every grievance of a student and addresses them in no time.</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">SRM Centre for Performing and Fine Arts (CPFA)</h2>
+                                    <p>SRM CPFA is the cultural identity of SRMIST. The vision of this department is to provide students a platform for artistic endeavors, to tap their artistic talents and hone them. Here, you will find students from different disciplines like Engineering, Medicines, Arts and Science coming together to pursue their passion in Performing Arts. The Centre boasts of a world class Faculty, 
+                                    facilities and offers certificate courses in Performing Arts like Carnatic Vocal Music, Carnatic Violin, Mridangam, Keyboard and Guitar. 
+                                    Training is given for Grade Certificate exams in Western Classical Music offered by the Trinity College of Music, London. 
+                                    SRM is a Registered Exam Centre of the Trinity College of Music, London. 
+                                    Annual Music and Dance Festivals are organized by the CPFA during important festivals.</p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

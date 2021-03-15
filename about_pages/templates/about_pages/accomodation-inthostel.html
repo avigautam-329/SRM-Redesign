@@ -1,0 +1,204 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > International Hostel</h4>
+                <h1>INTERNATIONAL HOSTEL</h1>
+                <br>
+                <p><img src="{% static "media/images/about/irhostel-banner.jpg" %}"></p>
+                <br>
+                <p>International students come in huge numbers to SRM for its outstanding learning environment that fulfills their academic aspirations, 
+                intellectual passion and the desire to experience cultural diversity at its richest. 
+                The international hostel is more popular among others as it also houses many international students. 
+                The hostel block is completely air-conditioned.</p>
+                <p><b>Premium International Hostel</b></p>
+                <p>Outside the campus,  we are having 1 more International Hostel named Green Pearl International Hostel within 10 mins walk from the campus, 
+                which is service apartment type of accommodation will be provided. 
+                Shuttle buses are available from Hostel to campus for easy commutation of students. 
+                For the benefit of the international students, the hostel also offers multi-cuisine dining facility providing Thai, 
+                Chinese and Indian foods.</p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">Facilities Available</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Modernized Kitchen</li>
+                                            <li>Library</li>
+                                            <li>Drinking Water</li>
+                                            <li>Water Heater</li>
+                                            <li>Telephone</li>
+                                            <li>Power Supply</li>
+                                            <li>Medical Care</li>
+                                            <li>Banking Facility</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="carousel-item ">
+                                    <p>
+                                        <ul>
+                                            <li>Recreation</li>
+                                            <li>Stationery Shop</li>
+                                            <li>Laundry Point</li>
+                                            <li>Gym</li>
+                                            <li>Play Ground</li>
+                                            <li>Indoor Games</li>
+                                            <li>A/C  Study Hall</li>
+                                            <li>A/C  Dining Hall</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p style='font-size:18px'>For Details, Contact :</p>
+                <p>
+                    <ul>
+                        <li>Mr. Selvaraj, Warden       -           09840865168</li>
+                        <li>Mr. Sudarshan, Supervisor  -           09962426596</li>
+                        <li>Help Desk                  -           044-47432200</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

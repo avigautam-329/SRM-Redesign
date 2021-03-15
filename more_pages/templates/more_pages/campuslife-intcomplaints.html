@@ -1,0 +1,119 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>CAMPUS LIFE</h1>
+                </div>
+                <div>
+                    <p>Home > More > Campus Life</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                    <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                    <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                        <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                        <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                        <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                        <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus Life > International Complaints Committee</h4>
+                <h1>CONSTITUTION OF INTERNAL COMPLAINTS COMMITTEE</h1>
+
+                <p>In reference to UGC, Ministry of Human Resource Development, Government of India’s letters of even number dated 28.01.2015 and 14th May, 2019, 
+                SRM Institute of Science and Technology reconstituted the Internal Complaint Committee (ICC) with the following members to deal with the issue of gender based violence and to conduct gender sensitization programme.</p>
+
+                <p style='font-size:18px'><b>To contact the committee:</b></p>
+
+                <p>
+                    <ul>
+                        <li><b>E-mail  -</b><a href='#'>  po.icc.ktr@srmist.edu.in</a></li>
+                        <li><b>Phone –</b> 9677760276 / 7358026017</li>
+                    </ul>
+                </p>
+                <p>
+                    <img src='{% static "media/images/more/intcomplaints-1.png" %}'>
+                    <img src='{% static "media/images/more/intcomplaints-2.png" %}'>
+                </p>
+
+                <p>The above constituted ICC will be working as per UGC (Prevention, Prohibition and Redressal of Sexual Harassment of Women Employees and Students in Higher Educational Institutions) Regulation, 2015.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

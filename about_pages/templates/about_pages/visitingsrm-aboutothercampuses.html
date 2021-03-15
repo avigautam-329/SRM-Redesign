@@ -1,0 +1,123 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Visiting SRM</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}" class="active">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}" class="active">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:visitingbyrail' %}">BY RAIL</a></li>
+                    <li><a href="{% url 'about_pages:visitingbyair' %}">BY AIR</a></li>
+                    <li><a href="{% url 'about_pages:visitingabtothercampuses' %}">ABOUT LAYOUT OF OTHER CAMPUSES</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:visitingbyrail' %}">BY RAIL</a></li>
+                        <li><a href="{% url 'about_pages:visitingbyair' %}">BY AIR</a></li>
+                        <li><a href="{% url 'about_pages:visitingabtothercampuses' %}">ABOUT LAYOUT OF OTHER CAMPUSES</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Visiting SRM > About Layout of Other Campuses</h4>
+                <h1>ABOUT LAYOUT OF OTHER CAMPUSES</h1>
+                <p style='font-size:20px'><b>The Ramapuram Campus</b></p>
+                <p>Spreading over 27 acres, the campus at Ramapuram is within the Corporation of Chennai City Limits, adjacent to the Link Road that leads to the Chennai - Bangalore National Highway NH 4. It houses the College of Dentistry and a few disciplines of the Faculty of Engineering and Technology of the University.</p>
+                <p>It also houses the Easwari Engineering College of the SRM Group, a multi-specialty hospital and a community health center.
+                </p>
+                <p style='font-size:18px'><a href='https://www.srmist.edu.in/aboutus/popup/rama_campus.html'>Click here for the campus layout.</a></p>
+                <br>
+                <p style='font-size:20px'><b>NCR Campus (SRM Institute of Management & Technology)</b></p>
+                <p>Spread across 25 acres in Modinagar, on the Delhi-Meerut Highway, NH 58, Ghaziabad, Delhi. This actually comprises of two campuses - one for Management courses and the other for Engineering and Technology courses.</p>
+                <p>All campuses of SRM Institute of Science and Technology (formerly known as SRM University) are provided with facilities like post office, banks, playgrounds, cafes & restaurants, internet browsing centers, etc., - for comfortable learning and living.
+                </p>
+                <br>
+                <p>
+                    <ul>
+                        <li><a href='https://www.srmist.edu.in/aboutus/popup/modi_campus.html'>Click here for the campus layout of Modi Nagar Campus.</a></li>
+                        <li><a href='https://www.srmist.edu.in/aboutus/popup/trichy_campus.html'>Click here for the campus Trichy Campus.</a></li>
+                        <li><a href='https://www.srmist.edu.in/aboutus/popup/vadapalani_campus.html'>Click here for the campus layout of Vadapalani Campus.</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

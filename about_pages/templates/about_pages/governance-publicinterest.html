@@ -1,0 +1,169 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Governance</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}" class="active">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}" class="active">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:govpublicinterest' %}">Information in Public Interest</a></li>
+                    <li><a href="{% url 'about_pages:govcontacts' %}">Contacts</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:govpublicinterest' %}">Information in Public Interest</a></li>
+                        <li><a href="{% url 'about_pages:govcontacts' %}">Contacts</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Governance > Information in Public Interest</h4>
+                <h1>INFORMATION IN PUBLIC INTEREST</h1>
+
+                <p>"Compliance of the Deemed to be University in response to MHRD's order No.F.4-30/2009-U.I(A) Dated 17th July, 2009 and UGC Letter No.F.6-1(7)/2006(CPP-I) dated 7th August, 2009 for disclosure of information in public interest".</p>
+                <p>
+                    <ol>
+                        <li><a href='#'>Information relating to availability of infrastructure and Physical assets</a></li>
+                        <li><a href='https://www.srmist.edu.in/content/funded-research'>If you take the train to Chengalpattu, you can directly reach Potheri railway station. SRM Institute of Science and Technology (formerly known as SRM University) is just opposite to Potheri railway station.</a></li>
+                        <li>Information regarding the admission criteria and the process of admissions in respect of all courses of study, whether degree or diploma, and whether by regular mode or distance mode (with the approval of the UGC-AICTE-DEC Joint Committee).</li>
+                    </ol>
+                </p>
+                <p><img src="{% static "media/images/about/governance-1.png" %}"></p>
+                <p style='font-size:18px'><b>For further details <a href='#'>click here</a></b></p>
+                <br>
+                <p>
+                    <ol>
+                        <li>Information regarding details of faculty positions in each of the schools / faculties comprising part of such university/institution along with the Photographs of such faculty members and the nature of their employment, whether regular, temporary, visiting or guest.<br>
+                            <ul>
+                                <li>Engineering Technology<br>
+                                    <ul>
+                                        <li><a href='#'>Kattankulathur Campus</a></li>
+                                        <li><a href='#'>Ramapuram Campus</a></li>
+                                        <li><a href='#'>Modinagar Campus</a></li>
+                                    </ul>
+                                </li>
+                                <li>Medical & Health Sciences<br>
+                                    <ul>
+                                        <li><a href='#'>Medical</a></li>
+                                        <li><a href='#'>Dental</a></li>
+                                        <li><a href='#'>Paramedical</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href='#'>Science & Humanities</a></li>
+                                <li><a href='#'>Management</a></li>
+                            </ul>
+                        </li>
+                        <li>Information regarding the admission criteria and the process of admissions in respect of all courses of study, whether degree or diploma, and whether by regular mode or distance mode (with the approval of the UGC-AICTE-DEC Joint Committee).<br>
+                        The main income is derived from the students fees. Considering this and the expenditure incurred to meet the requirement of norms and regulations fee structure is fixed, the details of which are given below. The Fees Structure is decided at the start of academic year based recommendation of a committee specially constituted for this purpose. The composition of the committee is as follows.<br>
+                        The committee considers the following aspects before finalizing the Fees Structure.<br>
+                        The fee structure prescribed by State Government for self-financing Engg. Colleges.<br>
+                        For furthet details <a href='#'>click here</a><br>
+                            <ul>
+                                <li>Member from Finance Committee</li>
+                                <li>Member from Board of Management</li>
+                                <li>Pro vice chancellor</li>
+                                <li>Convener - Registrar</li>
+                                <li>Balance sheet of 2007-08, 2006 -2007 and provisional income - expenditure statement of 2008-09</li>
+                                <li>Additional finance required to meet the phased implementation of VI pay commission</li>
+                                <li>Expansion programs envisaged for the University</li>
+                            </ul>
+                        </li>
+                        <li>Information regarding academic curriculum in respect of the courses offered, whether degree or diploma.<br>
+                            <ul>
+                                <li><a href='#'>Engineering Technology</a></li>
+                                <li><a href='#'>Medical & Health Sciences</a></li>
+                                <li><a href='#'>Science & Humanities</a></li>
+                                <li><a href='#'>Management</a></li>
+                            </ul>
+                        </li>
+                        <li>Information regarding all study centres, and its locations thereof, opened by the universities and institutions to impart distance education (with the approval of the UGC-AICTE-DEC joint Committee).<br>
+                            <ul>
+                                <li><b>Not Applicable</b></li>
+                            </ul>
+                        </li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/ugc_regulations-2012.pdf'>UGC (Mandatory assessment And accreditation of the Educational Institutions) Regulations, 2012</a></li>
+                        <li><a href='#'>SRMIST has been accredited by NAAC with the Highest 'A++' Grade in the year 2018, valid for the next 5 years.</a></li>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

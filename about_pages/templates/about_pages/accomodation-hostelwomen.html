@@ -1,0 +1,236 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > Hostel for Women</h4>
+                <h1>HOSTELS FOR WOMEN</h1>
+                <br>
+                <p>There are 7 blocks allotted for Women students of capacity varying from 250 to 700 in each block. 
+                The total capacity for Women’s hostel is about 4000.</p>
+                <br>
+                <p>
+                    <ul>
+                        <li><a href='https://www.srmist.edu.in/acdemics/womens-hostel-floor-plan'>Floor Plans</a></li>
+                    </ul>
+                </p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">Sister Nivedita (M Block)</h2>
+                                    <p>Welcome to Sister Nivedita hostel, also known as M-Block, is a fully furnished Girls’ hostel. 
+                                    This residential facility offers a comfortable accommodation to more than 1800 girls every year. 
+                                    It has 24 X 7 CCTV coverage, security guards surveillance, power backup and 
+                                    biometric attendance system which ensure the utmost security for girls.</p>
+                                    <p>Other amenities like Wi-Fi, fully equipped gym, indoor games hall, jogging and walking tracks, fully air-conditioned waiting halls, 
+                                    study hall ensure the utmost comfort for the students.  
+                                    Supermarkets, eatery shops, photocopier service and all the other shops catering to the daily requirement of the students are also present inside the premises.</p>
+                                    <p>This block’s entrance is facing north and all the rooms are fully furnished with attached bathrooms with cold and hot water facilities. 
+                                    In each room Study table, storage lockers, are available on double sharing basis.</p>
+                                    <p>Both A.C and Non A.C rooms are available for allotment. From First floor to Eighth floor both AC and Non-AC Rooms are available as mentioned in the floor plan. 
+                                    From 9th floor to 15th floor all the rooms are Non-AC.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Senbagam Block</h2>
+                                    <p>Senbagam girls Hostel has Ground plus 5 floors. This fully furnished hostel provides a comfortable stay, with a safe and a conducive environment for the girl students. 
+                                    For the safety of girls, it is equipped with 24 * 7 surveillance cameras, security guards and biometric attendance.</p>
+                                    <p>Thishostel provides WiFi, power backup and purified water facility. Students can spend their leisure time in the TV hall. Eatery shops, 
+                                    Photocopier service are also available near the block.</p>
+                                    <p>Senbagam block is a north facing building, with a dining hall in the ground floor. Rooms are furnished with a bed, wardrobe, study table, and chair.  The rooms are spacious and are available on triple sharing and six sharing basis.  
+                                    Common bathrooms with cold and hot water facility are available. The block can house above 400 students.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">ESQ A BLOCK</h2>
+                                    <p>Welcome to Engineering Staff Quarters A, also known as ESQ-A block, is a well furnished Girls hostel. This residential facility offers a homely accommodation, like living in a flat with balconies. 
+                                    This block has 30 flats (G + 9) and 2 lifts. Medical clinic room is there very nearby. 
+                                    Each flat is available on two, three and four sharing basis with a study hall. 
+                                    All the flats are Non AC and some of the flats are provided with attached washrooms.</p>
+                                    <p>Block entrance is facing east and all rooms are provided with study tables and storage lockers. Cold and hot water facilities, 24 x 7 Wi-fi facilities, indoor and outdoor games, 
+                                    jogging and walking tracks are also available. Eatery shops, photocopier service are present near the premises. 
+                                    It has security guards surveillance, power backup and biometric attendance system which ensure the utmost security for girls.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">ESQ B BLOCK</h2>
+                                    <p>Welcome to Engineering Staff Quarters B, also known as ESQ-B block, is a well furnished Girls hostel. 
+                                    This residential facility offers a homely accommodation, like living in a flat with balconies. 
+                                    This block has 40 flats (G + 9) and 2 lifts. Clinic room is available to ensure the medical facilities for the students. 
+                                    Each flat is available on two and three sharing basis with a study hall. All the flats are Non AC and some of the flats are provided with attached washrooms.</p>
+                                    <p>Block entrance is facing east and all rooms are provided with study tables and storage lockers. Cold and hot water facilities, 24 x 7 Wi-fi facilities, indoor and outdoor games, jogging and walking tracks are also available. 
+                                    Eatery shops, photocopier service are also present near the premises. 
+                                    It has security guards surveillance, power backup and biometric attendance system which ensure the utmost security for girls.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Kalpana Chawla Hostel</h2>
+                                    <p>Welcome to Kalpana Chawla hostel. It is a fully furnished Girls’ hostel, which has rooms from 2nd to 5th floor with a lift. 
+                                    Each floor has 25 AC rooms. This residential facility offers a comfortable accommodation to more than 250 girls every year. 
+                                    It has 24 X 7 CCTV coverage, security guards surveillance, power backup and biometric attendance system.</p>
+                                    <p>Other amenities like Wi-Fi, indoor games, TV hall, study hall ensure the utmost comfort for the students.</p>
+                                    <p>Supermarkets, eatery shops, photocopier service and all the other shops catering to the daily requirement of the students are also present very near to the premises. 
+                                    This block’s entrance is facing west and all the rooms are fully furnished with attached bathrooms with cold and hot water facilities. 
+                                    In each room Study table, storage lockers, are available on double sharing and triple sharing-basis.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Meenakshi Hostel</h2>
+                                    <p>Welcome to Meenakshi hostel. It is a fully furnished Girls’ hostel, which has rooms from ground floor to fourth floor. 
+                                    Each floor has 20 to 30 non-AC rooms with attached wash rooms which are available on triple sharing basis. 
+                                    This residential facility offers a comfortable accommodation to more than 350 girls every year. 
+                                    It has 24 X 7 CCTV coverage, security guards surveillance, power backup and biometric attendance system.</p>
+                                    <p>Other amenities like Wi-Fi, indoor games, Cloth Washing area, Gym Hall. 
+                                    TV hall, study hall and mess hall ensure the utmost comfort for the students. 
+                                    Supermarkets, eatery shops, photocopier service and all the other shops catering to the daily requirement of the students are also present very near to the premises. 
+                                    This block’s entrance is facing east and all the rooms are fully furnished with attached bathrooms with cold and hot water facilities. 
+                                    In each room Study table, storage lockers, ceiling fan are available.</p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

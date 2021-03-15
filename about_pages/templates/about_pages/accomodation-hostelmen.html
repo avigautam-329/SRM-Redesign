@@ -1,0 +1,198 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > Hostel for Men</h4>
+                <h1>HOSTELS FOR MEN</h1>
+                <br>
+                <p>There are 14 blocks allotted for Men of capacity varying from 200 to 1000 students in each block.
+                 The total capacity for Men’s hostel is about 7500.</p>
+                <br>
+                <p>
+                    <ul>
+                        <li><a href='https://www.srmist.edu.in/acdemics/mens-hostel-floor-plan'>Floor Plans</a></li>
+                    </ul>
+                </p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <h2 class="text-center">Adhiyaman</h2>
+                                    <p>Adhiyaman, known for his generosity in Tamil literature is said to have donated a rare gooseberry, 
+                                    with the characteristic feature of giving long life to the great poet Avvaiyar to promote literature. 
+                                    We accolade the gesture of the King and have a hostel campus after his name.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Kaari</h2>
+                                    <p>Kaari was considered the most modest of kings and is well known for his philanthropy. It is being said that nobody left empty-handed after visiting him. 
+                                    The visitor who came on barefoot would usually return vaulted on a horse or an elephant of his choice. 
+                                    He called himself not a king but a "rightful servant of his beloved people". 
+                                    Impressed with his credentials we named the hostel, Kaari to inspire the students of his benevolence.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Oori</h2>
+                                    <p>A man of courage is a man with good character deriving from deep-rooted godliness. The value of a man is not his financial equities but it is his character. 
+                                    A man of valor teaches others by demonstration what magnanimity is like. 
+                                    Oori known for his valor was said to have killed a lion, bear, deer and a boar with a single arrow. 
+                                    Inspired by his defiance, the hostel was named after the great philanthropist, Valvil Oori. 
+                                    It was constructed in the year 2008 and can house a maximum of 930 students.</p>
+                                </div>
+                                <div class="carousel-item ">
+
+                                    <h2 class="text-center">Paari</h2>
+                                    <p>Pari was one of the seven patron kings who were well known for philanthropy. 
+                                    One day as Pari was travelling through a forest on his golden chariot; wanted to quench his thirst and stopped near a stream.
+                                     When he returned he found that a mullai plant (a wild jasmine creeper) had entwined itself around one of the wheels of the chariot. 
+                                     To move the chariot would mean to break its tendril.</p>
+                                    <p>Sometimes it just a spark that brings on enlightenment and to Pari it came at that moment. Hence, he gave his golden chariot to the plant, and he walked back to his palace. 
+                                    Henceforth he gave away all his wealth. Tamils are well known for their hospitality. 
+                                    Pari's gesture to an ordinary Jasmine plant is a nice example.</p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

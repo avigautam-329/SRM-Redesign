@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous">
 
     <link href="{% static 'SRMRedesign/css/styles.css' %}" rel="stylesheet">
-    <link href="{% static 'SRMRedesign/css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'ExtendedPages/css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/dpt.css' %}" rel="stylesheet">
+    
     <title>SRM Institute of Science and Technology</title>
 
 </head>
@@ -35,12 +37,11 @@
                         <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{% url 'about_pages:srminfocus' %}">Facts</a></li>
                             <li><a class="dropdown-item" href="{% url 'about_pages:ourcampus' %}">The Campus</a></li>
-                            <li><a class="dropdown-item" href="#">Student Accomodation</a></li>
-                            <li><a class="dropdown-item" href="#">Governance</a></li>
-                            <li><a class="dropdown-item" href="#">Student Achievements</a></li>
-                            <li><a class="dropdown-item" href="#">Career Centre</a></li>
-                            <li><a class="dropdown-item" href="#">Visiting SRM</a></li>
-                            <li><a class="dropdown-item" href="#">SRM CARE</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:accwelcomehostel' %}">Student Accomodation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:govpublicinterest' %}">Governance</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/">Career Centre</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:visitingaboutktr' %}">Visiting SRM</a></li>
+                            <li><a class="dropdown-item" href="https://care.srmist.edu.in/#/">SRM CARE</a></li>
                         </ul>
                     </li>
 
@@ -50,7 +51,7 @@
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Colleges And Schools</a></li>
-                            <li><a class="dropdown-item" href="#">Departments</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
                             <li><a class="dropdown-item" href="#">Faculty Directory</a></li>
                             <li><a class="dropdown-item" href="#">Library</a></li>
                         </ul>
@@ -74,10 +75,10 @@
                   RESEARCH
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Directorate of Research</a></li>
-                            <li><a class="dropdown-item" href="#">Academic Research</a></li>
-                            <li><a class="dropdown-item" href="#">Funded Research</a></li>
-                            <li><a class="dropdown-item" href="#">Centre For Statistics</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/directorate-of-research/">Directorate of Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/research/phd_research">Academic Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/content/funded-research">Funded Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/centre-for-statistics/">Centre For Statistics</a></li>
 
                         </ul>
                     </li>
@@ -88,9 +89,8 @@
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Students</a></li>
-                            <li><a class="dropdown-item" href="#">Faculty</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
                             <li><a class="dropdown-item" href="#">Alumni</a></li>
-                            <li><a class="dropdown-item" href="#">Parents</a></li>
                             <li><a class="dropdown-item" href="#">Visitors</a></li>
 
                         </ul>
@@ -101,12 +101,12 @@
                   MORE
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Campus Life</a></li>
-                            <li><a class="dropdown-item" href="#">Placements</a></li>
-                            <li><a class="dropdown-item" href="#">Group Institutions</a></li>
-                            <li><a class="dropdown-item" href="#">Announcements</a></li>
-                            <li><a class="dropdown-item" href="#">News</a></li>
-                            <li><a class="dropdown-item" href="#">Events</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:campartsnculture' %}">Campus Life</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/about">Placements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:grpinstitutions' %}">Group Institutions</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:announcements' %}">Announcements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:news' %}">News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:events' %}">Events</a></li>
 
                         </ul>
                     </li>

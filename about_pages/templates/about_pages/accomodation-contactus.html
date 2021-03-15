@@ -1,0 +1,184 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > Contact Us</h4>
+                <h1>CONTACT US</h1>
+                <br>
+                <p style='font-size:18px'><b>For any queries related to Hostels,  Contact as under:</b></p>
+                <p><b>Email ID:</b><a href='#'> hostel.helpdesk.ktr@srmist.edu.in</a></p>
+                <p><b>Contact Number - Timings from 09.00 am to 06.00 pm</b></p>
+                <p>
+                    <ul>
+                        <li>Accounts Office - 044-27434503</li>
+                        <li>Hostel Office - 044-27434506, 044-27456364, 044-27453159, 044-27456363</li>
+                    </ul>
+                </p>
+                <br>
+                <p style='font-size:18px'><b>For Pierre Fauchard (PF) Hostel</b></p>
+                <p>
+                    <ul>
+                        <li>Contact number: 044-27414728</li>
+                        <li>Mobile Number - 6381310672, 8056016621</li>
+                    </ul>
+                </p>
+                <p style='font-size:18px'><b>For Sister Nivedita M Block - Timings from 09.00 am to 06.00 pm</b></p>
+                <p>
+                    <ul>
+                        <li>Email ID:<a href='#'> warden.sisternivedita.ktr@srmist.edu.in</a></li>
+                        <li>Contact number -  044-27414728</li>
+                        <li>Mobile Numbers - 6381310672 & 8056016627</li>
+                    </ul>
+                </p>
+                <p>
+                <img src="{% static "media/images/about/contact-1.png" %}">
+                <img src="{% static "media/images/about/contact-2.png" %}">
+                </p>
+                <p><img src="{% static "media/images/about/contact-3.png" %}"></p>
+                <p><img src="{% static "media/images/about/contact-4.png" %}"></p>
+                <br>
+                <p style='font-size:20px'>Hostel Authorities</p>
+                <p style='font-size:18px'><b>The Director (Campus Life)</b></p>
+                <p>Dr. M. Leenus Jesu Martin<br>
+                SRM Hostels,<br>
+                SRMIST Institute of Science and Technology</p>
+                <p><b>Tele -</b> 044 - 27453159, 27456363, 27456364</p>
+                <p><b>E.Mail –</b><a href='#'> director.cl@srmist.edu.in</a></p>
+                <p style='font-size:18px'><b>Associate Director  (Gents Hostels)</b></p>
+                <p>Dr. K. Anbazhagan</p>
+                <p><b>E.Mail –</b><a href='#'> assocdirector.clgh@srmist.edu.in</a></p>
+                <p style='font-size:18px'><b>Associate Director (Girls Hostels)</b></p>
+                <p>Dr.E.Poovammal</p>
+                <p><b>E.Mail –</b><a href='#'> assocdirector.cllh@srmist.edu.in</a></p>
+                <p style='font-size:18px'><b>The Director (Campus Life)</b></p>
+                <p>The Registrar<br>
+                SRM Institute of Science and Technology (formerly known as SRM University),<br>
+                SRM Nagar, Kattankulathur - 603 203.</p>
+                <p><b>Phone: </b>+91-44-2741 7100</p>
+                <p><b>Fax: </b>+91-44-2745 2343</p>
+                <p><b>E.Mail –</b><a href='#'> registrar@srmist.edu.in</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

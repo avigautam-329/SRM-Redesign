@@ -1,0 +1,116 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>CAMPUS LIFE</h1>
+                </div>
+                <div>
+                    <p>Home > More > Campus Life</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                    <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                    <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                        <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                        <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                        <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                        <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus Life > Caste Discrimination</h4>
+                <h1>CASTE DISCRIMINATION</h1>
+                <p style='font-size:22px'><b>"We are Indians, firstly & lastly": Dr. Ambedkar</b></p>
+                <p>Caste prejudiced violence and sentiments are rising throughout our nation. Cutting across the religious and cultural divide, such hostility threaten the community of minorities. 
+                In the land where leaders like Gandhi and Ambedkar relentlessly strived for the abolition of the caste system, we now have instances of discrimination in educational institutions. 
+                This sorry state of affairs is highly condemned by the UGC and Indian Law. Being temples of learning, 
+                educational institutions should inculcate in the minds of faculty and students that people should protect and defend the dignity of each individual through respect for human rights and the rule of law.</p>
+                <p>With a view to providing a safe and secure learning ambiance for the students, SRM Institute of Science and Technology (formerly known as SRM University) takes every possible step to eradicate any form of caste - based prejudices and discrimination in its facilities. The management along with the complete support of its faculty and staff has been able to maintain a peaceful environment where no sign of discrimination is tolerated. 
+                With its 25 plus years of meritorious service in the educational sector, the SRM Group has built its positive reputation among people of the different strata of the society. Merits-based and other need based Scholarships are given to deserving candidates. 
+                SRMU has to its credit a globally acknowledged multicultural educational space. 
+                Within SRMU we value learning, mutual respect, teamwork, and diverse points of view.</p>
+                <p>SRMU has set motivated goals for accomplishing measurable out comes as to make a difference in our students' lives. 
+                The University has left no stone unturned to set an environment of freedom to the students during their stay here in the campus. 
+                In case there is a situation where in the student / faculty feels let down or humiliated due to some callous comment of someone or if he / she feels that they are being targeted by a particular faculty / peers due to their extremist and biased belief in caste, 
+                the person can lodge a complaint in the prescribed form that will reach a senior University official, which will be followed by an enquiry for justice to be delivered.</p>
+                <p style='font-size:20px'><b>Complaints can be made!</b></p>
+                <p>Please fill the<a href='https://grievances.srmist.edu.in/pcbd/'> online form</a> and submit your complaints.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

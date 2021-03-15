@@ -25,6 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.HomePage.as_view(),name='home'),
     url(r'^About/',include('about_pages.urls',namespace='aboutpages')),
+    url(r'^More/',include('more_pages.urls',namespace='morepages')),
+    url(r'^Academics/',include('academics_pages.urls',namespace='academicspages')),
+    url(r'^For-You/',include('foryou_pages.urls',namespace='foryoupages')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

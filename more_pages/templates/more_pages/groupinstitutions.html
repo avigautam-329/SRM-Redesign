@@ -1,0 +1,79 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>Group Institutions</h1>
+                </div>
+                <div>
+                    <p>Home > More > Group Institutions</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:grpinstitutions' %}">ALL CAMPUSES</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:grpinstitutions' %}">ALL CAMPUSES</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="#">MORE INFORMATION ON CAMPUSES</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="#">MORE INFORMATION ON CAMPUSES</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Group Institutions > All Campuses</h4>
+                <h1>ALL CAMPUSES</h1>
+
+                <p style='font-size:20px'>SRM Institute of Science And Technology, Chennai</p>
+                <p>
+                    <ul>
+                        <li><a href='{% url 'home' %}'>Kattankulathur Campus</a></li>
+                        <li><a href='https://srmrmp.edu.in/'>Ramapuram Campus</a></li>
+                        <li><a href='https://www.srmup.in/'>NCR - Ghaziabad Campus</a></li>
+                        <li><a href='https://www.srmist.edu.in/vadapalani/'>Vadapalani Campus</a></li>
+                    </ul>
+                </p>
+                <br>
+                <p style='font-size:20px'><a href='https://srmap.edu.in/'>SRM University, Andhra Pradesh</a></p>
+                <br>
+                <p style='font-size:20px'><a href='https://www.srmuniversity.ac.in/'>SRM University, Haryana</a></p>
+                <br>
+                <p style='font-size:20px'><a href='#'>SRM University, Sikkim</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>CAMPUS LIFE</h1>
+                </div>
+                <div>
+                    <p>Home > More > Campus Life</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}" class="active">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                    <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                    <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                        <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                        <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                        <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                        <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus Life > Athletics & Fitness</h4>
+                <h1>ATHLETICS & FITNESS</h1>
+
+                <p style='font-size:20px'>Sporting Excellence...</p>
+                <p>SRM has excellent sports and recreation facilities on campus, with dedicated facilities for tennis, 
+                basketball, badminton, volley ball, yoga and various other sports.</p>
+                <p>Students participate regularly in Inter Collegiate, Inter University and State Level Tournaments and have won laurels for SRM.</p>
+                <p style='font-size:20px'>Fitness Centre</p>
+                <p>For students to stay fit and healthy, all hostels are equipped with gym and fitness centre facilities - treadmill, 
+                exercise bikes and more of the latest fitness equipment.</p>
+                <p>The central gym for men at SRM is also equipped with body building equipment.</p>
+                <p>All gyms and fitness centers are open both in the morning and evening hours.</p>
+                <p style='font-size:20px'>A healthy body and a healthy mind with Yoga</p>
+                <p>Yoga sessions are conducted for students to help them maintain both healthy body and mind.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,1849 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link href="{% static 'SRMRedesign/css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/announcement.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/about.css' %}" rel="stylesheet">
+    
+    <title>SRM Institute of Science and Technology</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ABOUT
+                </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about_pages:srminfocus' %}">Facts</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:ourcampus' %}">The Campus</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:accwelcomehostel' %}">Student Accomodation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:govpublicinterest' %}">Governance</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/">Career Centre</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:visitingaboutktr' %}">Visiting SRM</a></li>
+                            <li><a class="dropdown-item" href="https://care.srmist.edu.in/#/">SRM CARE</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ACADEMICS
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="#">Departments</a></li>
+                            <li><a class="dropdown-item" href="#">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="#">Library</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ADMISSION
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Admission India</a></li>
+                            <li><a class="dropdown-item" href="#">Admission International</a></li>
+                            <li><a class="dropdown-item" href="#">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="#">Transfer Program</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  RESEARCH
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/directorate-of-research/">Directorate of Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/research/phd_research">Academic Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/content/funded-research">Funded Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/centre-for-statistics/">Centre For Statistics</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  FOR YOU
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
+                            <li><a class="dropdown-item" href="#">Alumni</a></li>
+                            <li><a class="dropdown-item" href="#">Visitors</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MORE
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'more_pages:campartsnculture' %}">Campus Life</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/about">Placements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:grpinstitutions' %}">Group Institutions</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:announcements' %}">Announcements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:news' %}">News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:events' %}">Events</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="content" class="column container">
+        <div class="section">
+            <div class="tabs">
+            </div>
+
+            <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+
+                    <div class="content">
+                        <div class="view view-faculty-directory view-id-faculty_directory view-display-id-page view-dom-id-a499f9e7bdf7f1e77b065845527f36ef">
+
+                            <div class="view-filters">
+                                <form action="/faculty-directory" method="get" id="views-exposed-form-faculty-directory-page" accept-charset="UTF-8">
+                                    <div>
+
+                                        <!--<div class="views-exposed-form">-->
+                                        <div>
+                                            <div class="views-exposed-widgets clearfix margin-top-16px">
+                                                <div id="edit-title-wrapper" class=" col-xs-12 col-sm-12 col-md-12 col-lg-4 margin-latest-res textBoxPart views-exposed-widget views-widget-filter-title">
+                                                    <div class="col-md-6">
+                                                        <label for="edit-title" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 labelStyle">
+By Name          </label>
+                                                        <div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+                                                            <div class="form-item form-type-textfield form-item-title">
+                                                                <input type="text" id="edit-title" name="title" value="" size="30" maxlength="128" class="form-text" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+    </div>-->
+                                                </div>
+                                                <div id="edit-body-value-3-wrapper" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-latest-res textBoxPart views-exposed-widget views-widget-filter-body_value_3">
+                                                    <div class="col-md-6">
+                                                        <label for="edit-body-value-3" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 labelStyle">
+By Colleges          </label>
+                                                        <div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+                                                            <div class="form-item form-type-select form-item-body-value-3">
+                                                                <select id="edit-body-value-3" name="body_value_3" class="form-select"><option value="All" selected="selected">- Any -</option><option value="1">College of Engineering</option><option value="2">College of Medicine and Health Science</option><option value="3">College of Science and Humanities</option><option value="4">School of Management</option></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+    </div>-->
+                                                </div>
+                                                <div id="edit-body-value-4-wrapper" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-latest-res textBoxPart views-exposed-widget views-widget-filter-body_value_4">
+                                                    <div class="col-md-6">
+                                                        <label for="edit-body-value-4" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 labelStyle">
+By Designation          </label>
+                                                        <div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+                                                            <div class="form-item form-type-select form-item-body-value-4">
+                                                                <select id="edit-body-value-4" name="body_value_4" class="form-select"><option value="All" selected="selected">- Any -</option><option value="1">Assistant Professor</option><option value="2">Associate Professor</option><option value="3">Dean</option><option value="4">Educational Consultant</option><option value="5">Head of Department</option><option value="6">Professor</option><option value="7">Project Officer</option><option value="8">Teaching Associate</option><option value="9">Visiting Professor</option></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+    </div>-->
+                                                </div>
+                                                <div id="edit-body-value-5-wrapper" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-latest-res textBoxPart views-exposed-widget views-widget-filter-body_value_5">
+                                                    <div class="col-md-6">
+                                                        <label for="edit-body-value-5" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 labelStyle">
+By Areas          </label>
+                                                        <div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+                                                            <div class="form-item form-type-textfield form-item-body-value-5">
+                                                                <input type="text" id="edit-body-value-5" name="body_value_5" value="" size="30" maxlength="128" class="form-text" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="views-widget col-xs-9 col-sm-7 col-md-7 col-lg-7">
+    </div>-->
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-latest-res textBoxPart">
+                                                    <div class="btmSpace15px">
+                                                        <ul class="btnAlignCenter">
+                                                            <li>
+                                                                <div class="views-exposed-widget views-submit-button">
+                                                                    <input type="submit" id="edit-submit-faculty-directory" name="" value="SUBMIT" class="form-submit" /> </div>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            <div class="view-content">
+                                <style>
+                                    .view-faculty-directory .views-field-title span a {
+                                        font-size: 13px;
+                                        font-weight: bold;
+                                    }
+                                    
+                                    .view-faculty-directory table>tbody>tr:nth-child(2n+1)>td,
+                                    .view-faculty-directory table>tbody>tr:nth-child(2n+1)>th {
+                                        background-color: #fff;
+                                    }
+                                    
+                                    .hostel-fee tr,
+                                    .hostel-fee td {
+                                        border-color: #fff !important;
+                                    }
+                                    
+                                    .topic-india {
+                                        background-color: #f2f2f2 !important;
+                                        border: 3px solid #ffffff !important;
+                                        box-shadow: 1px 0 2px 2px #cccccc;
+                                        height: 84px !important;
+                                        margin-left: 10px !important;
+                                        margin-top: 14px !important;
+                                        padding: 2px;
+                                        width: 109px !important;
+                                    }
+                                </style>
+                                <div class="btmBorderDashed  btmSpace15px">
+                                    <div class="row  margin-top-16px ">
+                                        <div class="col-md-12">
+                                            <ul class="allSearchView">
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/all">ALL</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/a">A</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/b">B</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/c">C</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/d">D</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/e">E</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/f">F</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/g">G</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/h">H</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/i">I</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/j">J</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/k">K</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/l">L</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/m">M</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/n">N</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/o">O</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/p">P</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/q">Q</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/r">R</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/s">S</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/t">T</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/u">U</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/v">V</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/w">W</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/x">X</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/y">Y</a></li>
+                                                <li><a class="alpha-page" href="https://www.srmist.edu.in/faculty-directory/z">Z</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="clear:both"></div>
+
+                                <div class="views-row views-row-1 views-row-odd views-row-first">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/medicine/clinical-psychology/faculty/nayanthara-o">Ms.Nayanthara. O</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <p>
+                                                <?php global $base_url; ??>
+                                            </p>
+                                            <div class="event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft home_hd flft table table-striped hostel-fee" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                <img alt="Ms.Nayanthara. O" src="/sites/default/files/images/o-nayanthara.jpg" style="width: 150px; height: 168px;" /></td>
+                                                            <td valign="top">
+                                                                <h5>
+                                                                    Ms.Nayanthara. O</h5>
+                                                                <p>Professor and Head</p>
+                                                                <p><b>Area:</b> Clinical Psychology<br /><b>Affiliation:</b> Department of Clinical Psychology, SRM Medical College Hospital and Research Centre , Kattankulathur Campus, SRM Institute of Science
+                                                                    and Technology.</p>
+                                                                <p><strong>Email ID</strong>: <a href="mailto:nayantho@srmist.edu.in">nayantho@srmist.edu.in</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <b>Education</b>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                    <tbody>
+                                                                        <tr class="boxsecond">
+                                                                            <td valign="top" width="20%">
+                                                                                M.Phil.</td>
+                                                                            <td valign="top" width="40%">
+                                                                                Clinical Psychology</td>
+                                                                            <td valign="top">
+                                                                                SRM Institute of Science and Technology, 2018</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3>
+                                                                    Other Details:</h3>
+                                                                <p><b>Research Interests</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Learning Disability , Neuropsychology</li>
+                                                                </ul>
+                                                                <p><strong>Working Papers</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Neuropsychological soft signs among Alcoholic patients</li>
+                                                                </ul>
+                                                                <p><strong>Work in Progress</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        LD battery in Tamil and Malayalam</li>
+                                                                </ul>
+                                                                <p><b>Academic Experiences</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        • Worked as a Clinical Psychologist from November 2018 to January 2018 in Manomithra Hospital.</li>
+                                                                </ul>
+                                                                <p><strong>Other Professional Experiences</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Consultant Psychologist at Hinduja TMT, Bangalore from 05/09/2003 to 12/11/2005.</li>
+                                                                </ul>
+                                                                <p><strong>Workshops /Seminars/Conferences Attended</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Attended a workshop on Cognitive Training in traumatic brain injury in the year 2018, February at SRMIST Chennai.</li>
+                                                                </ul>
+                                                                <p><strong>Memberships</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Rehabilitation Council of India - A 62974 </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" colspan="2" valign="bottom">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p> </p>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-2 views-row-even">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/medicine/health-science/aslp/faculty/dr-usha-dalvi">Dr. Usha A. Dalvi</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <p>
+                                                <?php global $base_url; ??>
+                                            </p>
+                                            <div class="content event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                <img alt="" src="/sites/default/files/images/" title="" /><img alt="Usha A. Dalvi" class="img-thumbnail img-responsive" src="/sites/default/files/images/usha-dalvi.jpg" style="width: 150px; height: 168px;"
+                                                                /></td>
+                                                            <td valign="top">
+                                                                <h5>
+                                                                    Dr. Usha A. Dalvi</h5>
+                                                                <p>Professor<br /><b>Area:</b> Audiology and Speech Language Pathology<br /><b>Affiliation:</b> Department of Audiology and Speech Language Pathology, Faculty of Medicine and Health Sciences,SRM
+                                                                    Medical College Hospital and Research Centre, Kattankulathur campus.</p>
+                                                                <p>Email ID: <a href="mailto:ushaa@srmist.edu.in">ushaa@srmist.edu.in</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <b>Education</b>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                    <tbody>
+                                                                        <tr class="boxsecond">
+                                                                            <td valign="top">
+                                                                                Ph.D.</td>
+                                                                            <td valign="top">
+                                                                                Doctorate in Speech Language Pathology</td>
+                                                                            <td valign="top">
+                                                                                Maharashtra University of Health Sciences, Nashik, 2016</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top">
+                                                                                MASLP</td>
+                                                                            <td valign="top">
+                                                                                Masters in Speech and Hearing</td>
+                                                                            <td valign="top">
+                                                                                All India Institute of Speech and Hearing, Mysore, 1986</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top">
+                                                                                BASLP </td>
+                                                                            <td valign="top">
+                                                                                Bachelors in Speech and Hearing</td>
+                                                                            <td valign="top">
+                                                                                All India Institute of Speech and Hearing, Mysore, 1974</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3>
+                                                                    Other Details:</h3>
+                                                                <p><b>Courses</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Adult Language Disorders and Augmentative and Alternative Communication.</li>
+                                                                </ul>
+                                                                <p><b>Research Interests</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Childhood and Adult Language Disorders, Motor Speech Disorders, Dysphagia and Augmentative and Alternative Communication</li>
+                                                                </ul>
+                                                                <p><b>Selected Publications</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Prema Devi, Usha Dalvi, Venkat raman Prusty Working Memory and Communication in Adults and Elderly Population Paperback – August 11, 2015</li>
+                                                                    <li>
+                                                                        Dalvi, U. A.; Varsha, N.S. (2015). Study of Inferential Ability in Primary School Children. Languagesinindia .Vol. 15 (11), p208-226</li>
+                                                                    <li>
+                                                                        Ravali P. Mathur ; Dalvi.U. A; Yaashna A. Rajani. (2015). Prevalence of learning disability in primary school students with hearing impairment in Mumbai, India. International Journal of Science and Applied Research 2 (12) , p117-121</li>
+                                                                    <li>
+                                                                        Prathana Karunaimathi V., Gladis D. &amp; Dalvi U. A (2015). A Study of Fo estimation based on ARAPT framework using sustained vowel. In Fourth International Conference on “Advances in computing, communication &amp; informatics” conference proceeding.
+                                                                        p187-192
+                                                                    </li>
+                                                                    <li>
+                                                                        Dali &amp; Dalvi, U., (2012). Language deficits, recovery patterns and effective intervention in a multilingual 16 years post TBI". In M.R. Gitterman, M. Goral, &amp; L.K. Obler (Eds) Aspects of Multilingual Aphasia. Bristol: Multilingual matters.p123-138</li>
+                                                                    <li>
+                                                                        Reuban Thomas Vargese &amp; Usha Dalvi (2012). Speech LanguagePathologists in Early Intervention of Children with ADHD-A case Study. In Journal of Disability Management and Special Education; 2(2),49-55</li>
+                                                                    <li>
+                                                                        Shah, U., &amp; Dalvi, U., (2011). Role of SLP in the Management of Individuals with Parkinson's Disease. In Journal of Parkinson's Disease and Movement Disorder Society (PDMDS) issue 13, Nov. p 18-19</li>
+                                                                    <li>
+                                                                        Indranil Chatterjee, Usha Dalvi &amp; Zoramsiami (2010). Study of communicative competence of Adults with hearing Impairment. In Journal of Rehabilitation council of India; 2 (1&amp;2) p1-10</li>
+                                                                    <li>
+                                                                        Dalvi, U. &amp; Kant, A. R., (2010). Contributed to the Tutorial on the International Classification of Functioning, Disability and Health. In Journal of Indian Speech and Hearing Association, Mysore. p27-33</li>
+                                                                    <li>
+                                                                        Dalvi, U. (2010). Introduction to Speech and Speech teaching to the hearing impaired - Block I (Unit 1 to 4) Speech Mechanism for Tamil Nadu Open University, SEDE course material, Chennai. p 5-88 </li>
+                                                                </ul>
+                                                                <p><b>Papers Presented</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Usha,D., Usha Sri, S.V., Priyankaa, A., (2018). Phonological awareness in children with Mental Retardation-A Pilot study, at the International conference on Challenging Exclusion, SRM, Kattankulathur.</li>
+                                                                    <li>
+                                                                        Dalvi.U.A., Aishwarya,N., Shivaranjini (2015). Comprehensive study of semantic and syntactic aspects in primary school children.” Oral presentation in TANISHA, September, 2015 at KanyaKumari.</li>
+                                                                    <li>
+                                                                        Navitha.U., Dalvi.U.A., Tamilselvan G., (2015). Practices regarding NG tube removal in dysphagia patients following stroke- a survey on SLP’S content, knowledge And recommendation. Poster presentation in TANISHA, September, 2015, at Kanyakumari.</li>
+                                                                    <li>
+                                                                        Dalvi.U.A., Ranjitha.R., Nandini.S., (2015). Attitudes of fifth and seventh standard students towards reading. Poster presentation in TANISHA, September, 2015, at Kanyakumari.</li>
+                                                                    <li>
+                                                                        Mukherjee, T., Dalvi, U. &amp; Sharadha L.N (2013). Role of SLPs in the management of suicidal hanging” Oral presentation in TANISHA, September, 2013.</li>
+                                                                </ul>
+                                                                <p>Accepted for Publications</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Application of Sanskrit Grammar in Communication Disorders” to the book titled “Paradigm Shift in Indian Linguistics and its implications for Applied Disciplines” on 17.10.18.</li>
+                                                                </ul>
+                                                                <p>Projects Completed</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        “Development and Standardization of Articulation Test and Language Test in seven Indian Languages." at Ali Yavar Jung National Institute for Hearing Handicapped, Bandra, Mumbai in collaboration with Regional Rehabilitation Training Center, Chennai, 1990,
+                                                                        as a research officer for UNICEF funded Project</li>
+                                                                    <li>
+                                                                        " Hindi Learning Package" resource material for facilitating language development in Children with Hearing Impairment and other language Disorders, 2007 as a Principle Investigator for a Science and Technology Mission Mode, Govt. of India funded Project
+                                                                        titled
+                                                                    </li>
+                                                                </ul>
+                                                                <p><strong>Working Papers</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        With Ms. Saranya “Development of Voice onset time of plosives in Native Tamil speaking bilingual children”</li>
+                                                                    <li>
+                                                                        With Ms. Jilu “Relationship between birth weight,mode of delvery and maternal factors on acoustical parameters of Neonatal cry”.</li>
+                                                                </ul>
+                                                                <p><strong>Work in Progress</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        With Dr. Varshini Karthik, I/c HOD &amp; Prof., Dept. of Biomedical Engineering, Dr.Anita G. &amp; Asst.Prof. Dept. of Biomedical Engineering an Interdisciplinary collaborative project titled “Development of an instrument for Assessment of Pharyngeal
+                                                                        Phase of Swallowing”</li>
+                                                                    <li>
+                                                                        With Lakhmi Sree “A Comparative Study of Linguistic Measures of Story Retelling Ability and Self Narrative skills among Native Tamil speaking First and Second Standard Urban School Children”</li>
+                                                                    <li>
+                                                                        Inferential ability in Children with and without Hearing Impairment</li>
+                                                                </ul>
+                                                                <p><b>Academic experiences</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Associate Professor, Dept. of Audiology and Speech Language Pathology, SRM MCH &amp; RC, Kattankulathur, Oct.2012- 20th Oct 2016</li>
+                                                                    <li>
+                                                                        Lecturer, Dept. of Speech Language Pathology, Ali Yavar Jung National Institute for the Hearing Handicapped, Mumbai, Jan 1991 – Sep 2012</li>
+                                                                </ul>
+                                                                <p><b>Other Professional Experiences</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        RCI inspector for granting a continuation of BASLP and MASLP courses Affiliated to various Universities.</li>
+                                                                    <li>
+                                                                        Inspector for approval and sanction of Grant-in-aid for NGO by Ministry of Social Justice and Empowerment, Govt.Of India, New Delhi</li>
+                                                                    <li>
+                                                                        Holding the charge of treasurer ISAAC – India chapter, Mumbai</li>
+                                                                </ul>
+                                                                <p><strong>Workshops, Seminars and Conferences</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        “Strategies to implement Augmentative and Alternative Communication in Children” at the National Seminar on ”Unlocking AAC concepts in children with complex communication needs” held at National Institute of Speech and Hearing, Trivandrum, in Jan 2019.</li>
+                                                                    <li>
+                                                                        “ Overcoming challenges and barriers in implementing Augmentative and Alternative communication in Indian Context” Panelist for the topic at the National Seminar on ”Unlocking AAC concepts in children with complex communication needs” held at National
+                                                                        Institute of Speech and Hearing, Trivandrum, in Jan 2019</li>
+                                                                    <li>
+                                                                        ‘Care of Special Children-Challenges Ahead’at Seminar on “Transformation and Innovations of Evidence Based Nursing-21st Century Challenges in Pediatric Practices” held at SRM College of Nursing in Feb 2018.</li>
+                                                                    <li>
+                                                                        “Inclusion through Augmentative and Alternative Communication” at the 3rd International Conference on ” Challenging Exclusion” held at SRM Institute of science and Technology to deliver a lecture in Feb 2018</li>
+                                                                    <li>
+                                                                        “Alternative and Augmentative Communication” at the Multi Disciplinary National conference on “Current Trends in Multidisciplinary Care for Children with Developmental Disabilities” at University of Calicut in Feb 2018. </li>
+                                                                    <li>
+                                                                        “Evidence Based AAC Assessment and Clinical Demonstration” at HCC Flash Series II held at Holy Cross College, Trichy, in March 2018.</li>
+                                                                    <li>
+                                                                        “Subjective assessment of feeding and swallowing in children with cerebral palsy” at the RCI-CRE National seminar on Assessment and management of feeding and swallowing problems in children with cerebral palsy – A multidisciplinary approach held at Manipal,
+                                                                        in Feb., 2017.</li>
+                                                                    <li>
+                                                                        “Management of oral sensory deficits” at the RCI-CRE National seminar on “Assessment and management of feeding and swallowing problems in children with cerebral palsy – A multidisciplinary approach” at Manipal, February, 2017. </li>
+                                                                    <li>
+                                                                        “Application of Sanskrit grammar in Communication Disorders” at the “Paradigm Shift in Indian Linguistics and its implications for Applied Disciplines “ at Indian Institute of Advanced Study, Shimla in Oct. 2017</li>
+                                                                    <li>
+                                                                        “Management strategies in restoration of speech and language in children” at the 10th World cleft lip, Palate and craniofacial congress of International cleft lip and palate foundation .held at Chennai in October, 2016.</li>
+                                                                    <li>
+                                                                        “Communication Systems – Current Practices” at the 13th National Workshop on “Early Intervention in Mental Retardation” Chennai in Nov.2016.</li>
+                                                                </ul>
+                                                                <p>Scholarships</p>
+                                                                <ul>
+                                                                    <li>
+                                                                        First recipient of “Teacher in Residence” scholarship awarded by International Society for Augmentative and Alternative Communication, Canada and Bridge School, San Francisco, USA, Aug 1998 -June 1999 </li>
+                                                                </ul>
+                                                                <p><b>Achievements and Awards</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Professor R.K. Oza Oration award for the year 2019 for successful Entrepreneur in the field of Speech and Hearing from India by Indian Speech and Hearing Association, at the 51st ISHACON held at Bangaluru in Feb 2019</li>
+                                                                    <li>
+                                                                        Indian Speech &amp; Hearing Association (ISHA). L11030159 (1976)</li>
+                                                                    <li>
+                                                                        Member of International Society for Augmentative and Alternative Communication (ISAAC). Canada (2019)</li>
+                                                                    <li>
+                                                                        Life member of Maharashtra Indian Speech &amp; Hearing Association Branch (MISHA). (2000)</li>
+                                                                    <li>
+                                                                        Life member of Indian Academy of Cerebral Palsy (2005)</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" colspan="2" valign="bottom">
+                                                                <a class="contentlink" href="javascript:window.close();">X Close</a></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p> </p>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-3 views-row-odd">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/medicine/pharmacy/faculty/ahalya-s-p">Ahalya.S.P</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="event-heading course_eng faculty_table">
+                                                <div id="content-inner">
+                                                    <div id="content-content">
+                                                        <div class="node odd full-node node-type-faculty" id="node-1821">
+                                                            <div class="content">
+                                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                                <img alt="ahalya-s-p" src="/sites/default/files/images/ahalya-s-p.jpg" style="width: 150px; height: 168px;" /></td>
+                                                                            <td valign="top">
+                                                                                <h5>
+                                                                                    Ms.Ahalya.S.P</h5>
+                                                                                <p>Assistant Professor</p>
+                                                                                <p> <b>Email: </b><a href="mailto:ahalyap@srmist.edu.in">ahalyap@srmist.edu.in</a><br /><b>Area:</b> Pharmacy Practice<br /><b>Affiliation:</b> SRM College of Pharmacy, SRM Institute
+                                                                                    of Science and Technology (formerly known as SRM University).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <b>Education</b>
+                                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr class="boxsecond">
+                                                                                            <td valign="top">
+                                                                                                M.Pharm</td>
+                                                                                            <td valign="top">
+                                                                                                Pharmacy Practice</td>
+                                                                                            <td valign="top">
+                                                                                                Sri Ramachandra Institute of Higher Education and research, Faculty of Pharmacy, 2017</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td valign="top">
+                                                                                                B.Pharm.</td>
+                                                                                            <td valign="top">
+                                                                                                Pharmacy</td>
+                                                                                            <td valign="top">
+                                                                                                Sri Ramachandra Institute of Higher Education and research, Faculty of Pharmacy, 2015</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" valign="top">
+                                                                                <h3>
+                                                                                    Other Details:</h3>
+                                                                                <p><b>Research Interests</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Pharmacovigilance</li>
+                                                                                    <li>
+                                                                                        Therapeutic Drug Monitoring</li>
+                                                                                    <li>
+                                                                                        Clinical Research </li>
+                                                                                </ul>
+                                                                                <p><b>Selected Publications</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Effect of hemocare syrup and hemocare XT tablets on hemoglobin levels in iron deficiency anemia among women of reproductive age: A randomized, placebo controlled, open label trial. Contemp Clin Trials Commun;2019;15:100425.</li>
+                                                                                    <li>
+                                                                                        Overview of Metformin as a host directed therapy in tuberculosis. Research J. Pharm. and Tech;2019;12(7):3211-3213.</li>
+                                                                                    <li>
+                                                                                        A systematic review of second-line controller combination therapy options for the management of asthma. Drugs and Therapy Perspectives;2019;35(2):77-85.</li>
+                                                                                    <li>
+                                                                                        A review on benefits and toxicity of orlistat therapy. Drug Intervention Today;2019;12(3);550-553.</li>
+                                                                                    <li>
+                                                                                        Assessment of pharmacists-led drug information services in a tertiary care teaching hospital in India. Journal of medical sciences;2017;17(2);102-106.</li>
+                                                                                </ul>
+                                                                                <p><b>Working Papers</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        A retrospective study on ADR reported in a tertiary care teaching hospital.</li>
+                                                                                    <li>
+                                                                                        Effect of HCQ in recurrent abortion</li>
+                                                                                </ul>
+                                                                                <p><b>Academic Experiences</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Assistant professor, SRM College of Pharmacy, SRMIST, October 2017 to till date</li>
+                                                                                </ul>
+                                                                                <p><b>Conferences/Seminars/Workshops Attended</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        International conference on ‘Clinical Pharmacy Practice Skills’. 2016.</li>
+                                                                                    <li>
+                                                                                        National seminar on ‘Pharmacovigilance of Ayush Drugs’ 2016.</li>
+                                                                                    <li>
+                                                                                        1st International Congress of the society for Ethnopharmacology (ICSE 2014).</li>
+                                                                                    <li>
+                                                                                        National seminar on “Pharmaceutical approach for malarial targeting and resistance 2014.</li>
+                                                                                    <li>
+                                                                                        Conference on ‘Herbal drugs: A treasure to entrepreneurship’ 2013.</li>
+                                                                                    <li>
+                                                                                        Herbotech 2012 ‘A national conference on approaches of nanotechnology in herbal drug development’.</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in Clinical Research Protocol Development on Herbal Medicines 2018 2nd February SRM College of Pharmacy, SRMIST</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in National Workshop on Scientific Writing 2018 9 th March SRM Medical College Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in National Conference on Evidence based medicine and Clinical research (EBCON 2018) 2018 SRM Medical college Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Attended a Training Programme on GCP 2018 April SRM Medical college Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Worked as an Organizing Member for a One day National Workshop on “Clinical Study Designs and Statistical Methodologies” 2018 SRM College of Pharmacy, SRMIST</li>
+                                                                                    <li>
+                                                                                        Attended a CEP for Pharmacy Teachers-Current perspective and challenges in teaching and learning strategies for effective implementation of pharmacy curriculum 2018, JSS College of Pharmacy, Ooty</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in Two Days National Level Workshop on “QSAR” 2018, October SRM College of Pharmacy, SRMIST.</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in One day Regional Workshop on The basic concepts of successful research planning, biostatistics and scientific writing 2018 December, JKKN College of Pharmacy, Kumaraplayam.</li>
+                                                                                </ul>
+                                                                                <p><strong>Achievements and Awards</strong></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Graduate Pharmacy Aptitude Test : Qualified - GPAT(2015)</li>
+                                                                                </ul>
+                                                                                <p> </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="right" colspan="2" valign="bottom">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p> </p>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /#node-1821 -->
+                                                    </div>
+                                                </div>
+                                                <!-- /content-inner -->
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-4 views-row-even">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/medicine/health-sciences/aslp/faculty/ambethkar-suprent">Mr.Ambethkar Suprent</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <p>
+                                                <?php global $base_url; ??>
+                                            </p>
+                                            <div class="content event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                <img alt="Ambethkar Suprent" class="img-thumbnail img-responsive" src="/sites/default/files/images/ambethkar-g.jpg" style="width: 150px; height: 168px;" /></td>
+                                                            <td valign="top">
+                                                                <h5>
+                                                                    Mr.Ambethkar Suprent</h5>
+                                                                <p>Associate Professor<br /><b>Area:</b> Voice, Dysphagia, Laryngectomy, Cleft lip, and Palate <br /><b>Affiliation:</b> Department of Audiology and Speech Language Pathology, SRM Medical College
+                                                                    Hospital and Research Centre, Kattankulathur campus.</p>
+                                                                <p>Email ID: <a href="mailto:ambeths@srmist.edu.in">ambeths@srmist.edu.in</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <b>Education</b>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                    <tbody>
+                                                                        <tr class="boxsecond">
+                                                                            <td valign="top">
+                                                                                MASLP</td>
+                                                                            <td valign="top">
+                                                                                Audiology and Speech Language Pathology</td>
+                                                                            <td valign="top">
+                                                                                Mumbai University, 2004</td>
+                                                                            <td valign="top">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr class="boxsecond">
+                                                                            <td valign="top">
+                                                                                B.Sc ASLP</td>
+                                                                            <td valign="top">
+                                                                                Audiology and Speech Language Pathology </td>
+                                                                            <td valign="top">
+                                                                                Mysore University, 2000</td>
+                                                                            <td valign="top">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3>
+                                                                    Other Details:</h3>
+                                                                <p><b>Courses</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Communication Sciences</li>
+                                                                    <li>
+                                                                        Fluency and its Disorder</li>
+                                                                    <li>
+                                                                        Speech Science production</li>
+                                                                    <li>
+                                                                        Speech Perception</li>
+                                                                </ul>
+                                                                <p><b>Research Interests</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Vocal rehabilitation in Head and neck surgery.</li>
+                                                                    <li>
+                                                                        Developing Normative on acoustical and aerodynamic parameters in Indian scenarios.</li>
+                                                                    <li>
+                                                                        Protocol for Assessment and Management on patients with Dysphagia.</li>
+                                                                    <li>
+                                                                        Acoustic characteristics of voice pattern across the age and Gender in Indian. </li>
+                                                                    <li>
+                                                                        Spectrographic analysis of speech in different types of speech disorders. </li>
+                                                                </ul>
+                                                                <p><strong>Papers Presented</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Presented a paper in ISHA CON- 2003 "Language Problems in Children with Cleft Lip and Palate”</li>
+                                                                    <li>
+                                                                        Presented a paper titled on “Focusing on IEP to improve students’ academic performance “, Compton Unified School District (LACOE), Compton, California, USA.</li>
+                                                                </ul>
+                                                                <p><strong>Working Papers</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        A study on Changes of Acoustic parameters of Voice in Growing Children , 2019</li>
+                                                                    <li>
+                                                                        Awareness of dysphagia among other health care professionals,2018</li>
+                                                                    <li>
+                                                                        A study on suprasegmenetal aspects in typically developed Tamil speaking children, 2018.</li>
+                                                                </ul>
+                                                                <p><strong>Work in Progress</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Acoustical analysis of voice in Patients diagnosed with GERD and LPR</li>
+                                                                    <li>
+                                                                        Perturbation values at different frequency level among young adults</li>
+                                                                    <li>
+                                                                        A comparative study on aerodynamic values among Teachers, Professional singers and Speech language pathologist.</li>
+                                                                    <li>
+                                                                        Pulmonary functions between smokers and nonsmokers </li>
+                                                                </ul>
+                                                                <p><b>Academic Experience and Clinical Experience</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        June 2001 to July 2002: Worked as Speech Language Pathologist &amp; Audiologist at Rotary School for the Deaf &amp; Mute, Coimbatore, India</li>
+                                                                    <li>
+                                                                        Feb 2005 to Feb 2006: Worked as a Clinical Speech Pathologist and Audiologist at PSG Medical College, Coimbatore, India.</li>
+                                                                    <li>
+                                                                        March 2006 to Jan 2007 worked at Private Nursing Homes, Coimbatore, India</li>
+                                                                    <li>
+                                                                        September 2018 – September 2018 working as an Associate Professor in the Department of Audiology and Speech Pathology at SRMIST, Kattankulathur, and Chennai. </li>
+                                                                    <li>
+                                                                        June 2015 – September 2018 working as an Asst Professor in the Department of Audiology and Speech Pathology at SRMIST, Kattankulathur, and Chennai. </li>
+                                                                    <li>
+                                                                        Feb 2013- June 18, 2015, Worked as an Audiologist and Speech-Language Pathologist at PES Institute of Medical Sciences and Research, Kuppam, Andra Pradesh.</li>
+                                                                    <li>
+                                                                        March 2010 – July 2012 Worked as a Speech Language Pathologist in Hallmark Rehab care in skilled nursing home facilities, Los Angeles, California, USA</li>
+                                                                    <li>
+                                                                        July 2009 –Feb 2010 Worked as a Speech Language Pathologist, in Pristine Rehab care and placed in Santa Monica School District, Santa Monica, California, USA</li>
+                                                                    <li>
+                                                                        Sep 2008- June 2009: Worked as a Speech Language Pathologist, with Cumberland Therapy Services, LLC, placed in Compton Unified School District (LACOE), Compton, California, USA.</li>
+                                                                    <li>
+                                                                        Feb 2008 – Aug 2008 Worked as a Speech Language Pathologist @ Bilingual Inc, Montebello California, USA.</li>
+                                                                    <li>
+                                                                        Feb 2006- January 2008 worked as an Asst Professor in the Department of Audiology and Speech Pathology at Sweekar upkaar rehabilitation centre Secunderabad , Andrapradesh.</li>
+                                                                </ul>
+                                                                <p><b>Other Professional Experience</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Scientific research paper presented in TANISHACON (Tamil Nadu) at Pondicherry in 2016. (Topic : Important of oral hygiene in treating patient with dysphagia ) </li>
+                                                                    <li>
+                                                                        Scientific research paper presented in TANISHACON (Tamil Nadu) at Pondicherry in 2016. (Topic : Important of oral hygiene in treating patient with dysphagia ) </li>
+                                                                    <li>
+                                                                        Scientific research paper presented in TANISHACON (Tamil Nadu) at Kanniyakumari in 2015.</li>
+                                                                </ul>
+                                                                <p><b>Memberships</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Licensed by Rehabilitation Council of India (A54706)</li>
+                                                                    <li>
+                                                                        Licensed by Speech-Language Pathology and Audiology Board, </li>
+                                                                    <li>
+                                                                        California from 2008 to 2012 (license # SP 17678) </li>
+                                                                    <li>
+                                                                        Life Member of Indian Speech and Hearing Association since 2001 in India</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" colspan="2" valign="bottom">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-5 views-row-odd">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/engineering/cse/faculty/u-m-prakash">Mr.U.M.Prakash </a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft home_hd flft table table-striped hostel-fee" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                <img alt="Mr.U.M.Prakash " src="/sites/default/files/images/u-m-prakash(1).jpg" style="width: 150px; height: 168px;" /></td>
+                                                            <td valign="top">
+                                                                <h5 class="rtejustify">
+                                                                    Mr.U.M.Prakash </h5>
+                                                                <p class="rtejustify">Assistant Professor</p>
+                                                                <p><b>Area or Subject:</b> Bio Statistics and Machine learning Algorithms<br /><strong>Affiliation</strong>: Department of Computer Science and Engineering, Kattankulathur Campus, SRM Institute
+                                                                    of Science and Technology (formerly known as SRM University))<br /><b>Email ID</b>: <a href="mailto:prakashm3@srmist.edu.in">prakashm3@srmist.edu.in</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <p class="rtejustify"><b>Education</b></p>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder table table-striped hostel-fee" width="100%">
+                                                                    <tbody>
+                                                                        <tr class="boxsecond">
+                                                                            <td class="rtejustify" valign="top">
+                                                                                M.E</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Computer Science and Engineering</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Anna University, 2013</td>
+                                                                        </tr>
+                                                                        <tr class="boxsecond">
+                                                                            <td class="rtejustify" valign="top">
+                                                                                B.Tech</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Information Technology</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Anna University, 2011</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3 class="rtejustify">
+                                                                    Other Details:</h3>
+                                                                <p class="rtejustify"><b>Courses</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Machine Learning</li>
+                                                                    <li class="rtejustify">
+                                                                        Database Management Systems</li>
+                                                                    <li class="rtejustify">
+                                                                        Object-Oriented Analysis and Design</li>
+                                                                    <li class="rtejustify">
+                                                                        Software Engineering</li>
+                                                                    <li class="rtejustify">
+                                                                        Computer Programming</li>
+                                                                    <li class="rtejustify">
+                                                                        Computer Organization and Architecture</li>
+                                                                    <li class="rtejustify">
+                                                                        Electronics and Microprocessor</li>
+                                                                    <li class="rtejustify">
+                                                                        System Software</li>
+                                                                    <li class="rtejustify">
+                                                                        Computer Networks</li>
+                                                                    <li class="rtejustify">
+                                                                        Advanced Computer Architecture</li>
+                                                                    <li class="rtejustify">
+                                                                        Internet Programming</li>
+                                                                    <li class="rtejustify">
+                                                                        Mobile and Pervasive Computing</li>
+                                                                    <li class="rtejustify">
+                                                                        Microprocessor and Microcontroller</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Research Interests</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Bio Statistics and Machine learning Algorithms</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Selected Publications</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        With Hitarth Pandey, " Pneumonia Detection Using Artificial Neural Networks And Transfer Learning Model," International Journal Of Recent Technology And Engineering, Vol 2s4(149-151), 2019</li>
+                                                                    <li class="rtejustify">
+                                                                        With Pratyush, " Emotional Analysis Using Image Processing," International Journal Of Recent Technology And Engineering, Vol 5s2(258-262), 2019</li>
+                                                                    <li class="rtejustify">
+                                                                        With Dharun Srivathsav, " Least Value Cloud Carrier Across A Handful Of Cloud Vendors,” Lecture Notes On Data Engineering And Communications Technologies, Vol 15. Springer, Singapore, 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        With Priyanshu Madan, "Intelligent Lighting System And Garbage Monitoring System," Journal Of Advanced Research In Dynamical And Control Systems, Vol 4(256-260), 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        With Priyanshu Madan, "Intelligent Lighting System And Garbage Monitoring System," Journal Of Advanced Research In Dynamical And Control Systems, Vol 4(256-260), 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        With Sushant Garg, ”Performance Comparison Of Machine Learning Algorithms Analyzing Patterns Of Neural Response To Object Categories, ”International Journal Of Pure And Applied Mathematics, Vol 118 (715-720), 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        With P.Sathish Kumar,” A Review On Facial Expression Recognition,” International Journal For Science And Advance Research In Technology, Vol 2(115- 120), 2016</li>
+                                                                    <li class="rtejustify">
+                                                                        With V.G.Thamarai Selvi,” Detecting And Tracking Of Multiple Moving Objects For Intelligent Video Surveillance Systems,” IEEE Xplore”, vol 4 (253-257), 2014</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Papers Presented</strong></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash, Hitarth Pandey, "Pneumonia Detection Using Artificial Neural Networks and Transfer Learning Model”, In the 4th International Conference ICAIECES, SRM IST, KTR, 2019</li>
+                                                                    <li class="rtejustify">
+                                                                        Anagha Chakravarthi, Gargi Singh, U.M.Prakash, ”Prediction of Cardiac Arrhythmia using recurrent neural networks gated recurrent units with causal Diagram”, In the International Conference ICIOT, SRM IST, KTR, 2019</li>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash, Priyanshu Madan, "Intelligent Lighting System and Garbage Monitoring System”, In the International Conference ICARESM, SRM Hotel, Chennai, 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash, Sushant Grag, D.Mohit Jain, “Performance Comparison Of Machine Learning Algorithms Analyzing Patterns Of Neural Response To Object Categories”, In the International Conference ICRDEST, SRM IST, KTR, 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash, V.G.ThamaraiSelvi “Detection and Tracking of Moving Objects for Intelligent Video Surveillance”. In the International Conference on Innovations in Communications, Information and Computing (ICICIC’13) Sponsored by IEEE and ICTACT, Coimbatore,
+                                                                        2014
+                                                                    </li>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash, Sathish Kumar “Personalizing Digital Television channels in a Cloud Computing Environment”. In the National Conference on Simulation in Computing Nexus, Coimbatore, 2012</li>
+                                                                    <li class="rtejustify">
+                                                                        U.M.Prakash “Data Mining and Data Warehousing”. In the National Conference on Advanced Computing and Communications, Namakkal, 2010</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Workshops /Seminars/Conferences</strong></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Participated in short term training programme on Data Analytics and Parallel Processing from 26th -30 th August, Organized by Dept of CSE, SRM IST, KTR</li>
+                                                                    <li class="rtejustify">
+                                                                        Participated in the International Conference on “Blockchain, Cryptocurrency and Digital Assests: Regulatory Framework”, Organized by ILTES on September 29- 30, 2018, Hyderabad- India</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended National Workshop on The Internet of Things Application Development at Paavai Engineering College on 29th Jan 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended National Workshop on Software Testing Tools at Selvam College of Technology 22nd Feb 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended National Workshop on Big data Analytics Tools – NWBAT’18 at SRM IST , KTR on 6th – 8th Feb 2018</li>
+                                                                    <li class="rtejustify">
+                                                                        Participated in ACM India Celebration of Women in Computing - AICWIC’17 in SRM IST, KTR on 11th – 13th Sep 2017</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended National Workshop on Human Cognition and Emotion Adapting AI Techniques – HCEAIT’ 17 at SRM IST , KTR on 9th – 10th Oct 2017</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended two days National level Workshop on “Hadoop tools for Crunching big data” on 30th and 31st Jan’17 at M.Kumarasamy College of Engineering, Karur</li>
+                                                                    <li class="rtejustify">
+                                                                        Participated in the Fourth International Conference on “SIGNALS AND IMAGE PROCESSING (ICSIP’12)” Sponsored by Springer at Dr. N.G.P. Institute of Technology</li>
+                                                                    <li class="rtejustify">
+                                                                        Attended “IIS &amp; ASP.Net Services on International Conference on Computer Applications (ICCA’10)” at Pondicherry</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Academic Experiences</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Assistant Professor at SRM Institute of Science and Technology, Kattankulathur from June 2017</li>
+                                                                    <li class="rtejustify">
+                                                                        Assistant professor at Paavai Engineering College –Autonomous, Namakkal from July 2016 to June 2017</li>
+                                                                    <li class="rtejustify">
+                                                                        Assistant Professor at Dhanalakshmi Srinivasan College of Engineering, Perambalur from July 2013 to May 2016.</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Achievements and Awards</strong></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Infosys – Campus Connect Recognized as BRONZE partner faculty under inspire ( The Campus Connect Faculty Partnership Model) , 2018</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Memberships</strong></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Scientific Council Member in “International Association of Engineering and Technology for Skill Development” (IAETSD), New Delhi, 2015</li>
+                                                                    <li class="rtejustify">
+                                                                        Association Member in “International Association of Computer Science and Information Technology” (IACSIT), Singapore, 2014</li>
+                                                                    <li class="rtejustify">
+                                                                        Member in “International Association of Engineers” (IAENG), Hong Kong, 2014</li>
+                                                                    <li class="rtejustify">
+                                                                        Member in IET, United Kingdom, 2017</li>
+                                                                    <li class="rtejustify">
+                                                                        Indian Science Congress Association (ISCA), 2017</li>
+                                                                </ul>
+                                                                <p> </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rtejustify" colspan="2" valign="bottom">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="rtejustify"> </p>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-6 views-row-even">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/content/priya-swaminathan">Priya Swaminathan</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft home_hd flft table table-striped hostel-fee" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtejustify" valign="top" width="25%">
+                                                            </td>
+                                                            <td valign="top">
+                                                                <h5 class="rtejustify">
+                                                                    Ms. Dr. Priya Swaminathan</h5>
+                                                                <p class="rtejustify">Assistant Professor (O.G)</p>
+                                                                <p> <b>Email Id:</b> <a class="clicklink" href="mailto:amala.r@ktr.srmuniv.ac.in">priya.s@ktr.srmuniv.ac.in</a><br /><b>Area:</b> Bioinformatics</p>
+                                                                <p class="rtejustify"><b>Affiliation:</b> Department of Biotechnology, Kattankulathur Campus, SRM University</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <p class="rtejustify"><b>Education</b></p>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                Ph.D. Pursuing </td>
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                Biotechnology</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                SRM University,2016</td>
+                                                                        </tr>
+                                                                        <tr class="boxfirst">
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                M.Phil.</td>
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                Bioinformatics</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Bharathidasan University, 2008</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                M.Sc.</td>
+                                                                            <td class="rtejustify" valign="top" width="30%">
+                                                                                Bioinformatics</td>
+                                                                            <td class="rtejustify" valign="top">
+                                                                                Madras University, 2005</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3 class="rtejustify">
+                                                                    Other Details:</h3>
+                                                                <p class="rtejustify"><b>Courses</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Computational simulation</li>
+                                                                    <li class="rtejustify">
+                                                                        Bioinformatics</li>
+                                                                    <li class="rtejustify">
+                                                                        Perl Programming</li>
+                                                                    <li class="rtejustify">
+                                                                        Proteomics</li>
+                                                                    <li class="rtejustify">
+                                                                        Molecular phylogeny</li>
+                                                                    <li class="rtejustify">
+                                                                        Bioinformatics algorithms</li>
+                                                                    <li class="rtejustify">
+                                                                        Microarray bioinformatics</li>
+                                                                </ul>
+                                                                <p><strong>Research Interests</strong></p>
+                                                                <ul>
+                                                                    <li style="margin-left: 0.5in;">
+                                                                        Microbiome analysis</li>
+                                                                    <li style="margin-left: 0.5in;">
+                                                                        vaccine development for infectious diseases and autoimmune disorders</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Selected Publications</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Priya, V. S., Swaminathan, P., Muddapur, U. M., Fandilolu, P. M., Parulekar, R. S., &amp; Sonawane, K. D. (2018). Peptide Similarity Search Based and Virtual Screening Based Strategies to Identify Small Molecules to Inhibit CarD–RNAP Interaction in M.
+                                                                        tuberculosis. International Journal of Peptide Research and Therapeutics, 1-13.</li>
+                                                                    <li class="rtejustify">
+                                                                        Swaminathan, P., &amp; Saleena, L. (2017). Evaluation of Cardiospermum halicacabum leaf compounds against human Dihydro Orotate dehydrogenase: A target for rheumatoid arthritis using structure based drug designing. Journal of Applied Pharmaceutical Science,
+                                                                        7, 48-61.</li>
+                                                                    <li class="rtejustify">
+                                                                        Swaminathan P.(2015). E-pharmacophore screening and induced fit docking of Phytocompounds against human dihydroorotate Dehydrogenase. International journal of Pharma and BioSciences 8(1): (B) 641-647.</li>
+                                                                    <li class="rtejustify">
+                                                                        Swaminathan P, Sukesh K, Saleena LM. (2014). E-Pharmacophore and molecular dynamics study of flavonols and dihydroflavonols as inhibitors against DihydroDeHydrogenase, Combinatorial Chemistry and High Throughput screening, 17(8), 663-673.</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Accepted:</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Lilly M Saleena , Priya Swaminathan “Development Of Specific DHODH Inhibitors For Plasmodium And Human Species"- IJCBDD( International Journal of Computational Biology and Drug Design)</li>
+                                                                </ul>
+                                                                <h3>
+                                                                    Papers Presented:</h3>
+                                                                <ul>
+                                                                    <li>
+                                                                        National Conference on “Futuristic Trends in Biotechnology and Computational Biology” VIT Vellore. "Antigenic antivenom candidate for Indian snake bites"-November 2016</li>
+                                                                    <li>
+                                                                        ICPMN-2015 SARVASUMANA-Bangalore,” Determination of potential phytochemical inhibitor for NDM-1 using different algorithms”-December 2015</li>
+                                                                    <li>
+                                                                        BIOTECH 2015-IIT Kanpur, “Determining promiscuous sequences in DHODH – a candidate for malarial vaccine”-March 2015</li>
+                                                                    <li>
+                                                                        RASB 14- Structure based Pharmacophore search of ZINC database inhibitors for DHODH, Bishop Heber college- Trichy-January 2015</li>
+                                                                    <li>
+                                                                        BIOTRENDS 2014- Biozone Chennai,”<em>C. halicacabum</em> on various targets of Rheumatoid arthritis”-October 2014</li>
+                                                                    <li>
+                                                                        Modern Progress In Biotechnology- Bharthidasan Institute of Technology,”Identification of DILI based safe inhibitors of <em>C.halicacabum</em> against DHODH”-October 2014</li>
+                                                                    <li>
+                                                                        DFID-2014 NIPER Hyderabad,”Gene network reconstruction from gene Expression profiles by identifying hubgenes in Kaposi sarcoma”-March 2014</li>
+                                                                    <li>
+                                                                        RACDD 2013- IISc Bangalore, ”Virtual Screening Of Inhibitory Indian Phytochemicals Against Human DHODH For Rheumatoid Arthritis”-September 2013</li>
+                                                                </ul>
+                                                                <p><strong>Academic Experience:</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Assistant Professor, Biotechnology department 2016-till date</li>
+                                                                    <li>
+                                                                        Assistant Professor, Bioinformatics department 2006-2016</li>
+                                                                </ul>
+                                                                <p><strong>Achievements and Awards</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Qualified TNSET 2016.</li>
+                                                                    <li>
+                                                                        Won gold medal on Research day for best paper presentation-2013</li>
+                                                                    <li>
+                                                                        Won second place in the oral paper presentation at the National conference on Recent advances in Bioengineering in 2008.</li>
+                                                                </ul>
+                                                                <p><strong>Academic Bodies and Professional Societies</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Indian Science Congress</li>
+                                                                    <li>
+                                                                        Bioclues.org</li>
+                                                                </ul>
+                                                                <p><strong>Other professionals activities</strong></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Reviewed papers for PeerJ and PlosOne Resource person at workshops conducted by the Bioinformatics department, Madras veterinary college Vepery. </li>
+                                                                </ul>
+                                                                <h3>
+                                                                </h3>
+                                                                <p class="rtejustify"> </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-7 views-row-odd">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/medicine/pharmacy/faculty/priyadharshini-a">Ms.Priyadharshini.A</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="event-heading course_eng faculty_table">
+                                                <div id="content-inner">
+                                                    <div id="content-content">
+                                                        <div class="node odd full-node node-type-faculty" id="node-1821">
+                                                            <div class="content">
+                                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                                <img alt="priyadarsini-s" src="/sites/default/files/images/priyadarsini-s.jpg" style="width: 150px; height: 168px;" /></td>
+                                                                            <td valign="top">
+                                                                                <h5>
+                                                                                    Ms.Priyadharshini.A</h5>
+                                                                                <p>Assistant Professor</p>
+                                                                                <p> <b>Email:</b><a href="mailto:priyadha@srmist.edu.in">priyadha@srmist.edu.in</a><br /><b>Area:</b> Pharmacy Practice<br /><b>Affiliation:</b> SRM College of Pharmacy, SRM Institute
+                                                                                    of Science and Technology (formerly known as SRM University).</p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                <b>Education</b>
+                                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                                    <tbody>
+                                                                                        <tr class="boxsecond">
+                                                                                            <td valign="top">
+                                                                                                Pharm.D</td>
+                                                                                            <td valign="top">
+                                                                                                Pharmacy Practice</td>
+                                                                                            <td valign="top">
+                                                                                                Sri Ramakrishna Institute of Paramedical Sciences, College of Pharmacy, The Tamilnadu Dr.M.G.R Medical University, 2017</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td valign="top">
+                                                                                                P.G. Diploma</td>
+                                                                                            <td valign="top">
+                                                                                                Clinical Research</td>
+                                                                                            <td valign="top">
+                                                                                                Distance Education, Catalyst Clinical Services, New Delhi, 2017</td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" valign="top">
+                                                                                <h3>
+                                                                                    Other Details:</h3>
+                                                                                <p><b>Course</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Pharm.D</li>
+                                                                                </ul>
+                                                                                <p><b>Research Interests</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Pharmacovigilance</li>
+                                                                                    <li>
+                                                                                        Therapeutic Drug Monitoring</li>
+                                                                                    <li>
+                                                                                        Clinical Research </li>
+                                                                                </ul>
+                                                                                <p><b>Selected Publications</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        With Shivashankar.V, Nissy ,Noel, Shereen “Study on prescribing pattern and drug interactions of dyslipidemic agents in a tertiary care hospital,” International Journal of Research in Pharmacology and Pharmacotherapeutics , vol.6, Issue 4, Oct-Dec,2017.</li>
+                                                                                    <li>
+                                                                                        Priyadharshini. A, Ahalya. S. P, Maria Alex, Sunitha Elza Mathew ” Overview of Metformin as a Host Targeted Therapy in Tuberculosis” Research J. Pharm. and Tech., 2019; 12(7):3211-3213.</li>
+                                                                                    <li>
+                                                                                        A.Priyadharshini, S. P. Ahalya, P. Vaishnavi, S. Pavithra, A. Rakesh Rosario A “A review on benefits and toxicity of orlistat therapy” Drug Invention Today, 2019;12(3):550-553</li>
+                                                                                    <li>
+                                                                                        With TM Vijayakumar, Priyadharshini A, Ahalya SP, Lakshmi KS, Logaraj M, Rama S “Effect of Hemocare Syrup and Hemocare XT Tablets on Hemoglobin levels in iron deficiency anemia among women of reproductive age: A randomized, placebo controlled, open label
+                                                                                        trial“ Contemporary Clinical Trials Communications., 2019,Vol.15, Pg.100425</li>
+                                                                                    <li>
+                                                                                        With Sarumathy. S, Madhumitha. V, Vishali. M, Janani. S, Englebert Rynjah. M, Priyadharshini. A., Trends in Management of Congestive Heart Failure patients in A Tertiary Care Hospital -A Retrospective Study, Research J. Pharm. and Tech., 2019; 12(8):
+                                                                                        3851-3853.
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p><b>Working Papers</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        “Impact of drugs with high hepatic extraction ratio on liver dysfunction”</li>
+                                                                                    <li>
+                                                                                        “Drug-related problems in stroke patients”</li>
+                                                                                    <li>
+                                                                                        “Study on the rational use of dyslipidemic agents in a tertiary care hospital”</li>
+                                                                                </ul>
+                                                                                <p><b>Academic Experiences</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Assistant Professor, Dept of Pharmacy Practice, SRM College of Pharmacy, SRM Institute of Science and Technology (formerly known as SRM University) – 2017 till date.</li>
+                                                                                </ul>
+                                                                                <p><b>Conferences/Seminars/Workshops Attended</b></p>
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        Worked as a Volunteer in IACP- Advancing Pharmacy Practice In India: The Next Generation Pharmacist, Indian Association Of College Of Pharmacy(IACP), Indian Congress Of Pharmacy Practice, held at Sheraton Hotel, Bangalore, 21 – 22 February 2014</li>
+                                                                                    <li>
+                                                                                        Worked as a Volunteer in the NSS unit and served for camps conducted by SRIPMS- 2015</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in IPC 67TH Indian Pharmaceutical Congress held at JSS University, Mysore, December 2015.</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in a National seminar on Best practice in pharmacovigilance for healthcare professionals contemporary Indian scenario organized by Indian society for clinical society held at Coimbatore Medical College and Hospital Coimbatore,
+                                                                                        March 2016.</li>
+                                                                                    <li>
+                                                                                        Worked as a volunteer on SANJEEVINI –Diabetes exhibition and awareness camp held Sri Ramakrishna Hospital Coimbatore, January 2016. </li>
+                                                                                    <li>
+                                                                                        Participated as a delegate on Diabetes summit -held at The Residency Tower Coimbatore February 2016.</li>
+                                                                                    <li>
+                                                                                        Poster Presented at a One day Seminar- Practice Education for Better Patient Care, conducted on 6th June at Sri Ramakrishna Hospital.</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in Clinical Research Protocol Development on Herbal Medicines 2018 2nd February SRM College of Pharmacy, SRMIST</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in National Workshop on Scientific Writing 2018 9 th March SRM Medical College Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in National Conference on Evidence based medicine and Clinical research (EBBCON 2018) 2018 SRM Medical college Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Attended a Training Programme on GCP 2018 April SRM Medical college Hospital &amp; Research centre</li>
+                                                                                    <li>
+                                                                                        Worked as an Organizing Member for a One day National Workshop on “Clinical Study Designs and Statistical Methodologies” 2018 SRM College of Pharmacy, SRMIST</li>
+                                                                                    <li>
+                                                                                        Attended a CEP for Pharmacy Teachers-Current perspective and challenges in teaching and learning strategies for effective implementation of pharmacy curriculum 2018, JSS College of Pharmacy, Ooty</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in Two Days National Level Workshop on “QSAR” 2018, October SRM College of Pharmacy, SRMIST.</li>
+                                                                                    <li>
+                                                                                        Participated as a delegate in Oneday Regional Workshop on The basic concepts of successful research planning, biostatistics and scientific writing 2018 December, JKKN College of Pharmacy, Kumaraplayam</li>
+                                                                                </ul>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="right" colspan="2" valign="bottom">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                <p> </p>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /#node-1821 -->
+                                                    </div>
+                                                </div>
+                                                <!-- /content-inner -->
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-8 views-row-even">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/engineering/chemical/faculty/sam-david">Dr. S. Sam David</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft home_hd flft table table-striped hostel-fee" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" valign="top" width="25%">
+                                                                <img alt="Sam David" class="img-responsive img-thumbnail" src="/sites/default/files/images/sam-david.jpg" style="width: 150px; height: 191px;" /></td>
+                                                            <td valign="top">
+                                                                <h5>
+                                                                    Dr. S. Sam David</h5>
+                                                                <p>Assistant Professor<br /><b>Area:</b> Chemical Engineering thermodynamics and Transport phenomena<br /><b>Affiliation:</b> Department of Chemical Engineering, Kattankulathur Campus, SRM Institute
+                                                                    of Science and Technology (formerly known as SRM University).</p>
+                                                                <p><strong>Email Id</strong>: <a class="contentlink" href="mailto:samdavis@srmist.edu.in">samdavis@srmist.edu.in</a></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <b>Education</b>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                    <tbody>
+                                                                        <tr class="boxsecond">
+                                                                            <td valign="top" width="20%">
+                                                                                Ph.D.</td>
+                                                                            <td valign="top" width="25%">
+                                                                                Chemical Engineering</td>
+                                                                            <td valign="top">
+                                                                                Indian Institute of Technology Madras, 2017</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3>
+                                                                    Other Details:</h3>
+                                                                <p><b>Courses</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Transport phenomena fundamentals</li>
+                                                                    <li class="rtejustify">
+                                                                        Chemical engineering thermodynamics</li>
+                                                                    <li class="rtejustify">
+                                                                        Process heat transfer</li>
+                                                                    <li class="rtejustify">
+                                                                        Fluid Mechanics</li>
+                                                                    <li class="rtejustify">
+                                                                        Heat and mass transfer Laboratory</li>
+                                                                    <li class="rtejustify">
+                                                                        Mechanical operations and Fluid mechanics Laboratory</li>
+                                                                    <li class="rtejustify">
+                                                                        Process control Laboratory.</li>
+                                                                </ul>
+                                                                <p><b>Research Interests</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Experimental multiphase &amp; Liquid-liquid systems, Mathematical modelling, Emulsion liquid membrane and electrochemical waste water treatment, Microbial fuel cell.</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Selected Publications</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        G. Angeline Divya, R. Sakthi Balan, K. Sumithra Parvadha Varthini, K. Deepa and S. Sam David, Experimental investigation of hydrodynamics and chromium (VI) adsorption in continuous countercurrent fluidized column. Chem. Pap. (2019).
+                                                                        <a href="https://doi.org/10.1007/s11696-019-00977-6">https://doi.org/10.1007/s11696-019-00977-6</a>
+                                                                    </li>
+                                                                    <li class="rtejustify">
+                                                                        Sam David, S., Renganathan, T. and Krishnaiah, K., (2016), Hydrodynamics of cocurrent downward liquid-liquid extraction column. RSC Advances, 2016, 6, 12439 - 12445. </li>
+                                                                </ul>
+                                                                <p class="rtejustify"><strong>Papers Presented</strong></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Presented a paper orally titled “Phase Inversion Velocity and Holdup in Cocurrent Downward Liquid-Liquid System” at the 14th International Conference on Gas-Liquid and Gas-Liquid-Solid Reactor Engineering (GLS-14) held on May 30- June 3 2019,China.</li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a poster titled “Design Of Low Cost Microbial Fuel Cell” and own third prize at the 'INDACON 2019’ conference organized by NIOT in association with SRM IST, INDA(SZ), IEEE-(OES), Chennai. (March 7-9, 2019)</li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a paper orally titled “Liquid-Solid Inverse Fluidized Bed Coagulator” and own second prize at the ‘tielines 2k19’ conference organized by the Department Of Chemical Engineering, Pondicherry Engineering College, Pondicherry. (February 21 &amp;
+                                                                        22, 2019)</li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a poster titled “Phenol Removal Using Activated Carbon Counter-Current Liquid-Solid Fluidized Bed Adsorber” at the 'INDACON 2019’ conference organized by NIOT in association with SRM IST, INDA(SZ), IEEE-(OES), Chennai. (March 7-9, 2019)</li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a poster titled “Removal Studies Of Chromium By Batch Process Using Electrochemical Cell” at ICONN 2019,an International Conference Srm Ist (March 7-9, 2019)</li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a poster titled “Counter Current Liquid-Solid Fluidized System - Design, Hydrodynamics, And Mass-Transfer Studies” and won the best poster presentation at the 'National Conference on Recent Advances in Environmental Remediation.' held at Hindustan
+                                                                        Institute of Technology and Science, Chennai, on March 23, 2018. </li>
+                                                                    <li class="rtejustify">
+                                                                        Presented a paper orally titled “Liquid-Solid Inverse Fluidized Bed – Hydrodynamics Studies” and won the best paper award at the 'CHEMFLUX 2018’ national level technical festival held at SRM Institute of Technology and Science, Chennai. </li>
+                                                                    <li class="rtejustify">
+                                                                        “Hydrodynamics of Cocurrent Downward Liquid-Liquid Extraction Column” was presented orally in 2014 AICHE Annual Meeting In Atlanta, GA</li>
+                                                                    <li class="rtejustify">
+                                                                        “Holdup Studies in Cocurrent Downward Liquid-Liquid Extraction Column” was presented orally in International Conference on New Frontiers on Chemical Energy and Environmental Engineering (INCEEE 2015), NIT Warangal, India.</li>
+                                                                    <li class="rtejustify">
+                                                                        “Study of Antioxidants in Metal Induced Tridax Procumbens” was presented orally in the International Conference organized by the Department Of Biotechnology, Indian Institute of Technology, Kharagpur</li>
+                                                                </ul>
+                                                                <p> <b>Work in Progress</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Sam David, S., Renganathan, T. and Krishnaiah, K., (2019), Hydrodynamics and Drop Size Distribution in Cocurrent Downward Water-Oil System: Experiments and Modelling. (under review).</li>
+                                                                    <li class="rtejustify">
+                                                                        R. Rajkumar, R. Rohan Karthik, S. Sarves, K. Deepa and S. Sam David (2019), Hydrodynamics and Phenol Adsorption Studies in Continuous Counter Current Liquid-Solid Settling Column. (under review)</li>
+                                                                    <li class="rtejustify">
+                                                                        Sam David, S., Renganathan, T. and Krishnaiah, K., (2019), Effect of oil properties and packing voidage on residence time distribution of cocurrent downward liquid-liquid extraction column with and without packing. (to be communicated)</li>
+                                                                    <li class="rtejustify">
+                                                                        Sam David, S., Renganathan, T. and Krishnaiah, K., (2019), Effect of oil properties on drop size distribution of cocurrent downward liquid-liquid extraction column. (to be communicated)</li>
+                                                                    <li class="rtejustify">
+                                                                        Waste water treatment using emulsion liquid membrane</li>
+                                                                    <li class="rtejustify">
+                                                                        ANN Modelling of countercurrent liquid solid fluidized bed</li>
+                                                                    <li class="rtejustify">
+                                                                        Water treatment in packed bed electrochemical reactors</li>
+                                                                </ul>
+                                                                <p><b>Academic Experience:</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Assistant Professor, Department of Chemical Engineering, SRM Institute of Science and Technology July 2016 to till date.</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Workshops /Seminars/Conferences</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        One of the organizer in the 5 days faculty development program titled “Computational Fluid Dynamics with Chemical Engineering Applications” from 24th June to 28th June, 2019, in the Department of Chemical Engineering, SRM Institute of science and technology.</li>
+                                                                    <li class="rtejustify">
+                                                                        One of the organizer in the Workshop on "Chemical Process Simulation using Aspen Plus®" from March 8 and 9, 2019, SRM Institute of science and technology.</li>
+                                                                    <li class="rtejustify">
+                                                                        One of the organizer in the Workshop on "Application of Process Simulation using Aspen Plus®" from March 9 and 10, 2018, SRM Institute of science and technology</li>
+                                                                    <li class="rtejustify">
+                                                                        One of the organizer in the Workshop on “Introduction to Process Simulation using Aspen Plus®” from March 10 and 11, 2017, SRM Institute of science and technology</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Achievements and Awards:</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        MHRD Scholarship 2011</li>
+                                                                </ul>
+                                                                <p class="rtejustify"><b>Memberships:</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Life member, Indian Science Congress, 2016</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="right" colspan="2" valign="bottom">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p> </p>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-9 views-row-odd">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/engineering/dept-genetics/faculty/mr-santhosh-kumarn">Mr.Santhosh Kumar N</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="content event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtejustify" style="width: 297px;" valign="top" width="25%">
+                                                                <img alt="" src="/sites/default/files/images/" title="" /><img alt="" src="/sites/default/files/images/" style="width: 170px; height: 190px;" /></td>
+                                                            <td style="width: 907px;" valign="top">
+                                                                <h5 class="rtejustify">
+                                                                    Mr.Santhosh Kumar N</h5>
+                                                                <p class="rtejustify">Research Scholar<br /><strong>Area</strong>: Bioinformatics<br /><strong>Email ID</strong>: <a href="mailto:santhoshkumar.nv@ktr.srmuniv.ac.in">santhoshkumar.nv@ktr.srmuniv.ac.in</a></p>
+                                                                <p class="rtejustify"><b>Affiliation:</b> Department of Genetic Engineering, Kattankulathur Campus, SRM Institute of Science and Technology (formerly known as SRM University)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <p class="rtejustify"><b>Education</b></p>
+                                                                <table border="0" cellpadding="0" cellspacing="0">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Ph.D </td>
+                                                                            <td>
+                                                                                Bioinformatics</td>
+                                                                            <td>
+                                                                                Pursuing at SRM Institute of Science and Technology (formerly known as SRM University) from 2015</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                M.Tech</td>
+                                                                            <td>
+                                                                                Bioinformatics</td>
+                                                                            <td>
+                                                                                SRM Institute of Science and Technology (formerly known as SRM University), 2012-2014</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                B.Tech</td>
+                                                                            <td>
+                                                                                Industrial Biotechnology</td>
+                                                                            <td>
+                                                                                Government College of Technology, Coimbatore, 2008-2012</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3 class="rtejustify">
+                                                                    Other Details:</h3>
+                                                                <p><b>Research Interests:</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Molecular modelling and Computer Aided drug designing</li>
+                                                                    <li>
+                                                                        Protein and lipid membrane dynamics</li>
+                                                                    <li>
+                                                                        3D QSAR and Density Functional Theory</li>
+                                                                </ul>
+                                                                <p> </p>
+                                                                <p><b>Selected Publications:</b></p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Santhosh Kumar N, Sathya B, and Thirumurthy M. (2017). Theoretical analysis of somatostatin receptor 5 with antagonists and agonists for the treatment of neuroendocrine tumors. Molecular Diversity, 21(2), pp.367-384.</li>
+                                                                    <li>
+                                                                        Santhosh Kumar N, Sathya B, Sohn H, Panneer D, and Thirumurthy M, (2017). 3D-QSAR studies on indole and 7-azoindole derivatives as ROCK-2 inhibitors: An integrative computational approach. Computational Biology and Chemistry, 71, pp.104-116.</li>
+                                                                    <li>
+                                                                        Sathya B, Santhosh Kumar N, Hang Lee S, and Thirumurthy M, (2016). Structural characterization of human CRTh2: a combined homology modeling, molecular docking and 3D-QSAR-based in silico approach. Medicinal Chemistry Research, 25(4), pp.653-671.</li>
+                                                                    <li>
+                                                                        Abinaya B, Manish B, Meenakumari S, Thirumavalavan M, Thirumurthy M, Santhosh Kumar N, Velusamy P and Pachaiappan R (2018). Isolation, purification and characterization of proteinaceous fungal α-amylase inhibitor from rhizome of Cheilocostus speciosus
+                                                                        (J.Koenig) C.D.Specht. International Journal of Biological Macromolecules, 111, pp.39-51.</li>
+                                                                    <li>
+                                                                        Sathya B, Rupa M, Santhosh Kumar N, Sohn H, and Thirumurthy M, (2016). Molecular Modeling Study on Diazine Indole Acetic Acid Derivatives for CRTH2 Inhibitory Activity. Combinatorial Chemistry &amp; High Throughput Screening, 19(6), pp.444-460.</li>
+                                                                </ul>
+                                                                <p> <b>Work in Progress:</b></p>
+                                                                <p> </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        Structural characterization of Somatostatin receptors using apo and complex structures in a solvated lipid bilayer microenvironment</li>
+                                                                    <li>
+                                                                        Performing 3D QSAR, DFT calculations to check for modifications in ligand conformation for better activity.</li>
+                                                                </ul>
+                                                                <p> </p>
+                                                                <p><b>Achievements and Awards:</b></p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Qualified GATE 2011 and 2012</li>
+                                                                    <li class="rtejustify">
+                                                                        Qualified CSIR-NET 2015<br />
+                                                                    </li>
+                                                                </ul>
+                                                                <p></p>
+                                                                <p> </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-10 views-row-even views-row-last">
+
+                                    <div class="views-field views-field-title"> <span class="field-content"><a href="/engineering/genetic/faculty/krishnaveni-s">Ms. Krishnaveni S</a></span> </div>
+                                    <div class="views-field views-field-body">
+                                        <div class="field-content">
+                                            <div class="content event-heading course_eng faculty_table">
+                                                <table border="0" cellpadding="5" cellspacing="0" class="popup_fnt lnht imglft table table-striped hostel-fee home_hd flft" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rtecenter" style="width: 297px;" valign="top" width="25%">
+                                                                <img alt="Ms. Krishnaveni S" src="/sites/default/files/images/krishnaveni-s.jpg" style="width: 150px; height: 168px;" /></td>
+                                                            <td style="width: 907px;" valign="top">
+                                                                <p> <br /><strong>Ms. </strong>Krishnaveni S</p>
+                                                                <p>Research Scholar<br /><strong>Area:</strong> Cancer Biology<br /><strong>Email: </strong><a href="mailto:krishnaveni.su@ktr.srmuniv.ac.in">krishnaveni.su@ktr.srmuniv.ac.in</a><br /><strong>Affiliation:</strong>                                                                    Department of Genetic Engineering SRM Institute of Science and Technology, Kattankulathur</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <p class="rtejustify"><b>Education</b></p>
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="table table-striped hostel-fee">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Ph.D </td>
+                                                                            <td style="width: 371px;">
+                                                                                Pursing at SRM Institute of Science and Technology </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                M.Sc</td>
+                                                                            <td style="width: 371px;">
+                                                                                Bharathiar University, Coimbatore </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                B.Sc</td>
+                                                                            <td style="width: 371px;">
+                                                                                K.S.G college of Arts and Science, Coimbatore </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2" valign="top">
+                                                                <h3 class="rtejustify">
+                                                                    Other Details</h3>
+                                                                <p class="rtejustify">Experimental Research undertaken</p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Mini project - “Cloning of HSP70 Isoform – HSPA13 in Mammalian expression vector and its over expression in Human cell line”</li>
+                                                                    <li class="rtejustify">
+                                                                        Dissertation project - “Exploration of Akt-MyoD interaction during Skeletal Muscle Differentiation”.</li>
+                                                                </ul>
+                                                                <p class="rtejustify">Other Skills</p>
+                                                                <ul>
+                                                                    <li class="rtejustify">
+                                                                        Diplomo in Clinical Research and Medical Coding</li>
+                                                                    <li class="rtejustify">
+                                                                        Diplomo in Computer Application</li>
+                                                                    <li class="rtejustify">
+                                                                        Certified course “Adobe Photoshop” organized by Adora Multimadia – World Multimedia Association </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript" src="https://www.srmist.edu.in/sites/all/themes/srmuniversity/js/jquery-1.10.2.min.js"></script>
+                                <script>
+                                    $(document).ready(function() {
+                                        $('.view-faculty-directory table tr:nth-child(n+2)').hide();
+                                        $('.view-faculty-directory table img').width(109);
+                                        $('.view-faculty-directory .table-striped img').height(84);
+                                        $('.view-faculty-directory table tr:first-child').css("border", "0");
+                                        var i = 1;
+                                        $('.field-content > a').each(function(index) {
+                                            $(".views-row-" + i + " span.field-content").hide();
+                                            var ss = $(".views-row-" + i + " span.field-content").html();
+                                            $(".views-row-" + i + " table h5").html(ss);
+                                            $(".view-faculty-directory .views-row-" + i).addClass('btmBorderDashed'); //add btmBorderDashed class to the div
+                                            $(".view-faculty-directory .views-row-" + i + " table").css('margin-bottom', '0px'); //add btmBorderDashed class to the div
+                                            $(".view-faculty-directory .views-row-" + i + " table").nextAll("p").remove(); //remove p tag after table
+                                            $(".view-faculty-directory .views-row-" + i + " table img").addClass("topic-india"); //
+                                            //console.log(i);
+                                            i++;
+                                        });
+                                    });
+                                </script>
+                            </div>
+
+                            <h2 class="element-invisible">Pages</h2>
+                            <div class="item-list">
+                                <ul class="pager">
+                                    <li class="pager-current first">1</li>
+                                    <li class="pager-item"><a title="Go to page 2" href="/faculty-directory?page=1">2</a></li>
+                                    <li class="pager-item"><a title="Go to page 3" href="/faculty-directory?page=2">3</a></li>
+                                    <li class="pager-item"><a title="Go to page 4" href="/faculty-directory?page=3">4</a></li>
+                                    <li class="pager-item"><a title="Go to page 5" href="/faculty-directory?page=4">5</a></li>
+                                    <li class="pager-item"><a title="Go to page 6" href="/faculty-directory?page=5">6</a></li>
+                                    <li class="pager-item"><a title="Go to page 7" href="/faculty-directory?page=6">7</a></li>
+                                    <li class="pager-item"><a title="Go to page 8" href="/faculty-directory?page=7">8</a></li>
+                                    <li class="pager-item"><a title="Go to page 9" href="/faculty-directory?page=8">9</a></li>
+                                    <li class="pager-ellipsis">…</li>
+                                    <li class="pager-next"><a title="Go to next page" href="/faculty-directory?page=1">next ›</a></li>
+                                    <li class="pager-last last"><a title="Go to last page" href="/faculty-directory?page=179">last »</a></li>
+                                </ul>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class=" text-center top-space">
+            <img src="{% static "media/images/index/footer-logo.png" %}">
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class=" text-center gold"> GET CONNECTED</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class="gold text-center ">INSIGHTS</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class=" text-center gold">CAMPUSES</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class="text-center gold">MORE</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

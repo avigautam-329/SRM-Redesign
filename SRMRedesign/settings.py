@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "bootstrap5",
     "about_pages",
+    "more_pages",
+    "academics_pages",
+    "foryou_pages",
 ]
 
 MIDDLEWARE = [

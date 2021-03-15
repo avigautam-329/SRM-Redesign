@@ -1,0 +1,141 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > How and When to Apply?</h4>
+                <h1>HOW AND WHEN TO APPLY?</h1>
+                <br>
+                <p>Forms for hostel accommodation are required to be submitted to the hostel office duly recommended by concerned Principal/Director. 
+                Students who are seeking renewal are directed to fill the renewal form and submit along with the hostel fees.</p>
+                <p>Proof of residence: ration card/voter identity card/passport shall have to be shown in original and an attested photocopy of the same needs to be enclosed with the hostel admission form at the time of submission. 
+                Subletting is strictly prohibited.</p>
+                <p>Candidates accepted for admission will be required to pay the requisite fees along with three passport size recent photographs for identity cards.</p>
+                <p>If any candidate fails to pay the fees in full within the stipulated time as notified, his/her admission will be treated as cancelled.</p>
+                <p>Application for continuation of stay in the hostels is based on their willingness submitted in the appropriate form at the end of every academic year. 
+                However the management reserves the right to reject any application on the basis indiscipline.</p>
+                <p>All students (except final years) of all programs are advised to login to Online Hostel Room Booking portal to select and pay hostel and mess fees online for the next academic year.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

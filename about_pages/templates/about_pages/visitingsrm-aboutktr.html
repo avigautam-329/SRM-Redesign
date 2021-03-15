@@ -1,0 +1,161 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Visiting SRM</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}" class="active">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}" class="active">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:visitingbyrail' %}">BY RAIL</a></li>
+                    <li><a href="{% url 'about_pages:visitingbyair' %}">BY AIR</a></li>
+                    <li><a href="{% url 'about_pages:visitingabtothercampuses' %}">ABOUT LAYOUT OF OTHER CAMPUSES</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:visitingbyrail' %}">BY RAIL</a></li>
+                        <li><a href="{% url 'about_pages:visitingbyair' %}">BY AIR</a></li>
+                        <li><a href="{% url 'about_pages:visitingabtothercampuses' %}">ABOUT LAYOUT OF OTHER CAMPUSES</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Visiting SRM > Kattankulathur Layout</h4>
+                <h1>KATTANKULATHUR LAYOUT</h1>
+
+                <p>The SRM Institute of Science and Technology (formerly known as SRM University) Main Campus (Kattankulathur) is 40 kms from Chennai city on NH 45, and around 20 kms from Chennai Airport. 
+                The nearest Bus stop and Railway station is Potheri. The University is well connected by road, rail and air.</p>
+                <p style='font-size:20px'><b>The Layout of the Kattankulathur Campus is as follows:</b></p>
+                <p><img src='{% static "media/images/about/ktr_campu_layout-1.png" %}'></p>
+                <p>This main campus is at Kattankulathur in Chengalpattu District, 
+                a suburb of Chennai City on the G.S.T. Road (Chennai - Trichy National Highway, NH 45), 20 kms from Chennai Airport.</p>
+                <p>This 250 acre campus houses all the four faculties including:</p>
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p>
+                                        <ul>
+                                            <li>Engineering & Technology (erstwhile SRM Engineering College).</li>
+                                            <li>Medical & Health Sciences (Medical College and Research Center, Dental College, College of Pharmacy, 
+                                            College of Nursing, College of Physiotherapy, College of Occupational therapy and School of Public Health).</li>
+                                            <li>School of Management.</li>
+                                            <li>Faculty of Science & Humanities (journalism, communication, biotechnology and education). 
+                                            This campus has a network of 30 blocks for academic and administrative activities with a built up area of over 1,50,000 sq m.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                                <div class="carousel-item ">
+                                    <h2 class="text-center">Other institutes and facilities in the Kattankulathur campus are:</h2>
+                                    <p>
+                                        <ul>
+                                            <li>Valliammai Engineering College</li>
+                                            <li>Valliammai Polytechnic</li>
+                                            <li>SRM Polytechnic</li>
+                                            <li>SRM Institute of Hotel Management</li>
+                                            <li>SRM Arts and Science College</li>
+                                            <li>The SRM Hotel</li>
+                                            <li>General Hospital</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

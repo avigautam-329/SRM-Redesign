@@ -1,0 +1,202 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > Welcome to SRM Hostels</h4>
+                <h1>WELCOME TO SRM HOSTELS</h1>
+                <br>
+                <p>The quality of life is one of the most important factors considered by the students deciding to stay in the College/University hostels.
+                 By quality, it is not just the rooms but also the overall environment of the University campus.</p>
+                <p>We, at SRM Institute of Science and Technology (formerly known as SRM University), provide a wide choice in selecting the type or rooms in a hostel to suit every budget,
+                 with an aim of providing a decent stay and the best possible learning environment.</p>
+                <br>
+                <p>Ours is one of the greenest Campuses' in the country with all the facilities that are expected from global Universities.
+                 The stay at our campus provides a wealth of experience by developing qualities such as camaraderie and social responsibility.
+                  Our students comprise a cosmopolitan mix from all parts of India as well as many countries across the globe.</p>
+                <p>The students staying at SRM hostels are provided with healthy and sumptuous food options at highly subsidized rates.
+                 They can choose to have North Indian or South Indian menu in the dining halls that are co-located. For the benefit of our international students,
+                  the hostels also offer a multi-cuisine dining facility providing Thai, Chinese and continental food.</p>
+                <p>Life on campus helps the students not only to study but also to socialize with the peers. Friendships formed on the campus last a lifetime.
+                 SRM provides a comfortable and safe housing to all its students. The students housed in the campus are encouraged to use the gymnasium,
+                  playground, and all indoor gaming facilities.</p>
+                <p style='font-size:18px'><b>Online Hostel Booking Schedule for Academic Year 2020-21</b></p>
+                <p>
+                    <ul>
+                        <li><a href='https://www.srmist.edu.in/online-hostel-booking-schedule-for-academic-year-2020-21-first-year-students-boys-girls-ktr-campus'>First Year Students – Boys & Girls – KTR Campus</a></li>
+                        <li><a href='https://www.srmist.edu.in/announcement/online-hostel-booking-schedule-senior-students-boys-girls'>For Senior Students - Boys & Girls - KTR Campus</a></li>
+                        <li><a href='https://www.srmist.edu.in/announcement/online-hostel-booking-faculty-agricultural-sciences-2020-2021'>For Faculty of Agricultural Sciences</a></li>
+                    </ul>
+                </p>
+                <p style='font-size:18px'><b>Hostel Fee Structure for Academic Year 2020-21</b></p> 
+                <p>
+                    <ul>
+                        <li><a href='https://www.srmist.edu.in/hostel-fee-structure-academic-year-2020-21-first-year-students-boys-girls'>For First Year Students – Boys & Girls – KTR Campus</a></li>
+                        <li><a href='https://www.srmist.edu.in/announcement/hostel-fee-structure-academic-year-2020-21-senior-students-boys-girls'>For Senior Students - Boys & Girls - KTR Campus</a></li>
+                        <li><a href='https://www.srmist.edu.in/announcement/online-hostel-booking-faculty-agricultural-sciences-2020-2021'>For Faculty of Agricultural Sciences</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/downloads/2020/srm-hostel-rules-2020.pdf'>Rules and Regulations</a></li>
+                    </ul>
+                </p>
+                <div>
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                        <div class="field-items">
+                            <div class="field-item even" property="content:encoded">
+                                <div class="event-heading course_eng faculty_table">
+                                    <table border="1" cellpadding="5" cellspacing="0" width="554px">
+                                        <tbody>
+                                            <tr class="boxfirst">
+                                                <td align="center" style="width: 494px;">
+                                                    <p>Helpdesk</p>
+                                            </tr>
+                                            <tr class="boxsecond">
+                                                <td align="left" style="width: 494px;">
+                                                    <p>For any queries related to Hostels and Hostel Bookings, please contact:</p>
+                                                    <p>Email ID:<a href='#'>hostel.helpdesk.ktr@srmist.edu.in</a></p>
+                                                    <p>Contact Numbers - Timings  from 09.00 am to 06.00 pm.</p>
+                                                    <p>
+                                                        <ul>
+                                                            <li>Accounts Office - 044-27434503</li>
+                                                            <li>Hostel Office - 044-27453159, 044-27456363, 044-27434506, 044-27456364</li>
+                                                        </ul>
+                                                    </p>
+                                                    <p>For M Block - Timings  from 09.00 am to 06.00 pm.</p>
+                                                    <p>
+                                                        <ul>
+                                                            <li>Email ID:<a href='#'> warden.sisternivedita.ktr@srmist.edu.in</a></li>
+                                                            <li>Hostel Office - 044-27453159, 044-27456363, 044-27434506, 044-27456364</li>
+                                                            <li>Mobile Number : 6381310672, 8056016627</li>
+                                                        </ul>
+                                                    </p>
+                                                </td>
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

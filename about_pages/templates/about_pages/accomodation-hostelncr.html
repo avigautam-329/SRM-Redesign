@@ -1,0 +1,184 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ABOUT SRM</h1>
+                </div>
+                <div>
+                    <p>Home > About SRM > Facts</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'about_pages:srminfocus' %}">FACTS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:ourcampus' %}">CAMPUS</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:accwelcomehostel' %}" class="active">ACCOMODATION</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:govpublicinterest' %}">GOVERNANCE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/placement/">CAREER CENTRE</a>
+                </li>
+                <li>
+                    <a href="{% url 'about_pages:visitingaboutktr' %}">VISIT SRM</a>
+                </li>
+                <li>
+                    <a href="https://care.srmist.edu.in/#/">SRM CARE</a>
+                </li>
+
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                    <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                    <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                    <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                    <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                    <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:accwelcomehostel' %}">WELCOME TO SRM HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accvision' %}">VISION</a></li>
+                        <li><a href="{% url 'about_pages:acchostelmen' %}">HOSTELS FOR MEN</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchostelwomen' %}">HOSTELS FOR WOMEN</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/Pictorial-view-hostel-2019.pdf">PICTORIAL VIEW OF HOSTELS</a></li>
+                        <li><a href="{% url 'about_pages:accwhoapply' %}">WHO CAN APPLY?</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acchowwhenapply' %}">HOW AND WHEN TO APPLY?</a></li>
+                        <li><a href="{% url 'about_pages:acchostelncr' %}">HOSTEL - NCR CAMPUS</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'about_pages:acccontactus' %}">CONTACT US</a></li>
+                        <li><a href="{% url 'about_pages:accinthostel' %}">INTERNATIONAL HOSTEL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Student Accomodation > Hostel - NCR Campus</h4>
+                <h1>HOSTEL BOOKING SCHEDULE NCR CAMPUS 2018-2019</h1>
+                <br>
+                <p style='font-size:18px'><b>Hostel Booking Schedule for Academic Year 2019-20 Delhi NCR Campus, Modinagar</b></p>
+                <br>
+                <img src="{% static "media/images/about/accomodation-1.png" %}">
+                <br>
+                <p style='font-size:18px'><b>Hostel Fee Structure for Academic Year 2019-20  Delhi NCR Campus, Modinagar</b></p>
+                <br>
+                <img src="{% static "media/images/about/accomodation-2.png" %}">
+                <img src="{% static "media/images/about/accomodation-3.png" %}">
+                <br>
+                <p>
+                    <ul>
+                        <li><a href='https://hostellogin.srmist.edu.in/srmclb/'>Online Hostel Booking</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/online_hostel_booking_user_manual-freshers-2018.pdf'>User Manual</a></li>
+                        <li><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/hostel-rules-&-regulations-2018-19-ncr-delhi-campus-modinagar.pdf'>Rules and Regulations</a></li>
+                    </ul>
+                </p>
+                <br>
+                <div>
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                        <div class="field-items">
+                            <div class="field-item even" property="content:encoded">
+                                <div class="event-heading course_eng faculty_table">
+                                    <table border="1" cellpadding="5" cellspacing="0" width="554px">
+                                        <tbody>
+                                            <tr class="boxfirst">
+                                                <td align="center" style="width: 494px;">
+                                                    <p><b>Helpdesk - Delhi NCR Campus, Modinagar</b></p>
+                                                    <p><b>For any further queries regarding hostel online booking</b></p>
+                                            </tr>
+                                            <tr class="boxsecond">
+                                                <td align="left" style="width: 494px;">
+                                                    <p>Dr. Rupak Sharma (Hostel Faculty Manager)</p>
+                                                    <p>Contact No: 8630863909</p>
+                                                    <p>Lanline No: 01232234348</p>
+                                                    <p><b>Email ID:</b><a href='#'> rupak.s@ncr.srmuniv.ac.in</a></p>
+                                                    <p>For M Block - Timings  from 09.00 am to 06.00 pm.</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="boxfirst">
+                                                <td align="left" style="width: 494px;">
+                                                    <p>Mrs.M.B.Chandrika</p>
+                                                    <p>Contact No: 8859680642</p>
+                                                    <p><b>Email ID:</b><a href='#'> chandrika.m@ncr.srmuniv.ac.in</a></p>
+                                                </td>
+                                            </tr>  
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

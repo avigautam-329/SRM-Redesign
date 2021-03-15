@@ -1,0 +1,694 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link href="{% static 'SRMRedesign/css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/dpt.css' %}" rel="stylesheet">
+    
+    <title>SRM Institute of Science and Technology</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ABOUT
+                </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about_pages:srminfocus' %}">Facts</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:ourcampus' %}">The Campus</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:accwelcomehostel' %}">Student Accomodation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:govpublicinterest' %}">Governance</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/">Career Centre</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:visitingaboutktr' %}">Visiting SRM</a></li>
+                            <li><a class="dropdown-item" href="https://care.srmist.edu.in/#/">SRM CARE</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ACADEMICS
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
+                            <li><a class="dropdown-item" href="#">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="#">Library</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ADMISSION
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Admission India</a></li>
+                            <li><a class="dropdown-item" href="#">Admission International</a></li>
+                            <li><a class="dropdown-item" href="#">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="#">Transfer Program</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  RESEARCH
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/directorate-of-research/">Directorate of Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/research/phd_research">Academic Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/content/funded-research">Funded Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/centre-for-statistics/">Centre For Statistics</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  FOR YOU
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
+                            <li><a class="dropdown-item" href="#">Alumni</a></li>
+                            <li><a class="dropdown-item" href="#">Visitors</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MORE
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'more_pages:campartsnculture' %}">Campus Life</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/about">Placements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:grpinstitutions' %}">Group Institutions</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:announcements' %}">Announcements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:news' %}">News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:events' %}">Events</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid university-page">
+
+        <div class="row">
+
+            <div id="content">
+                <div class="section">
+                    <div class="tabs">
+                    </div>
+
+                    <div class="region region-content">
+                        <div id="block-system-main" class="block block-system">
+
+
+                            <div class="content">
+
+                                <div class="col-lg-12">
+                                    <div id="node-840" class="node node-academics node-promoted node-full clearfix" about="/academics/departmentsa-z" typeof="sioc:Item foaf:Document">
+                                        <div class="event-heading">
+                                            <h1 class="text-center" style="color:#063A7E">Departments A - Z</h1>
+                                            <div class="underline"></div>
+                                        </div>
+
+                                        <div class="content">
+                                            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                                                <div class="field-items">
+                                                    <div class="field-item even" property="content:encoded">
+                                                        <div class="event-heading course_eng faculty_table">
+                                                            <table border="1" cellpadding="5" cellspacing="0" class="boxborder imglft table table-striped hostel-fee" width="100%">
+                                                                <tbody>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="dpt/accidents.html">Accident &amp; Emergency Medicine (Casualty)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-aerospace-engineering/about-the-department">Aerospace Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/anaesthesiology/about-the-department">Anaesthesiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/non-clinical-departments/anatomy/about-the-department">Anatomy</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/animal-house/about-the-department">Animal House</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-architecture-and-interior-design/about-the-department">Architecture and Interior Design</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-automobile-engineering/about-the-department">Automobile Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/academics/medicine/health-science/BASLP" target="_self">BASLP</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/biochemistry/about-the-department">Biochemistry</a></td>
+                                                                    </tr>
+
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-biomedical-engineering/about-the-department">Biomedical Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            Blood Bank</td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-biotechnology/about-the-department">Biotechnology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/higher-specialties/cardiology">Cardiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/academics/medicine/college-of-medicine/higherspecialities/cardiovascular-and-thoracic-surgery">Cardiovascular and Thoracic Surgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a href="http://www.srmist.edu.in/placement/overview" target="_blank">Career Centre</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-career-development-0">Career Development&nbsp;(Science and Humanities)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/srmims/crt/index.htm">Centre for Renal Transplantation</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-chemical-engineering/about-the-department">Chemical Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/school-of-basic-sciences/department-chemistry/about-the-department">Chemistry</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-civil-engineering/about-the-department">Civil Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/clinical-psychology">Clinical Psychology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/college-of-science-and-humanities/school-of-commerce/department-of-commerce">Commerce</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/College-of-Dentistry">Community Dentistry</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/community-medicine/about-the-department">Community Medicine</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/department-of-computer-applications">Computer Applications (Engineering and Technology)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-computer-science">Computer Science</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-computer-science-engineering/about-the-department">Computer Science Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/conservative-dentistry-and-endodontics/about-the-department">Conservative Dentistry and Endodontics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a href="https://www.srmist.edu.in/corporate-relations" target="_blank">Corporate Relations</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/content/department-corporate-secretaryship-and-accounting-finance">Corporate Secretaryship and Accounting &amp; Finance</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a href="https://www.srmist.edu.in/center-for-performing-and-fine-arts/about-department" target="_blank">Centre for Performing and Fine Arts</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/academics/medicine/college-of-dentistry/dental-surgery">Dental Surgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/dermatology">Dermatology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a href="http://www.srmist.edu.in/content/department-economics-0" target="_self">Economics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/school-education">Education</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-electrical-and-electronics-engineering/about-the-department">Electrical and Electronics Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-electronics-communication-engineering/about-the-department">Electronics &amp; Communication Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-electronics-instrumentation-engineering/about-the-department">Electronics &amp; Instrumentation Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            Embedded System Technology</td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-english-0">English&nbsp;(Science and Humanities)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/school-of-language/department-of-foreign-languages">English and Foreign Languages</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/enterprise-resource-planning-erp">Enterprise Resource Planning (ERP)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/management/school-of-management">Finance</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/srm_eyebank/">Eye Bank</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-food-process-engineering/about-the-department">Food Process Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-french">French</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/forensic-medicine/about-the-department">Forensic Medicine</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/general-medicine">General Medicine</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/general-surgery/about-the-department">General Surgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/college-of-engineering/department-of-genetic-engineering/about-the-department">Genetic Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-hindi-0">Hindi</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/institute-hotel-and-catering-management">Hotel Management</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-information-technology/about-the-department">Information Technology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/institute-hotel-and-catering-management">Institute of Hotel and Catering Management</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-instrumentation-and-control-engineering/about-the-department">Instrumentation &amp; Control Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/IIISM/index.html" target="_blank">Interdisciplinary Institute of Indian System of Medicine</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-international-relationals-0">International Relations</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-journalism-mass-communication-0">Journalism and Mass Communication</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/school-law">Law</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/school-of-basicsciences/department-of-mathematics">Mathematics (Engineering and Technology)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/college-of-science-and-humanities/school-of-basic-sciences/department-of-mathematics">Mathematics &amp; Statistics (Science and Humanities)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/management/school-of-management/academics/programmes-Offered/mba/marketing">Marketing</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfist">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-mechanical-engineering/about-the-department">Mechanical Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-mechatronics-engineering/about-the-department">Mechatronics Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/media-and-communication">Media and Communication</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/medical-education">Medical Education</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/ms/index.htm">Medical Simulation</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/microbiology/about-the-department">Microbiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/school-of-basic-sciences/department-physics-and-nanotechnology/about-the-department">Nanotechnology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/higher-specialties/nephrology">Nephrology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/higher-specialties/neurology-and-neurosurgery">Neurology &amp; Neurosurgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-nuclear-Engineering/about-the-department">Nuclear Science and&nbsp; Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/health-sciences/college-of-nursing">Nursing</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/obstetrics-and-gynaecology/about-the-department">Obstetrics &amp; Gynaecology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/health-sciences/college-occupational-therapy/about-the-department">Occupational Therapy</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/Ophthalmology/about-the-department">Ophthalmology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/optometry">Optometry</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/Oral-and-Maxillofacial-Surgery/about-the-department">Oral &amp; Maxillofacial Surgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/Oral-and-Maxillofacial-Surgery/about-the-department">Oral Diagnosis,&nbsp;Oral Medicine and Radiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/college-of-dentistry/oral-pathology">Oral Pathology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/Oral-and-Maxillofacial-Surgery/about-the-department">Oral&nbsp;Maxillofacial Prosthodontics and Implantology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-dentistry/orthodontics/about-the-department">Orthodontics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/orthopaedics/about-the-department">Orthopaedics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/departments-of-surgery/Otorhinolaryngology-ent/about-the-department">Otorhinolaryngology (ENT)</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/paediatric-medicine-and-neonatology">Paediatric Medicine &amp; Neonatology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/department-of-pathology/about-the-department">Pathology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/college-of-dentistry/pedodontics-and-preventive-dentistry">Pedodontics &amp; Preventive Dentistry</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/periodontics">Periodontics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/pharmacology/about-the-department">Pharmacology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-pharmacy/about-the-department">Pharmacy</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/school-of-basic-sciences/department-physics-and-nanotechnology/about-the-department">Physics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/non-clinical-departments/physiology/about-the-department">Physiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/health-sciences/college-physiotherapy/about-the-department">Physiotherapy</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/higher-specialties/plastic-and-reconstructive-surgery">Plastic &amp; Reconstructive Surgery</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-political-science">Political Science</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/CollegeofDentistry">Prosthodontics</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/psychiatry">Psychiatry</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/department-public-administration">Public Administration</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/department-of-pulmonary-medicine">Respiratory Medicine</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/clinical-departments/radiology">Radiology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/retailing">Retailing</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/health-sciences/school-public-health/about-the-department">School of Public Health</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-software-engineering/about-the-department">Software Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/school-languages">School of Language</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/srm-ias-academy">SRM Civil Services Academy</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/science-and-humanities/school-of-media-studies/srm-sivaji-ganesan-film-institute">SRM Sivaji Ganesan Film Institute</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a href="http://www.srmist.edu.in/content/department-tamil-0" target="_blank">Tamil</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="http://www.srmist.edu.in/tamilperayam/">Tamil Perayam</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/content/school-education">Teacher Education and Research</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/engineering/department-of-telecommunication-engineering/about-the-department">Telecommunication Engineering</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxfirst">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/medicine/college-of-medicine/higher-specialties/urology">Urology</a></td>
+                                                                    </tr>
+                                                                    <tr class="boxsecond">
+                                                                        <td align="left" style="width: 494px;">
+                                                                            <a class="contentlink" href="/science-and-humanities/school-of-fine-arts/department-visual-communication">Visual Communications</a></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <p>&nbsp;</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class=" text-center top-space">
+            <img src="{% static "media/images/index/footer-logo.png" %}">
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class=" text-center gold"> GET CONNECTED</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class="gold text-center ">INSIGHTS</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class=" text-center gold">CAMPUSES</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <ul>
+                    <h2 class="text-center gold">MORE</h2>
+                    <li> <span class="gold">></span> International Alliances</li>
+                    <li>
+                        <span class="gold">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold">></span> Placement</li>
+                    <li>
+                        <span class="gold">></span> International Relations</li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

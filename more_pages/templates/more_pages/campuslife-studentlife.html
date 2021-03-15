@@ -1,0 +1,167 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>CAMPUS LIFE</h1>
+                </div>
+                <div>
+                    <p>Home > More > Campus Life</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}" class="active">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'more_pages:campartsnculture' %}">ARTS & CULTURE</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campathleticsnfitness' %}">ATHLETICS & FITNESS</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:campstudentlife' %}" class="active">STUDENT LIFE</a>
+                </li>
+                <li>
+                    <a href="https://www.srmist.edu.in/muthucharam/">COMMUNITY RADIO</a>
+                </li>
+                <li>
+                    <a href="{% url 'more_pages:camppublicservice' %}">PUBLIC SERVICE</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                    <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                    <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                    <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'more_pages:campcaste' %}">CASTE DISCRIMINATION</a></li>
+                        <li><a href="{% url 'more_pages:campintcomplaints' %}">INTERNATIONAL COMPLAINTS COMMITTEE</a></li>
+                        <li><a href="https://www.srmist.edu.in/engineering/womens-grievance-redressal-committee">WOMEN'S GRIEVANCE REDRESSAL COMMITTEE</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/campus-life/students-counseling-service">STUDENT COUNSELING SERVICE</a></li>
+                        <li><a href="https://www.srmist.edu.in/campus-life/anti-ragging">ANTI-RAGGING</a></li>
+                        <li><a href="https://www.srmist.edu.in/nss/index.php">NSS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Campus Life > Student Life</h4>
+                <h1>STUDENT LIFE</h1>
+
+                <p style='font-size:20px'>Getting around the Campus...</p>
+                <p>Walking and cycling are the most popular ways to get around the SRM campus. 
+                And with state-of-the-art security and 24 hour emergency services, it's the safest place to be.</p>
+                <p>The SRM group runs a fleet of buses for transporting students to and from the city and to other areas. 
+                Public transport buses and trains also ply to points near the campuses.</p>
+                <p style='font-size:20px'>Campus Lifestyle...</p>
+                <p>It's a diverse community of students at SRM Institute of Science and Technology (formerly known as SRM University), 
+                and the activities on offer are as diverse and varied too. 
+                From entertainment to extra-curricular or even religious pursuits, there's never a dull moment on campus.</p>
+                <p>There's never a dull moment on campus, as the activities on offer are as diverse and varied too - from entertainment to extra-curricular or even religious pursuits.</p>
+                <p style='font-size:20px'>Student Affairs</p>
+                <p>All activity related to extracurricular programs, forums, clubs, community service, and entrepreneurship cell and students council are managed by the student affairs department. 
+                Counselors are available to guide students and share personal issues.<br><a href='https://www.srmist.edu.in/soc/'> CLICK HERE FOR MORE</a></p>
+               <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 sub-content">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <h2 class="text-center">Housing & Dining</h2>
+                                    <p>The student accommodation at SRM is a "home away from home". There are separate hostels for men and women on the campus,
+                                     with all facilities for study and recreation. Besides hostel dining facility, 
+                                     there are food outlets and cafes too, open 12 to 15 hours a day.<br><a href='https://www.srmist.edu.in/campus/housing-dining'> CLICK HERE FOR MORE</a></p>
+                                </div>
+                                <div class="carousel-item ">
+                                    <h2 class="text-center">Diversity</h2>
+                                    <p>It's a 'mini India' out here at the SRM university campus - with students from all over India and other parts of the world. 
+                                    The campus reflects this cosmopolitan aspect of the student community, with celebrations of regional festivals.<br><a href='https://www.srmist.edu.in/campus/diversity'> CLICK HERE FOR MORE</a></p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Community Centers</h2>
+                                    <p>Students are initiated into community service at SRM, and are encouraged to actively participate in the many social initiatives such as Annsh - the school for drop-outs, 
+                                    Butterflies project - the cultural and sports forum for underprivileged children, etc.<br><a href='https://www.srmist.edu.in/campus/community-centers'> CLICK HERE FOR MORE</a></p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Clubs</h2>
+                                    <p>Several clubs are active on the SRM university campus, initiated by enthusiastic students. The Robotics Club is a good example, 
+                                    motivating students, distributing low cost kits, conducting workshops and organizing competitions.<br><a href='https://www.srmist.edu.in/soc/'> CLICK HERE FOR MORE</a></p>
+                                </div>
+                                <div class="carousel-item">
+                                    <h2 class="text-center">Religious Life</h2>
+                                    <p>There are prayer halls on campus, for all the major religions.</p>
+                                    <p>There are many other places of spiritual worship in and around Kattankulathur.</p>
+                                    <p><a href='https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2016/Religious-facility-name.pdf'> CLICK HERE FOR MORE</a></p>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                              </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
