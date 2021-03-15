@@ -48,10 +48,10 @@
                   ACADEMICS
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Colleges And Schools</a></li>
-                            <li><a class="dropdown-item" href="#">Departments</a></li>
-                            <li><a class="dropdown-item" href="#">Faculty Directory</a></li>
-                            <li><a class="dropdown-item" href="#">Library</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/academics/colleges-and-schools">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/faculty-directory">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:libabt' %}">Library</a></li>
                         </ul>
                     </li>
 
@@ -60,10 +60,10 @@
                   ADMISSION
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Admission India</a></li>
-                            <li><a class="dropdown-item" href="#">Admission International</a></li>
-                            <li><a class="dropdown-item" href="#">Student Mobility</a></li>
-                            <li><a class="dropdown-item" href="#">Transfer Program</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-india/">Admission India</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-international/">Admission International</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/ir/">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/srm-carnegie-mellon-partnership/msit-ese-overview">Transfer Program</a></li>
 
                         </ul>
                     </li>
@@ -86,10 +86,10 @@
                   FOR YOU
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:studgateway' %}">Students</a></li>
                             <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
-                            <li><a class="dropdown-item" href="#">Alumni</a></li>
-                            <li><a class="dropdown-item" href="#">Visitors</a></li>
+                            <li><a class="dropdown-item" href="https://alumni.srmist.edu.in/members.dz">Alumni</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:visit' %}">Visitors</a></li>
 
                         </ul>
                     </li>
@@ -1764,77 +1764,95 @@ By Areas          </label>
 
 
     <footer>
-        <div class=" text-center top-space">
+        <div class=" text-center top-space ">
             <img src="{% static "media/images/index/footer-logo.png" %}">
         </div>
-        <div class="row">
-            <div class="col-lg-3">
+        <div class="row social text-center ">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/SRMUniversityOfficial "><img src="{% static "media/images/index/facebook-f.png" %}"></a>
+                </li>
+
+                <li>
+                    <a hre="https://www.instagram.com/SRMUniversityOfficial/ "><img src="{% static "media/images/index/instagram.png" %}"></a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/SRM_Univ "><img src="{% static "media/images/index/twitter.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/SRMeducation?ob=0 "><img src="{% static "media/images/index/youtube.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/srm-ist-chennai/ "><img src="{% static "media/images/index/linkedin-in.png" %}"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class=" text-center gold"> GET CONNECTED</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class=" text-center gold "> GET CONNECTED</h2>
+                    <li> <span class="gold ">></span> International Alliances</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> International Advisory Board
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Corporate Advisory Board</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> Accreditations & Ranking</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span> Placement</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> International Relations</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
                     <h2 class="gold text-center ">INSIGHTS</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <li> <span class="gold ">></span> Innovation &Incubation Centre</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> Student Clubs
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Researgance</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> SRM Video</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span> Virtual Tour</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> Spectrum</li>
+                    <li>
+                        <span class="gold ">></span>IQAC</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class=" text-center gold">CAMPUSES</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class=" text-center gold ">CAMPUSES</h2>
+                    <li> <span class="gold ">></span>SRM University,Kattankulathur</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> SRM University,Ramapuram
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span>SRM University, Vadapalani</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> SRM University, Delhi-NCR</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span>SRM University, Sikkim</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> SRM University, Haryana</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class="text-center gold">MORE</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class="text-center gold ">MORE</h2>
+                    <li> <span class="gold ">></span> Privacy Policy</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> Campus Mail
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Terms & Conditions</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
-                    <li>
-                        <span class="gold">></span> Placement</li>
-                    <li>
-                        <span class="gold">></span> International Relations</li>
-
+                        <span class="gold ">></span>Student Portal</li>
                 </ul>
             </div>
         </div>

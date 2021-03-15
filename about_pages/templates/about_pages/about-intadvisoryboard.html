@@ -1,0 +1,993 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{% static 'SRMRedesign/css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/international.css' %}" rel="stylesheet">
+    <title>SRM Institute of Science and Technology</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ABOUT
+                </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about_pages:srminfocus' %}">Facts</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:ourcampus' %}">The Campus</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:accwelcomehostel' %}">Student Accomodation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:govpublicinterest' %}">Governance</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/">Career Centre</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:visitingaboutktr' %}">Visiting SRM</a></li>
+                            <li><a class="dropdown-item" href="https://care.srmist.edu.in/#/">SRM CARE</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ACADEMICS
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/academics/colleges-and-schools">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/faculty-directory">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:libabt' %}">Library</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ADMISSION
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-india/">Admission India</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-international/">Admission International</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/ir/">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/srm-carnegie-mellon-partnership/msit-ese-overview">Transfer Program</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  RESEARCH
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/directorate-of-research/">Directorate of Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/research/phd_research">Academic Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/content/funded-research">Funded Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/centre-for-statistics/">Centre For Statistics</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  FOR YOU
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:studgateway' %}">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
+                            <li><a class="dropdown-item" href="https://alumni.srmist.edu.in/members.dz">Alumni</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:visit' %}">Visitors</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MORE
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'more_pages:campartsnculture' %}">Campus Life</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/about">Placements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:grpinstitutions' %}">Group Institutions</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:announcements' %}">Announcements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:news' %}">News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:events' %}">Events</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form class="d-flex search-bar justify-content-end">
+        <input class="form-control me-2" type="search" aria-label="Search">
+        <img src="{% static "media/images/about/search.png" %}" class="search-icon">
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 content">
+
+                <h1 class="text-center" style="color:#063A7E">INTERNATIONAL ADVISORY BOARD</h1>
+                <div class="underline"></div>
+                <p>
+                    SRM Institute of Science and Technology (formerly known as SRM University) is one of the first universities in India to constitute an International Advisory Board (IAB) in 2003 with 31 Distinguished Deans, Directors and professors from top universities
+                    across the world. The membership has grown to over 50 today.The IAB is actively involved in building a stronger international dimension - in curriculum, research and teaching methodology. It has helped to create innovative avenues
+                    for research and successful careers at SRM Institute of Science and Technology (formerly known as SRM University), by:
+                    <ul>
+                        <li>Advising on implementation of systems and processes to take the standard of higher education to international standards</li>
+                        <li>
+                            Identifying and facilitating cooperation with reputed universities and industries in their country, for collaborative academic and research programs</li>
+                        <li>Formulating research schemes for availing external funding both in India and abroad
+                        </li>
+                    </ul>
+                </p>
+
+                <h3 class="text-center" style="color:#063A7E">INTERNATIONAL ADVISORY BOARD MEMBERS</h3>
+                <div class="underline"></div>
+
+                <table border="0" cellpadding="5" cellspacing="0" class="border table table-striped hostel-fee" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/al_lieberman.jpg" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.stern.nyu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/stern_school_business_nyu.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Al Lieberman</strong><br /> Prof. of Marketing, Executive Director<br /> Entertainment, Media and Technology Program<br /> Stern School of Business, NYU</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/6(14).jpg" style="width: 65px; height: 84px;" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.usc.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_southern_california.jpg" style="width: 159px; height: 49px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Prof. Allan Baker</strong><br /> Associate Dean, Administration and International Projects<br /> School of Cinematic Arts<br /> University of Southern California</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/allan_l_fisher.jpg" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.laureate.net/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/laureate_higher_education_group.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Allan L. Fisher</strong><br /> President and CEO<br /> Carnegie Technology Education, Pittsburgh</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;<img alt="" src="https://www.srmist.edu.in/sites/default/files/images/ashish_arora.jpg" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.cmu.edu/index.shtml" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/carnegie_mellon_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Ashish Arora</strong><br /> Professor of Economics and Public Policy<br /> Carnegie Mellon University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/bernhard_glaeser.jpg" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.wzb.eu/en" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/wzb.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Prof. Dr. Bernhard Glaeser</strong><br /> Social Science Research Centre<br /> Berlin
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/bob_hoekstra.jpg" style="width: 61px; height: 63px;" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.bangalore.philips.com/html/index.asp" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/philips_logo.jpg" style="width: 159px; height: 46px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Bob Hoekstra</strong><br /> Former CEO, Philips R&amp;D Center<br /> CEO, Opportunity India Consulting</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/bopaya.jpg" /></td>
+                            <td align="center" rowspan="2" valign="top">
+                                <a href="http://www.pitt.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_pittsburgh.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Bopaya Bidanda</strong><br /> Ernest E. Roth Professor and Chair, Dept. of Industrial Engg.<br /> Prof. of Business Administration<br /> Joseph M. Katz Graduate Business School<br /> University of Pittsburgh</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/cauligi_s_raghavendra.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 156px;" valign="top">
+                                <a href="http://www.usc.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_southern_california.png" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;">
+                                <strong>Dr. Cauligi S. Raghavendra</strong><br /> Sr. Associate Dean for Strategic Initiatives<br /> Prof. Electrical Engineering and<br /> Prof. of Computer Science<br /> Viterbi School of Engineering<br /> University
+                                of Southern California</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/christopher_r_lowe.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 156px;" valign="top">
+                                <a href="http://www.cam.ac.uk/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_cambridge.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;">
+                                <p><strong>Dr. Christopher R Lowe</strong><br /> Director
+                                    <br /> Institute of Biotechnology<br /> University of Cambridge</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 387px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/daniel_chandran.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 150px;" valign="top">
+                                <a href="http://www.uts.edu.au/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_technology_sydney.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 387px;">
+                                <p><strong>Dr. Daniel Chandran</strong><br /> Deputy Head of School,School of Systems, Management &amp; Leadership<br /> Associate Member, Centre for Human Centered Technology Design<br /> University of Technology, Sydney<br
+                                    /> New South Wales</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 387px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/david_e_luzzi.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 150px;" valign="top">
+                                <a href="http://www.northeastern.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/northeastern_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 387px;">
+                                <p><strong>Dr. Prof. David E.Luzzi</strong><br /> Dean, College of Engineering<br /> 230, Snell Engineering Center<br /> North Eastern University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 387px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/david_l_bartlett_bernard.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 150px;" valign="top">
+                                <a href="http://www.pitt.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_pittsburgh.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 387px;">
+                                <p><strong>Dr. David L. Bartlett </strong><br /> Vice Chairman, Surgical Oncology &amp; Gastrointestinal Services<br /> Bernard Fisher Professor of Surgery<br /> Chief of the Division of Surgical Oncology<br /> University
+                                    of Pittsburgh</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/ernest_j_wilson_iii.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 157px;" valign="top">
+                                <a href="http://www.usc.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_southern_california.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <p><strong>Prof. Ernest J. Wilson III</strong><br /> Dean and Walter H.Annenberg Chair in Communication<br /> Annenberg School for Communication and Journalism<br /> University of Southern California</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 380px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/francis_y_l_chin.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 157px;" valign="top">
+                                <a href="http://www.hku.hk/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_hong_kong.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <p><strong>Dr. Francis Y. L. Chin</strong><br /> Associate Dean of Engineering<br /> Professor and Chair, Computer Science<br /> University of Hong Kong</p>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/6(14).jpg" style="width: 65px; height: 84px;" /></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top" width="33%">
+                                <a href="http://www.northeastern.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/northeastern_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. Ganesh Krishnamoorthy</strong><br /> Professor, Accounting<br /> Northeastern University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/gilbert_h_mudge.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://brighamandwomens.org/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/brigham_and_womens_ hospital.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. Gilbert H. Mudge</strong><br /> Senior Cardiologist and Senior Medical Advisor<br /> Director BWH International Program<br /> Brigham and Women's Hospital</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/raghav_rao.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 163px;" valign="top">
+                                <a href="http://www.buffalo.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/state_university_new_york_buffalo.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <p><strong>Dr. H. Raghav Rao</strong><br /> Professor, Department of MSS, School of Management<br /> State University of New York<br /> Buffalo
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/hemant_k_bhargava.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 163px;" valign="top">
+                                <a href="http://www.ucdavis.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_california_davis.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <p><strong>Dr. Hemant K. Bhargava</strong><br /> Professor, and Jerome and Elsie Suran Chair in Technology Management<br /> Graduate School of Management<br /> University of California, Davis</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/hemant_k_jain.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 163px;" valign="top">
+                                <a href="http://www4.uwm.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_wisconsin_milwaukee.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 374px;">
+                                <p><strong>Dr. Hemant K. Jain</strong><br /> Professor
+                                    <br /> Sheldon B. Lubar School of Business<br /> University of Wisconsin, Milwaukee</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 378px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/j_n_reddy.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 159px;" valign="top">
+                                <a href="http://www.tamu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/texas_am_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <p><strong>Prof. J. N. Reddy</strong><br /> Distinguished Professor and Holder of Oscar S.Wyatt Chair<br /> Department of mechanical engineering<br /> Texas A &amp; M University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/jeremy_howells.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 159px;" valign="top">
+                                <a href="http://www.mbs.ac.uk/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_manchester.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <p><strong>Dr. Jeremy Howells</strong><br /> Dean, Faculty of Business and Law<br /> University of Southampton<br /> Southampton, United Kingdom</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/6(14).jpg" style="width: 65px; height: 84px;" /></td>
+                            <td align="center" rowspan="2" style="width: 159px;" valign="top">
+                                <a href="http://www.pitt.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_pittsburgh.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <p><strong>Dr. Joanne L. Russel</strong><br /> Director, Center for Global Health<br /> University of Pittsburgh</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/john_n.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 159px;" valign="top">
+                                <a href="http://www.jhu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/johns_hopkins_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 378px;">
+                                <p><strong>Dr. John N.Fini</strong><br /> Homewood Intellectual Property &amp; Technology Commercialization<br /> (Homewood IP), Director, Fast-forward Initiative,<br /> The Johns Hopkins University</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 376px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/k_sivakumar.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 161px;" valign="top">
+                                <a href="http://www4.lehigh.edu/default.aspx" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/lehigh_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. K. Sivakumar</strong><br /> Chairperson
+                                    <br /> Professor of Marketing<br /> Lehigh University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/kannan_srinivasan.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 161px;" valign="top" width="33%">
+                                <a href="http://www.cmu.edu/index.shtml" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/carnegie_mellon_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. Kannan Srinivasan</strong><br /> Rohet Tolani Distinguished Professor of International Business<br /> H. J. Heinz II Professor of Management, Marketing and Information Systems<br /> Carnegie Mellon University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/katsutoshi_ayano.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 161px;" valign="top">
+                                <a href="http://www.u-tokai.ac.jp/international/index.html" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/tokai_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Prof. Katsutoshi Ayano</strong><br /> Chief of the Dept. of Business Administration<br /> and Political Sciences, Tokai University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/kenneth_kw.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 161px;" valign="top">
+                                <a href="http://www.pitt.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_pittsburgh.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. Kenneth K.W. Lee</strong><br /> Associate Professor of Surgery<br /> Vice Chair for Graduate Education and Program Director<br /> Department of Surgery<br /> University of Pittsburgh</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 379px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/lee_loke_chong.png" /></td>
+                            <td align="center" rowspan="2" style="width: 158px;" valign="top">
+                                <a href="http://www.simtech.a-star.edu.sg/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/singapore_institute_of_manufacturing_technology.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <p><strong>Dr. Lee Loke Chong</strong><br /> Executive Director<br /> Singapore Institute of Manufacturing<br /> Technology
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 379px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/malcolm_peat.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 158px;" valign="top">
+                                <a href="http://www.queensu.ca/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/queens_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <p><strong>Dr. Malcom Peat</strong><br /> Executive Director<br /> Queen's University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/mark_stehlik.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 158px;" valign="top">
+                                <a href="http://www.cmu.edu/index.shtml" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/carnegie_mellon_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <p><strong>Dr. Mark Stehlik</strong><br /> Professor
+                                    <br /> Assistant Dean for Undergraduate Education, CSD<br /> Carnegie Mellon University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/medini_r_singh.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 158px;" valign="top">
+                                <a href="http://www.columbia.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/columbia_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 379px;">
+                                <p><strong>Dr. Medini R. Singh</strong><br /> Senior Lecturer in Discipline in Business<br /> Columbia University</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 383px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/v_g_narayanan.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 154px;" valign="top" width="33%">
+                                <a href="http://www.hbs.edu/Pages/default.aspx" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/harvard_business_school.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 383px;">
+                                <p><strong>Dr. V. G. Narayanan</strong><br /> Thomas D. Casserly, Jr. Professor of Business Administration<br /> Unit Head, Accounting and Management<br /> Harvard Business School<br /> Harvard University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 383px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/v_narayanamurti.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 154px;" valign="top" width="33%">
+                                <a href="http://www.hks.harvard.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/harvard_kennedy_school.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 383px;">
+                                <p><strong>Dr. V. Narayanamurti</strong><br /> Benjamin Peirce Professor and Director of Science<br /> Technology and Public Policy Program<br /> Harvard Kennedy School</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/oliver_linton.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 156px;" valign="top" width="33%">
+                                <a href="http://www2.lse.ac.uk/home.aspx" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/london_school_of_economics.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 381px;">
+                                <p><strong>Dr. Oliver Linton</strong><br /> Professor of Econometrics<br /> London School of Economics<br /> London
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/parasuraman.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 157px;" valign="top" width="33%">
+                                <a href="http://www.miami.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_miami_miami.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <p><strong>Dr. Parasuraman</strong><br /> James W. McLamore Chair in Marketing,<br /> Professor, and Department Chair, Marketing<br /> University of Miami<br /> Miami
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/pradeep_khosla.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 157px;" valign="top">
+                                <a href="http://ucsd.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/iab_uc.jpg" style="width: 159px; height: 30px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <p><strong>Dr. Pradeep Khosla</strong><br /> Chancellor
+                                    <br /> University of California, San Diego</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/prasant_mahapatra.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 157px;" valign="top">
+                                <a href="http://ucsd.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/iab_uc.jpg" style="width: 159px; height: 30px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 380px;">
+                                <p><strong>Dr. Prasant Mohapatra</strong><br /> Professor, Computer Science Department<br /> Associate Chancellor,<br /> University of California, San Diego</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/raj_acharya.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top" width="33%">
+                                <a href="http://www.psu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/the_pennsylvania_state_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Prof. Raj Acharya</strong><br /> Professor and Head,<br /> Computer Science &amp; Engineering<br /> Director, Advanced Laboratory for Information Systems &amp; Analysis (ALISA)<br /> The Pennsylvania State University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/ramaiya_balachandra.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top" width="33%">
+                                <a href="http://www.northeastern.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/northeastern_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Ramaiya Balachandra</strong><br /> Professor, IOA Group<br /> College of Business Administration<br /> Northeastern University, Boston</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/ravi_kumar.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top">
+                                <a href="http://www.usc.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_southern_california.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Ravi Kumar</strong><br /> Associate Dean for International Programs and Professor<br /> University of Southern California</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/eberhard_k_hohl.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top">
+                                <a href="http://www.hs-weingarten.de/web/willkommen/startseite" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_of_applied_sciences_weingarten.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Prof. Dr. Rer. Pol. Eberhard K. Hohl</strong><br /> Head of MBA Program, International Business Management<br /> Director of International Affairs<br /> Faculty Technology and Management<br /> Hochschule Ravensburg-Weingarten<br
+                                    /> University of Applied Sciences</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/rohan_abeyaratne.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top">
+                                <a href="http://web.mit.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/massachusetts_institute_technology.jpg" style="width: 159px; height: 46px;" /></a><br /> &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. Rohan Abeyaratne</strong><br /> Quentin Berg Professor of Mechanics<br /> Massachusetts Institute of Technology</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/6(37).jpg" style="width: 65px; height: 84px;" /></td>
+                            <td align="center" rowspan="2" style="width: 173px;" valign="top">
+                                <a href="http://www.cornell.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/cornell_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Dr. S. P. Raj</strong><br /> Professor, Johnson Graduate School of Management<br /> Cornell University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;" width="383">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/satish_udpa.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top" width="370">
+                                <a href="http://www.msu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/michigan_state_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Prof. Satish Udpa</strong><br /> Dean, College of Engineering<br /> University Distinguished Professor<br /> Michigan State University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/seeram_ramakrishna_ir.jpg" style="width: 61px; height: 63px;" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://www.nus.edu.sg/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/national_university_of_singapore.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Dr. Seeram Ramakrishna</strong><br /> Professor of Materials Engineering and Director of Center for Nan fibers &amp; Nanotechnology<br /> National University of Singapore</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/shiladitya_sengupta.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://brighamandwomens.org/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/brigham_and_womens_ hospital.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Dr. Shiladitya Sengupta</strong><br /> Assistant Professor of Medicine and Health Science and Technology<br /> Harvard Medical School<br /> Brigham and Women's Hospital</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/stacey_lawson.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://www.berkeley.edu/index.html" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_california_berkeley.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Dr. Stacey Lawson</strong><br /> Co-Founder and Industry Fellow<br /> Center of Entrepreneurship and Technology<br /> University of California, Berkeley</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/sunil_dutta.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://www.berkeley.edu/index.html" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/university_california_berkeley.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Dr. Sunil Dutta</strong><br /> Chair, Accounting Group<br /> Joan and Egon von Kaschnitz<br /> Distinguished Associate Professor<br /> University of California at Berkeley<br /> California
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/sunil_gupta.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://www.hbs.edu/Pages/default.aspx" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/harvard_business_school.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Dr. Sunil Gupta</strong><br /> Edward W. Carter Professor of Business Administration<br /> Chair, General Management Program<br /> Harvard Business School<br /> Harvard University</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/sunil_saigal.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 171px;" valign="top">
+                                <a href="http://www.njit.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/new_jersey _institute_technology.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 385px;">
+                                <p><strong>Prof. Sunil Saigal</strong><br /> Distinguished Professor and Dean<br /> Newark College of Engineering<br /> New Jersey Institute of Technology<br /> University Heights<br /> Newark, NJ 07102</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <span style="width: 378px;"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/6(37).jpg" style="width: 65px; height: 84px;" /></span></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://www.unimelb.edu.au/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/iab_mu.jpg" style="width: 159px; height: 40px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. Thas Nirmalathas</strong><br /> Director, MERIT<br /> Associate Dean of Engineering<br /> University of Melbourne</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <span style="width: 378px;"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/tom_byers.jpg" /></span></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://www.stanford.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/stanford_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. Tom Byers</strong><br /> Professor and Academic Director<br /> Stanford Technology Ventures Program<br /> Stanford University</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/n_venkatraman_ir.jpg" style="width: 61px; height: 63px;" /></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://www.bu.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/boston_unviersity_ir.jpg" style="width: 159px; height: 46px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. N. Venkatraman</strong><br /> David J. McGrath Jr. Professor in Management<br /> Boston University<br /> Boston
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/m_s_vijay_kumar_ir.jpg" style="width: 61px; height: 63px;" /></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://web.mit.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/massachusetts_institute_technology.jpg" style="width: 159px; height: 46px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. M. S. Vijay Kumar</strong><br /> Senior Strategic Advisor for Digital Learning &amp; Director,OEIT<br /> Massachusetts Institute of Technology</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;" width="67%">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/vithala_r_rao.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 153px;" valign="top">
+                                <a href="http://www.cornell.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/cornell_university.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 384px;">
+                                <p><strong>Dr. Vithala R. Rao</strong><br /> Deane W. Malott Professor of Management<br /> Johnson Graduate School of Management<br /> Cornell University</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 376px;" width="377">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/wai_k_cheng.jpg" /></td>
+                            <td class="center" rowspan="2" style="width: 164px;" valign="top">
+                                <a href="http://web.mit.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/massachusetts_institute_technology.jpg" style="width: 159px; height: 46px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. Wai K. Cheng</strong><br /> Professor of Mechanical Engineering<br /> Director, Sloan Automotive Laboratory<br /> Massachusetts Institute of Technology</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/william_david_evans.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 164px;" valign="top">
+                                <a href="http://web.mit.edu/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/massachusetts_institute_technology.jpg" style="width: 159px; height: 46px;" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. William David Evans</strong><br /> Head, Dept of Medical physics<br /> Cardiff and Vale NHS Trust<br /> University Hospital of Wales<br /> Wales
+                                    <br /> &nbsp;
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <img alt="" src="https://www.srmist.edu.in/sites/default/files/images/wong_poh_kam.jpg" /></td>
+                            <td align="center" rowspan="2" style="width: 164px;" valign="top">
+                                <a href="http://www.nus.edu.sg/" target="_blank"><img alt="" src="https://www.srmist.edu.in/sites/default/files/images/national_university_of_singapore.jpg" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 376px;">
+                                <p><strong>Dr. Wong Poh Kam</strong><br /> Director
+                                    <br /> NUS Entrepreneurship Centre<br /> National University of Singapore<br /> &nbsp;
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class=" text-center top-space ">
+            <img src="{% static "media/images/index/footer-logo.png" %}">
+        </div>
+        <div class="row social text-center ">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/SRMUniversityOfficial "><img src="{% static "media/images/index/facebook-f.png" %}"></a>
+                </li>
+
+                <li>
+                    <a hre="https://www.instagram.com/SRMUniversityOfficial/ "><img src="{% static "media/images/index/instagram.png" %}"></a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/SRM_Univ "><img src="{% static "media/images/index/twitter.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/SRMeducation?ob=0 "><img src="{% static "media/images/index/youtube.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/srm-ist-chennai/ "><img src="{% static "media/images/index/linkedin-in.png" %}"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class=" text-center gold "> GET CONNECTED</h2>
+                    <li> <span class="gold ">></span> International Alliances</li>
+                    <li>
+                        <span class="gold ">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold ">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold ">></span> Placement</li>
+                    <li>
+                        <span class="gold ">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class="gold text-center ">INSIGHTS</h2>
+                    <li> <span class="gold ">></span> Innovation &Incubation Centre</li>
+                    <li>
+                        <span class="gold ">></span> Student Clubs
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Researgance</li>
+                    <li>
+                        <span class="gold ">></span> SRM Video</li>
+                    <li>
+                        <span class="gold ">></span> Virtual Tour</li>
+                    <li>
+                        <span class="gold ">></span> Spectrum</li>
+                    <li>
+                        <span class="gold ">></span>IQAC</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class=" text-center gold ">CAMPUSES</h2>
+                    <li> <span class="gold ">></span>SRM University,Kattankulathur</li>
+                    <li>
+                        <span class="gold ">></span> SRM University,Ramapuram
+                    </li>
+                    <li>
+                        <span class="gold ">></span>SRM University, Vadapalani</li>
+                    <li>
+                        <span class="gold ">></span> SRM University, Delhi-NCR</li>
+                    <li>
+                        <span class="gold ">></span>SRM University, Sikkim</li>
+                    <li>
+                        <span class="gold ">></span> SRM University, Haryana</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class="text-center gold ">MORE</h2>
+                    <li> <span class="gold ">></span> Privacy Policy</li>
+                    <li>
+                        <span class="gold ">></span> Campus Mail
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Terms & Conditions</li>
+                    <li>
+                        <span class="gold ">></span>Student Portal</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"386d5aac0d17276539cf62e1fb787f667","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script> 
+
+</body>
+
+</html>

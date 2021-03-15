@@ -61,9 +61,11 @@
     }
     
     .about {
+        /*
         position: absolute;
         top: 30%;
-        right: 0;
+        right: 0;*/
+        margin-top: 22%;
         padding: 0 5%;
     }
     
@@ -86,14 +88,16 @@
     }
     
     .sub-nav {
+        /*
         position: absolute;
         top: 45%;
-        left: 3%;
+        left: 3%;*/
+        margin-top: 2%;
     }
     
     .sub-nav li {
         display: inline;
-        padding: 1%;
+        padding: 0.7%;
     }
     
     .sub-nav li a {
@@ -107,7 +111,7 @@
     
     .rule {
         margin: 1%;
-        width: 89vw;
+        width: 98%;
         height: 0px;
         border: 1px solid #969696;
     }
@@ -119,8 +123,8 @@
     .side-nav {
         list-style: none;
         position: absolute;
-        top: 60%;
-        left: 3%;
+        /*top: 60%;
+        left: 3%;*/
         font-style: normal;
         font-weight: 600;
         font-size: 15px;
@@ -142,7 +146,7 @@
         position: absolute;
         top: 60%;
         left: 26%;*/
-        margin-top: 25%;
+        margin-top: 0%;
     }
     
     .content h4 {

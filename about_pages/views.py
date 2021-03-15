@@ -16,11 +16,17 @@ def AboutEthics(request):
 def AboutHistory(request):
     return render(request,'about_pages/about-history.html')
 
+def AboutRanking(request):
+    return render(request,'about_pages/about-ranking.html')
+
 def AboutAdministration(request):
     return render(request,'about_pages/about-administration.html')
 
 def AboutProgrammes(request):
     return render(request,'about_pages/about-programs.html')
+
+def AboutInternationalAdvisory(request):
+    return render(request,'about_pages/about-intadvisoryboard.html')
 
 def AboutResearch(request):
     return render(request,'about_pages/about-research.html')

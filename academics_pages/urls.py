@@ -6,4 +6,5 @@ app_name = 'academics_pages'
 
 urlpatterns = [
     url(r"Departments/$",views.AcademicsDepartments,name='academicsdep'),
+    url(r"Library/About-Library/$",views.LibraryAbout,name='libabt'),
 ]

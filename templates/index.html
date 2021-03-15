@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,10 +45,10 @@
                   ACADEMICS
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/academics/colleges-and-schools">Colleges And Schools</a></li>
                             <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
-                            <li><a class="dropdown-item" href="#">Faculty Directory</a></li>
-                            <li><a class="dropdown-item" href="#">Library</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/faculty-directory">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:libabt' %}">Library</a></li>
                         </ul>
                     </li>
 
@@ -57,10 +57,10 @@
                   ADMISSION
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Admission India</a></li>
-                            <li><a class="dropdown-item" href="#">Admission International</a></li>
-                            <li><a class="dropdown-item" href="#">Student Mobility</a></li>
-                            <li><a class="dropdown-item" href="#">Transfer Program</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-india/">Admission India</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-international/">Admission International</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/ir/">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/srm-carnegie-mellon-partnership/msit-ese-overview">Transfer Program</a></li>
 
                         </ul>
                     </li>
@@ -83,10 +83,10 @@
                   FOR YOU
                 </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:studgateway' %}">Students</a></li>
                             <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
-                            <li><a class="dropdown-item" href="#">Alumni</a></li>
-                            <li><a class="dropdown-item" href="#">Visitors</a></li>
+                            <li><a class="dropdown-item" href="https://alumni.srmist.edu.in/members.dz">Alumni</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:visit' %}">Visitors</a></li>
 
                         </ul>
                     </li>
@@ -112,9 +112,25 @@
     <div class="container">
         <div class="row">
             <div class="top">
-                <div class="covid d-flex justify-content-between">
-                    <h3>Covid-19 Updates</h3>
-                    <p>Get latest updates of Covid-19 from us!</p>
+                <div class="fullscreen-bg">
+                    <video loop autoplay class="fullscreen-bg__video">
+                        
+                        <source src="{% static "media/video/Srmbg.mp4" %}" type="video/mp4">
+                        
+                    </video>
+                    <div id="overlay-vdo"></div>
+                    <div class="apply-now">
+                        <img src="{% static "media/images/index/horizontal-clip.png" %}" class="top-clip">
+                        <h1><a href="https://www.srmist.edu.in/admission-india/">APPLY NOW!</a></h1>
+                    </div>
+                </div>
+                <div class=" covid d-flex justify-content-between ">
+                    <a href="{% url 'covid' %}">
+                        <h3>Covid-19 Updates</h3>
+                    </a>
+                    <a href="{% url 'covid' %}">
+                        <p>Get latest updates of Covid-19 from us!</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -122,6 +138,15 @@
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -133,203 +158,452 @@
 
                         <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/cap.png" %}">
                             <h3 class="text-center">STUDENTS</h3>
-                            <h6 class="text-center">500000+</h6>
+                            <h6 class="text-center count">500000</h6>
+
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/coaching.png" %}">
-                            <h3 class="text-center">FACULTY</h3>
-                            <h6 class="text-center">3200+</h6>
+                            <h3 class="text-center">FACULTY<br></h3>
+                            <h6 class="text-center count">3200</h6>
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/book.png" %}">
-                            <h3 class="text-center">PUBLICATION</h3>
-                            <h6 class="text-center">25517</h6>
+                            <h3 class="text-center">PUBLICATION<br></h3>
+                            <h6 class="text-center count">25517</h6>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/recruitment.png" %}">
-                            <h3 class="text-center">JOB OFFERS</h3>
-                            <h6 class="text-center">8500+</h6>
+                            <h3 class="text-center">JOB<br>OFFERS</h3>
+                            <h6 class="text-center count">8500</h6>
                         </div>
                     </div>
 
                 </div>
-            </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
 
-        </div>
-        <div class="row academics">
+                        <div class="col-lg-4 col-md-4 col-sm-4 text-center icon-abt"><img src="{% static "media/images/index/international 1.png" %}">
+                            <h3 class="text-center">MOU<br>INTERNATIONAL</h3>
+                            <h6 class="text-center count">170</h6>
+                        </div>
 
-            <div id="overlay"></div>
-            <h1 class="text-center">ACADEMICS</h1>
-            <div class="underline"></div>
-            <h3 class="text-center">Schools and Faculties</h3>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Engineering</h4>
+                        <div class="col-lg-4 col-md-4 col-sm-4 text-center icon-abt"><img src="{% static "media/images/index/invest 1.png" %}">
+                            <h3 class="text-center">EXTERNAL<br>FUNDING</h3>
+                            <h6 class="text-center">130+ CRORE</h6>
+                        </div>
 
-                <img src="{% static "media/images/index/academics4.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Medical & Health Sciences</h4>
+                        <div class="col-lg-4 col-md-4 col-sm-4 text-center icon-abt"><img src="{% static "media/images/index/salary 1.png" %}">
+                            <h3 class="text-center">HIGHEST<br>CTC</h3>
+                            <h6 class="text-center">41.6 LPA</h6>
+                        </div>
+                    </div>
 
-                <img src="{% static "media/images/index/academics5.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Management</h4>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
 
-                <img src="{% static "media/images/index/academics1.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Science & Humanities</h4>
+                        <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/team 1.png" %}">
+                            <h3 class="text-center">INTERNATIONAL<br>STUDENTS</h3>
+                            <h6 class="text-center  count">950+</h6>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/business-and-trade 1.png" %}">
+                            <h3 class="text-center">COMPANIES VISITED</h3>
+                            <h6 class="text-center">625+</h6>
+                        </div>
 
-                <img src="{% static "media/images/index/academics8.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Hotel Management</h4>
+                        <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/suitcase 1.png" %}">
+                            <h3 class="text-center">SUPER DREAM<br> & DREAM OFFERS</h3>
+                            <h6 class="text-center">2000+</h6>
+                        </div>
 
-                <img src="{% static "media/images/index/academics3.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Law</h4>
+                        <div class="col-lg-3 col-md-6 col-sm-6 text-center icon-abt"><img src="{% static "media/images/index/collaboration 1.png" %}">
+                            <h3 class="text-center">INTERNATIONAL<br>COLLABORATION</h3>
+                            <h6 class="text-center">60+</h6>
+                        </div>
+                    </div>
 
-                <img src="{% static "media/images/index/academics2.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Agricultural Sciences</h4>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
 
-                <img src="{% static "media/images/index/academics6.png" %}">
-            </div>
-            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center">
-                <h4>Distance Education</h4>
 
-                <img src="{% static "media/images/index/academics7.png" %}">
-            </div>
-        </div>
-        <div class="row research">
-            <h1 class="text-center">RESEARCH & INNOVATION</h1>
-            <div class="underline"></div>
-            <h3 class="text-center">A place for learning, innovation, discovery, expression and discourse </h3>
-            <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                <div class="card">
-                    <img src="{% static "media/images/index/research1.png" %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Directorate of Research</h5>
-                        <p class="card-text">Fosters multi-disciplinary all pervasive research and innovation</p>
+                            <p class="carousel-p"><img src="{% static "media/images/index/srm_logo.png" %}"><span class="bold">Affliated Colleges</span><br>List of Institutes functioning as constitutent units under SRMIST</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/Ariia.png" %}"><span class="bold">ARIIA 2020</span><br>SRMIST is ranked SECOND in Category of Private / Self Financed<br> University & Deemed to be University in India</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/Ariia.png" %}"><span class="bold">ARIIA 2019</span><br>SRMIST Ranked THIRD under the Category of Private or Self Financed
+                                <BR>Institutions in India</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/abet.png" %}"><span class="bold">ABET</span><br>Indian college and university ranking</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/ashoka.png" %}"><span class="bold">MHRD</span><br>MHRD has placed SRMIST in highest Category 1 institution</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/india.png" %}"><span class="bold">NAAC</span><br>SRMIST has been accredited by NAAC with the Highest 'A++' Grade in the year 2018</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/nif.png" %}"><span class="bold">NIRF</span><br>Ranked 32nd Under University Category by NIRF</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row about ">
+                        <h1 class="text-center">ABOUT US</h1>
+                        <div class="underline"></div>
+                        <p class="text-center">A place for learning, discovery, innovation, expression and discourse
+                        </p>
+                        <div class="col-lg-12">
+
+
+                            <p class="carousel-p"><img src="{% static "media/images/index/ugc.png" %}"><span class="bold">UGC</span><br>UGC includes SRMIST in the list of Institutions Deemed to be Universities</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-center col-md-4 col-sm-12">
-                <div class="card">
-                    <img src="{% static "media/images/index/research2.png" %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Nanotechnology Research</h5>
-                        <p class="card-text">Characterization of cutting-edge nanostructured materials</p>
+        </div>
+        <div class="row academics ">
+
+            <div id="overlay-academics"></div>
+            <h1 class="text-center ">ACADEMICS</h1>
+            <div class="underline "></div>
+            <h3 class="text-center ">Schools and Faculties</h3>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Engineering</h4>
+
+                        <img src="{% static "media/images/index/academics4.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>We have long been at the forefront of breakthrough research and innovation. We offer several degree programs, major, minor and specializations, as well as research opportunities</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-center col-md-4 col-sm-12">
-                <div class="card">
-                    <img src="{% static "media/images/index/research3.png" %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Earthquake Research Cell</h5>
-                        <p class="card-text">Advanced Research on occurrence and prediction of Earthquake</p>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Medical & Health Sciences</h4>
+
+                        <img src="{% static "media/images/index/academics5.png" %}">
+
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>Join us in pioneering research, healthcare and implementing effective clinical therapies to improve living conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Management</h4>
+
+                        <img src="{% static "media/images/index/academics1.png" %}">
+
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>Creating effective leaders who can provide innovative ideas and solutions to change the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Science & Humanities</h4>
+
+                        <img src="{% static "media/images/index/academics8.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>It is the place for fundamental research, curiosity driven, where free, open and critical inquiry is pursued across disciplines.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Hotel Management</h4>
+
+                        <img src="{% static "media/images/index/academics3.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p></p> SRM Institute of Hotel Management (IHM) has been offering quality hospitality education and training for more than a decade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Law</h4>
+
+                        <img src="{% static "media/images/index/academics2.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>SRM Institute of Science and Technology has recently launched SRM law school with an aim to yield future legal professionals to our country.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Agricultural Sciences</h4>
+
+                        <img src="{% static "media/images/index/academics6.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p>To establish a Futuristic Institution for Higher Education and Research in Agriculture and Allied Sciences integrating Ecology, Food, Nutrition and Health.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3 col-md-4 col-sm-6 box text-center flip-card ">
+                <div class="flip-card-inner ">
+                    <div class="flip-card-front ">
+                        <h4>Distance Education</h4>
+
+                        <img src="{% static "media/images/index/academics7.png" %}">
+                    </div>
+                    <div class="flip-card-back ">
+                        <p> Distance education gives you the flexibility to acquire a university degree without needing to visit campus often.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row events">
-            <h1 class="text-center">EVENTS</h1>
-            <div class="underline"></div>
-            <h3 class="text-center">What's happening on Campus</h3>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class=" card">
-                    <h3 class=" card-title">SRMIST 18TH CONVOCATION</h3>
-                    <img src="{% static "media/images/index/vertical-clip.png" %}" class="vclip">
-                    <div class="date-1">
+        <div class="row admission ">
+            <h1 class="text-center ">ADMISSIONS</h1>
+            <div class="underline "></div>
+            <p>Follow your passion, explore, collaborate and challenge yourself.<br><span class="yellow "> Apply now!</span></p>
+            <div class="col-lg 6 col-md-6 col-sm-12 ">
+                <div class=" card card-ind ">
+                    <h3 class=" card-title ">Admissions India</h3>
+
+                    <button class="btn btn-primary " type="button "><a href="https://www.srmist.edu.in/admission-india/">APPLY NOW</a></button>
+                </div>
+            </div>
+            <div class="col-lg 6 col-md-6 col-sm-12 ">
+                <div class=" card card-int ">
+                    <h3 class=" card-title ">Admissions International</h3>
+                    <button class="btn btn-primary " type="button "><a href="https://www.srmist.edu.in/admission-international/">APPLY NOW</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="row research ">
+            <h1 class="text-center ">RESEARCH & INNOVATION</h1>
+            <div class="underline "></div>
+            <h3 class="text-center ">A place for learning, innovation, discovery, expression and discourse </h3>
+            <div class="col-lg-4 col-md-4 col-sm-12 text-center ">
+                <div class="card ">
+                    <img src="{% static "media/images/index/research1.png" %}" class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center ">Directorate of Research</h5>
+                        <p class="card-text ">Fosters multi-disciplinary all pervasive research and innovation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center col-md-4 col-sm-12 ">
+                <div class="card ">
+                    <img src="{% static "media/images/index/research2.png" %}" class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center ">Nanotechnology Research</h5>
+                        <p class="card-text ">Characterization of cutting-edge nanostructured materials</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center col-md-4 col-sm-12 ">
+                <div class="card ">
+                    <img src="{% static "media/images/index/research3.png" %}" class="card-img-top " alt="... ">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center ">Earthquake Research Cell</h5>
+                        <p class="card-text ">Advanced Research on occurrence and prediction of Earthquake</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row events ">
+            <h1 class="text-center ">EVENTS</h1>
+            <div class="underline "></div>
+            <h3 class="text-center ">What's happening on Campus</h3>
+            <div class="col-lg-6 col-md-12 col-sm-12 ">
+                <div class=" card ">
+                    <h3 class=" card-title ">SRMIST 18TH CONVOCATION</h3>
+                    <img src="{% static "media/images/index/vertical-clip.png" %}" class="vclip ">
+                    <div class="date-1 ">
                         <p>DEC 26</p>
                     </div>
-                    <div class="white-box">
-                        <div class="circle"></div>
-                        <img src="{% static "media/images/index/events.png" %}" class="circle-img">
-                        <p>SRMIST's 16th Annual Convocation will be held virtually. Rank Holders will be awarded their degrees in person.<br><br> <span class="blue">Time:</span> 10:30am <br><span class="blue">Date:</span> 26.12.2020</p>
+                    <div class="white-box ">
+                        <div class="circle "></div>
+                        <img src="{% static "media/images/index/events.png" %}" class="circle-img ">
+                        <p>SRMIST's 16th Annual Convocation will be held virtually. Rank Holders will be awarded their degrees in person.<br><br> <span class="blue ">Time:</span> 10:30am <br><span class="blue ">Date:</span> 26.12.2020</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 space">
-                <div class="col-lg-12 sub-col">
+            <div class="col-lg-6 col-md-12 col-sm-12 space ">
+                <div class="col-lg-12 sub-col ">
 
-                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip">
-                    <div class="date">
+                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip ">
+                    <div class="date ">
                         <p>FEB 20</p>
                     </div>
-                    <h1 class="text-right">ICON BEST-2021</h1>
-                    <p class="text-right content">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
+                    <h1 class="text-right size ">ICON BEST-2021</h1>
+                    <p class="text-right content ">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
                 </div>
-                <div class="col-lg-12 sub-col">
+                <div class="col-lg-12 sub-col ">
 
-                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip">
-                    <div class="date">
+                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip ">
+                    <div class="date ">
                         <p>FEB 20</p>
                     </div>
-                    <h1 class="text-right">ICON BEST-2021</h1>
-                    <p class="text-right content">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
+                    <h1 class="text-right size ">ICON BEST-2021</h1>
+                    <p class="text-right content ">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
                 </div>
-                <div class="col-lg-12 sub-col">
+                <div class="col-lg-12 sub-col ">
 
-                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip">
-                    <div class="date">
+                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip ">
+                    <div class="date ">
                         <p>FEB 20</p>
                     </div>
-                    <h1 class="text-right">ICON BEST-2021</h1>
-                    <p class="text-right content">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
+                    <h1 class="text-right size ">ICON BEST-2021</h1>
+                    <p class="text-right content ">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
                 </div>
-                <div class="col-lg-12 sub-col">
+                <div class="col-lg-12 sub-col ">
 
-                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip">
-                    <div class="date">
+                    <img src="{% static "media/images/index/horizontal-clip.png" %}" class="hclip ">
+                    <div class="date ">
                         <p>FEB 20</p>
                     </div>
-                    <h1 class="text-right">ICON BEST-2021</h1>
-                    <p class="text-right content">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
+                    <h1 class="text-right size ">ICON BEST-2021</h1>
+                    <p class="text-right content ">International Conference on Built Environment, Science and Technology (ICON BEST-2021)</p>
                 </div>
             </div>
         </div>
-        <div class="row campus-life">
+        <div class="row campus-life ">
 
-            <h1 class="text-center">CAMPUS LIFE</h1>
-            <div class="underline"></div>
-            <h3 class="text-center">A place for learning, innovation, discovery, expression and discourse</h3>
-            <div class="col-lg-8 col-md-12 col-sm-12">
-                <div class="col-lg-12 mx-md-auto" style="position:relative;">
-                    <img src="{% static "media/images/index/life1.png" %}" class="resize-lg">
-                    <div class="lg-overlay">
-                        <h6 class="text-center">Hostel Accomodation</h6>
+            <h1 class="text-center ">CAMPUS LIFE</h1>
+            <div class="underline "></div>
+            <h3 class="text-center ">A place for learning, innovation, discovery, expression and discourse</h3>
+            <div class="col-lg-8 col-md-12 col-sm-12 ">
+                <div class="col-lg-12 mx-md-auto " style="position:relative; ">
+                    <img src="{% static "media/images/index/hostel.jpg" %}" class="resize-lg ">
+                    <div class="lg-overlay ">
+                        <h6 class="text-center ">Hostel Accomodation</h6>
                     </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 mx-md-auto " style="position:relative;">
-                    <img src="{% static "media/images/index/life4.png" %}" class="resize-lg">
-                    <div class="lg-overlay">
-                        <h6 class="text-center">Campus Facilities</h6>
+                <div class="col-lg-12 col-md-12 col-sm-12 mx-md-auto " style="position:relative; ">
+                    <img src="{% static "media/images/index/facilities.jpg" %} " class="resize-lg ">
+                    <div class="lg-overlay ">
+                        <h6 class="text-center ">Campus Facilities</h6>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 col-sm-12">
-                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto" style="position:relative;">
-                    <img src="{% static "media/images/index/life3.png" %}" class="resize-sm">
+            <div class="col-lg-4 col-md-12 col-sm-12 ">
+                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto " style="position:relative; ">
+                    <img src="{% static "media/images/index/studeents.jpg" %} " class="resize-sm ">
 
-                    <div class="sm-overlay">
-                        <h6 class="text-center">Student Life</h6>
+                    <div class="sm-overlay ">
+                        <h6 class="text-center ">Student Life</h6>
                     </div>
                 </div>
-                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto" style="position:relative;">
-                    <img src="{% static "media/images/index/life5.png" %}" class="resize-sm">
+                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto " style="position:relative; ">
+                    <img src="{% static "media/images/index/art.jpg" %} " class="resize-sm ">
 
-                    <div class="sm-overlay">
-                        <h6 class="text-center">Arts and Culture</h6>
+                    <div class="sm-overlay ">
+                        <h6 class="text-center ">Arts and Culture</h6>
                     </div>
                 </div>
-                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto" style="position:relative;">
-                    <img src="{% static "media/images/index/life2.png" %}" class="resize-sm">
+                <div class="col-lg-12 col-sm-12 col-md-3 mx-md-auto " style="position:relative; ">
+                    <img src="{% static "media/images/index/sports.jpg" %} " class="resize-sm ">
 
-                    <div class="sm-overlay">
-                        <h6 class="text-center">Athletics and Fitness </h6>
+                    <div class="sm-overlay ">
+                        <h6 class="text-center ">Athletics and Fitness </h6>
                     </div>
                 </div>
             </div>
@@ -337,92 +611,132 @@
 
     </div>
     <footer>
-        <div class=" text-center top-space">
+        <div class=" text-center top-space ">
             <img src="{% static "media/images/index/footer-logo.png" %}">
         </div>
-        <div class="row">
-            <div class="col-lg-3">
+        <div class="row social text-center ">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/SRMUniversityOfficial "><img src="{% static "media/images/index/facebook-f.png" %}"></a>
+                </li>
+
+                <li>
+                    <a hre="https://www.instagram.com/SRMUniversityOfficial/ "><img src="{% static "media/images/index/instagram.png" %}"></a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/SRM_Univ "><img src="{% static "media/images/index/twitter.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/SRMeducation?ob=0 "><img src="{% static "media/images/index/youtube.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/srm-ist-chennai/ "><img src="{% static "media/images/index/linkedin-in.png" %}"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class=" text-center gold"> GET CONNECTED</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class=" text-center gold "> GET CONNECTED</h2>
+                    <li> <span class="gold ">></span> International Alliances</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> International Advisory Board
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Corporate Advisory Board</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> Accreditations & Ranking</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span> Placement</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> International Relations</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
                     <h2 class="gold text-center ">INSIGHTS</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <li> <span class="gold ">></span> Innovation &Incubation Centre</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> Student Clubs
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Researgance</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> SRM Video</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span> Virtual Tour</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> Spectrum</li>
+                    <li>
+                        <span class="gold ">></span>IQAC</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class=" text-center gold">CAMPUSES</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class=" text-center gold ">CAMPUSES</h2>
+                    <li> <span class="gold ">></span>SRM University,Kattankulathur</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> SRM University,Ramapuram
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span>SRM University, Vadapalani</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
+                        <span class="gold ">></span> SRM University, Delhi-NCR</li>
                     <li>
-                        <span class="gold">></span> Placement</li>
+                        <span class="gold ">></span>SRM University, Sikkim</li>
                     <li>
-                        <span class="gold">></span> International Relations</li>
+                        <span class="gold ">></span> SRM University, Haryana</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 ">
                 <ul>
-                    <h2 class="text-center gold">MORE</h2>
-                    <li> <span class="gold">></span> International Alliances</li>
+                    <h2 class="text-center gold ">MORE</h2>
+                    <li> <span class="gold ">></span> Privacy Policy</li>
                     <li>
-                        <span class="gold">></span> International Advisory Board
+                        <span class="gold ">></span> Campus Mail
                     </li>
                     <li>
-                        <span class="gold">></span> Corporate Advisory Board</li>
+                        <span class="gold ">></span> Terms & Conditions</li>
                     <li>
-                        <span class="gold">></span> Accreditations & Ranking</li>
-                    <li>
-                        <span class="gold">></span> Placement</li>
-                    <li>
-                        <span class="gold">></span> International Relations</li>
-
+                        <span class="gold ">></span>Student Portal</li>
                 </ul>
             </div>
         </div>
     </footer>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js " integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0 " crossorigin="anonymous "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js "></script>
     <script>
         $(function() {
             $(document).scroll(function() {
-                var nav = $(".fixed-top");
+                var nav = $(".fixed-top ");
                 nav.toggleClass('scrolled', $(this).scrollTop() > nav.height());
             });
         });
+        $('.count').each(function() {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 4000,
+                easing: 'swing',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
     </script>
+        <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"386d5aac0d17276539cf62e1fb787f667","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>  
 </body>
 
 </html>

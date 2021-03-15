@@ -1,0 +1,105 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>FOR STUDENTS</h1>
+                </div>
+                <div>
+                    <p>Home > For You > Students</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                    <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                    <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                    <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                    <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                    <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                    <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                        <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                        <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                        <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                        <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                        <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                        <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                        <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Students > Scholarship</h4>
+                <h1>SCHOLARSHIP</h1>
+                <img src="{% static "media/images/foryou/scholarship.jpg" %}">
+                <p>SRM Institute of Science and Technology (formerly known as SRM University) offers several scholarships, fee waiver schemes, teaching and research assistance to meritorious and deserving students.</p>
+                <br>
+                <p>
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/content/scholarships">Merit & Other Scholarships</a></li>
+                        <li><a href="https://www.srmist.edu.in/admission-international/Admission-Procedure/Scholarship">Scholarships - International</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

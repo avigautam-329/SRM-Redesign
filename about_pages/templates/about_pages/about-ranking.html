@@ -1,0 +1,646 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{% static 'SRMRedesign/css/styles.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/about.css' %}" rel="stylesheet">
+    <link href="{% static 'SRMRedesign/css/ranking.css' %}" rel="stylesheet">
+    <title>SRM Institute of Science and Technology</title>
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "media/images/index/srm_logo.png" %}"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ABOUT
+                </a>
+                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'about_pages:srminfocus' %}">Facts</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:ourcampus' %}">The Campus</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:accwelcomehostel' %}">Student Accomodation</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:govpublicinterest' %}">Governance</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/">Career Centre</a></li>
+                            <li><a class="dropdown-item" href="{% url 'about_pages:visitingaboutktr' %}">Visiting SRM</a></li>
+                            <li><a class="dropdown-item" href="https://care.srmist.edu.in/#/">SRM CARE</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ACADEMICS
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/academics/colleges-and-schools">Colleges And Schools</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:academicsdep' %}">Departments</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/faculty-directory">Faculty Directory</a></li>
+                            <li><a class="dropdown-item" href="{% url 'academics_pages:libabt' %}">Library</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  ADMISSION
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-india/">Admission India</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/admission-international/">Admission International</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/ir/">Student Mobility</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/srm-carnegie-mellon-partnership/msit-ese-overview">Transfer Program</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  RESEARCH
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/directorate-of-research/">Directorate of Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/research/phd_research">Academic Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/content/funded-research">Funded Research</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/centre-for-statistics/">Centre For Statistics</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  FOR YOU
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:studgateway' %}">Students</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:faculty' %}">Faculty</a></li>
+                            <li><a class="dropdown-item" href="https://alumni.srmist.edu.in/members.dz">Alumni</a></li>
+                            <li><a class="dropdown-item" href="{% url 'foryou_pages:visit' %}">Visitors</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  MORE
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'more_pages:campartsnculture' %}">Campus Life</a></li>
+                            <li><a class="dropdown-item" href="https://www.srmist.edu.in/placement/about">Placements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:grpinstitutions' %}">Group Institutions</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:announcements' %}">Announcements</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:news' %}">News</a></li>
+                            <li><a class="dropdown-item" href="{% url 'more_pages:events' %}">Events</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form class="d-flex search-bar justify-content-end">
+        <input class="form-control me-2" type="search" aria-label="Search">
+        <img src="{% static "media/images/about/search.png" %}" class="search-icon">
+    </form>
+    <div class="container">
+        <div class="row">
+            <div class="content col-lg-12">
+                <h1 class="text-center" style="color:#063A7E">RANKING</h1>
+                <div class="underline"></div>
+                <table border="0" cellpadding="5" cellspacing="5" class="table table-striped hostel-fee">
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <h4 style="text-align: justify; color:#063A7E">
+                                    Ranking</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <img alt="" src="{% static "media/images/about/iet-img-two.jpg" %}" style="width: 150px; height: 199px;" /></td>
+                            <td valign="top">
+                                <p><strong>IET Accreditation</strong></p>
+                                <p>Following programs of Kattankulathur Campus are accredited by The Institution of Engineering and Technology (IET).</p>
+                                <p>Visit https://www.theiet.org/ for more information.</p>
+                                <ul>
+                                    <li>
+                                        B.Tech Computer Science and Engineering</li>
+                                    <li>
+                                        B.Tech Software Engineering</li>
+                                    <li>
+                                        B.Tech Electronics and Instrumentation Engineering</li>
+                                    <li>
+                                        B.Tech Automobile Engineering<br /> &nbsp;
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 style="text-align: justify; color:#063A7E">
+                                    RECOGNITION</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="{% static "media/images/about/mhrd_logo.jpg" %}" style="height: 93px; width: 150px;" /></td>
+                            <td>
+                                <p style="text-align: justify;"><b>Ministry of HRD places SRM Institute of Science and Technology (formerly known as SRM University) in Category A</b></p>
+                                <p style="text-align: justify;">Ministry of HRD places SRM Institute of Science and Technology (formerly known as SRM University) in Category A The Ministry of Human Resource Development(MHRD), Department of Higher Education, Government of India, has
+                                    placed SRM Institute of Science and Technology (formerly known as SRM University) in highest Category 'A'. This is indeed a proud moment for SRM Institute of Science and Technology (formerly known as SRM University).</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 style="text-align: justify; color:#063A7E">
+                                    ACCREDITATION AND RANKING</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 style="text-align: justify; color:#000;">
+                                    Accreditation</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <a href="https://www.abet.org/" target="_blank"><img alt="" src="{% static "media/images/about/abet1_logo.jpg" %}" /></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <p style="text-align: justify;">Following programs of Kattankulathur Campus&nbsp;are accredited by the Engineering Accreditation Commission of<br /> ABET,&nbsp;
+                                        <a href="https://www.abet.org" target="_blank">https://www.abet.org</a>.</p>
+                                    <ul style="text-align: justify;">
+                                        <li>
+                                            B.Tech Civil Engineering</li>
+                                        <li>
+                                            B.Tech Mechanical&nbsp; Engineering</li>
+                                        <li>
+                                            B.Tech Electrical and Electronics Engineering</li>
+                                        <li>
+                                            B.Tech Electronics and Communication Engineering</li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div>
+                                    <a href="https://www.abet.org/" target="_blank"><img alt="" src="{% static "media/images/about/abet2_logo.jpg" %}" /></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <p>Following program of Kattankulathur Campus&nbsp;is accredited by the Computing&nbsp; Accreditation Commission of&nbsp;ABET,&nbsp;<a href="https://www.abet.org/" title="https://www.abet.org">https://www.abet.org</a>.</p>
+                                <ul style="text-align: justify;">
+                                    <li>
+                                        B.Tech Information Technology</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="{% static "media/images/about/naac_logo.jpg" %}" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 style="text-align: justify;">
+                                    NAAC</h4>
+                                <ul>
+                                    <li>
+                                        SRMIST has been accredited by NAAC with the Highest 'A++' Grade in the year 2018, valid for the next 5 years.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h4 style="text-align: justify; color:#063A7E">
+                                    Ranking</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://www.srmist.edu.in/ui-greenmetric-ranking" target="_blank"><img alt="" class="img-thumbnail" src="{% static "media/images/about/ui-green-metric-SRMIST-report.jpg" %}" style="width: 150px; height: 106px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p><strong>UI GreenMetric World University Ranking</strong></p>
+                                <p class="rtejustify">SRMIST Stands 9<sup>th</sup> in Country Wise and 362<sup>nd</sup> in World Wide Ranking by UI Metric. The classification has been done based on online survey regarding the current condition and policies related to Green
+                                    Campus and Sustainability in the Universities all over the world.</p>
+                                <p><a href="https://www.srmist.edu.in/ui-greenmetric-ranking">Know more</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/placement-ranking-2018.pdf" target="_blank"><img alt="" src="{% static "media/images/about/times-engg-placement-2018.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p><strong>2018</strong></p>
+                                <p>&nbsp;</p>
+                                <p>Optimal Media Solutions have partnered with i3RC to conduct its fifth Engineering Institute survey to highlight the top engineering institutions across the country.</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) is one amongst the top private engineering institute on placement to make it to the rankings this year.</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) has been placed in the 1st position in Placements.&nbsp;</p>
+                                <p><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/placement-ranking-2018.pdf" target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/engineering-institute-ranking2018.pdf" target="_blank"><img alt="" src="{% static "media/images/about/times-engg-ranking-2018.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p><strong>2018</strong></p>
+                                <p>&nbsp;</p>
+                                <p>Optimal Media Solutions have partnered with i3RC to conduct its fifth Engineering Institute survey to highlight the top engineering institutions across the country. &nbsp;</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) is one amongst the i3RC Times Top 150 Engineering Institute Rankings 2018.&nbsp;</p>
+                                <p>SRMIST has been placed in the 2nd position in the overall ranking of the institutions.&nbsp;</p>
+                                <p><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/engineering-institute-ranking2018.pdf" target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2016/Times-Engg-ranking-survey-2017.pdf" target="_blank"><img alt="" src="{% static "media/images/about/Times-Engg-ranking-survey-2017-tn" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p><strong>2017</strong></p>
+                                <p>&nbsp;</p>
+                                <p>Times Engineering Institute Ranking Survey 2017.</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) is placed No.1 in&nbsp;Top 50 Private Engineering Institute Rankings 2017&nbsp;</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) is placed No.2 in Top 100 Engineering Institute Rankings 2017&nbsp;</p>
+                                <p><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2016/Times-Engg-ranking-survey-2017.pdf" target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://www.timeshighereducation.com/" target="_blank"><img alt="" src="{% static "media/images/about/Times_Higher_Edu2016_17.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p><strong>2016 - 17</strong></p>
+                                <p>&nbsp;</p>
+                                <p>Times Higher Education (THE) World University Ranking. &nbsp;<a href="https://www.timeshighereducation.com/" target="_blank">Know More</a></p>
+                                <p>980 Institutions from 79 Countries have featured in the list.</p>
+                                <p>SRM Institute of Science and Technology (formerly known as SRM University) is one amongst the 31 Indian Universities that have made it to the rankings this year.</p>
+                                SRM Institute of Science and Technology (formerly known as SRM University) is placed in the 801+ category. &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2016/Times_Higher_Education_Ranking_2016-17.pdf"
+                                    target="_blank">Know More</a></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/TOI_ranking_survey_2016.pdf" target="_blank"><img alt="" src="{% static "media/images/about/times_of_india_survey2016.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p class="page-title" style="text-align: justify;"><b>2016</b></p>
+                                <p class="page-title" style="text-align: justify;"><b>The Times of India Engineering Institutes Ranking Survey&nbsp;</b></p>
+                                <p>Top 75 Private Engineering Institutes Ranking - SRM Institute of Science and Technology (formerly known as SRM University) is Placed No.1 &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/TOI_ranking_survey_2016.pdf"
+                                        target="_blank">Know More</a></p>
+                                <p>Top 150 Engineering Institutes Ranking - SRM Institute of Science and Technology (formerly known as SRM University) is Placed No.5 &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/TOI_ranking_survey_2016.pdf"
+                                        target="_blank">Know More</a></p>
+                                <p>Region Wise Ranking Survey - South: SRM Institute of Science and Technology (formerly known as SRM University) is Placed No.1 &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/TOI_region_wise_ranking_2016.pdf"
+                                        target="_blank">Know More</a></p>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/India_today_2016_NS_engg.pdf" target="_blank"><img alt="" src="{% static "media/images/about/india_today_nielsen_survey_tn2016.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <p class="page-title" style="text-align: justify;"><b>2016</b></p>
+                                <p class="page-title" style="text-align: justify;"><b>SRM Institute of Science and Technology (formerly known as SRM University) Ranked in The India Today - Nielsen Survey&nbsp;</b></p>
+                                <p>Engineering Factual Rank No.2. &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/India_today_2016_NS_engg.pdf" target="_blank">Know More</a></p>
+                                <p>BBA Factual Rank No.4.&nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/India_today_2016_NS_bba.pdf" target="_blank">Know More</a></p>
+                                <p><span style="line-height: 18px;">BCA Factual Rank No.2 .&nbsp;</span><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/India_today_2016_NS_bca.pdf" target="_blank">Know More</a></p>
+                                <p>Hotel Management Factual Rank No.4.&nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/India_today_2016_NS_hotel.pdf" target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/Higher_edu_ranking2016.pdf" target="_blank"><img alt="" src="{% static "media/images/about/Higher_edu_ranking2016.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td valign="top">
+                                <div class="page-title" style="text-align: justify;">
+                                    <span style="font-size: 1em;">2016</span></div>
+                                <p class="page-title" style="text-align: justify;">SRM Institute of Science and Technology (formerly known as SRM University) Placed First in Deemed &amp; Private Universities Ranking</p>
+                                <p>The Higher Education Review Magazine has placed SRM Institute of Science and Technology (formerly known as SRM University) at the "Top Position" in the ranking for "Top 25 Deemed &amp; Private Universities in India – Survey
+                                    2016". Academic Excellence, Infrastructure Facilities and Placements were the major parameters of ranking the universities across India. <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/Higher_edu_ranking2016.pdf"
+                                        target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2016_ranking_mgmt.pdf" target="_blank"><img alt="" src="{% static "media/images/about/top_200_bschool.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <div class="page-title" style="text-align: justify;">
+                                    <span style="font-size: 1em;">2016</span></div>
+                                <p class="page-title" style="text-align: justify;">SRM School of Business Management Ranked among Top 5 in South India</p>
+                                Times B-School, The Times of India ranked SRM School of Business Management, Chennai among "Top 5 Private Business Schools in South India". <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2016_ranking_mgmt.pdf"
+                                    target="_blank">Know More</a></td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2015_ranking_engineering.pdf" target="_blank"><img alt="" src="{% static "media/images/about/india_today_2015.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <div class="page-title" style="text-align: justify;">
+                                    <span style="font-size: 1em;">2015</span></div>
+                                <p class="page-title" style="text-align: justify;">SRM Institute of Science and Technology (formerly known as SRM University) has been&nbsp; ranked top by India Today 2015</p>
+                                <div class="page-title">
+                                    <span>Engineering has been ranked India's No:1 (factual ranking)&nbsp;</span><span>&nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2015_ranking_engineering.pdf" target="_blank">Know More</a></span></div>
+                                <p>Bachelor of Business Administration&nbsp; has been ranked&nbsp;<br />
+                                    <span style="font-size: 1em; line-height: 1.5;">India's No: 3&nbsp;</span>(factual ranking) <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2015_ranking_bba.pdf" target="_blank">Know More</a></p>
+                                <p><span style="font-size: 1em; line-height: 1.5;">Bachelor of Computer Applications has been ranked India's No. 1 (factual ranking)&nbsp;</span><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2015_ranking_bca.pdf"
+                                        target="_blank">Know More</a></p>
+                                <div class="page-title">
+                                    <span>Hotel Management has been ranked India's No. 2 (factual ranking)</span><span>&nbsp;<span><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/2015_ranking_hotel_mgmt.pdf" target="_blank">Know More</a>&nbsp;</span></span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_engineering_2015.pdf" target="_blank"><img alt="" src="{% static "media/images/about/rank_2015_times.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <div class="page-title" style="text-align: justify; color:#000;">
+                                    <span style="font-size: 1em;">2015</span></div>
+                                <div style="text-align: justify;">
+                                    <span>SRM Institute of Science and Technology, Chennai is ranked no: 1 in the "Top 50&nbsp;Private Engineering Institutes&nbsp;in India" by Times Engineering 2015, The Times of India.</span><span>&nbsp;&nbsp;<span><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_engineering_2015.pdf" target="_blank">Know More</a>&nbsp;</span></span>
+                                </div>
+                                <div style="text-align: justify;">
+                                    <span>Times Medical 2015, The Times of India ranked&nbsp;SRM Medical College Hospital &amp;&nbsp;Research Centre, Chennai among "Top 25 Private Medical Institutes in India". <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_medical_survey_2015.pdf" target="_blank">Know More</a></span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/higher_education_review_magazine_ranking.pdf" target="_blank"><img alt="" src="{% static "media/images/about/higher_education_review.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 style="text-align: justify; color:#000;">
+                                    2015</h4>
+                                SRM Institute of Science and Technology (formerly known as SRM University), Chennai is ranked no: 1 in the "Top 25 Private/Deemed Universities in India" Survey conducted by Higher Education Review (HER) Magazine.
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/higher_education_review_magazine_ranking.pdf" target="_blank"> <span style="line-height: 1.5;">Know More</span></a>
+                                <div class="page-title" style="text-align: justify;">
+                                    &nbsp;</div>
+                                <div class="page-title" style="text-align: justify;">
+                                    &nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_engineering_ranking.pdf" target="_blank"><img alt="" src="{% static "media/images/about/2014-times_eng_logo.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2014</h4>
+                                <div style="text-align: justify;">
+                                    <span>SRM Institute of Science and Technology, Chennai is ranked no: 1 among the private institutes in India by Times Engineering Survey. &nbsp; <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_engineering_ranking.pdf" target="_blank"> <span style="line-height: 1.5;">Know More</span></a>
+                                    </span>
+                                </div>
+                                <div class="page-title" style="text-align: justify;">
+                                    &nbsp;</div>
+                                <div class="page-title" style="text-align: justify;">
+                                    &nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/the_week_ranking.pdf" target="_blank"><img alt="" src="{% static "media/images/about/the_week.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    <br /> The Week</h4>
+                                <div style="text-align: justify;">
+                                    <span>The week magazine has ranked SRM Institute of Science and Technology (formerly known as SRM University) as No: 2 among the private Universities. &nbsp;<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/the_week_ranking.pdf" target="_blank"><span style="line-height: 1.5;">Know More</span>                                    </a>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/india_today_survey.pdf" target="_blank"><img alt="" src="{% static "media/images/about/2013-india_today_logo.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2013</h4>
+                                SRM is ranked India's No.1 by India Today(Factual Ranking 2013)&nbsp;.<a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/india_today_survey.pdf" style="line-height: 1.5;" target="_blank">Know More</a>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/univ_ranking2012.pdf" target="_blank"><img alt="" src="{% static "media/images/about/2012.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2012</h4>
+                                <div class="page-title" style="text-align: justify;">
+                                    <span>Deccan Chronicle ranking has placed SRM as No: 1 private university. <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/univ_ranking2012.pdf" target="_blank">Know More</a></span></div>
+                                NA - ZEE news survey ranked SRM Engineering &amp; SRM Institute of Science and Technology (formerly known as SRM University) India's Top 10, joining the league of IIT's and NIT's.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="/assets/2011.jpg" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2011</h4>
+                                India Today survey ranked SRM Institute of Science and Technology (formerly known as SRM University) as India's No. 1 Multiple Streams Private University.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="/assets/2010.jpg" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2010</h4>
+                                DNA - ZEE news survey ranked SRM Engineering India's Top 15, joining the league of IIT's and NIT's.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_of_india_ranking.pdf" target="_blank"><img alt="" src="{% static "media/images/about/2009_logo.jpg" %}" style="width: 150px; height: 199px;" /></a>
+                            </td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    2009</h4>
+                                SRM Institute of Science and Technology (formerly known as SRM University) stood high in The Education Times (The Times of India) - GfK Mode survey:
+                                <ul>
+                                    <li>
+                                        SRM Institute of Science and Technology (formerly known as SRM University) ranked India's No.1 Multiple Stream University (Engineering &amp; Medicine)</li>
+                                    <li>
+                                        SRM Engineering ranked India's No.1 Private Engineering University and in India's Top 8 including the aided universities, joining the league of IITs &amp; NITs</li>
+                                    <li>
+                                        SRM Medicine ranked India's No.3 in private universities and India's Top No. 8 including aided universities., joining the league of AIIMS &amp; CMC</li>
+                                </ul>
+                                <p><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/times_of_india_ranking.pdf" target="_blank">Know More</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="{% static "media/images/about/fe1_logo.jpg" %}" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 class="page-title" style="text-align: justify; color:#000;">
+                                    Financial Express</h4>
+                                <ul>
+                                    <li>
+                                        SRM Institute of Science and Technology (formerly known as SRM University) ranked India's No. 1 university</li>
+                                </ul>
+                                Being ranked No.1 Private University in India has brought great pride and renewed sense of purpose at SRM Institute of Science and Technology (formerly known as SRM University). New faculty buildings, cutting edge courses, study abroad programs, dual
+                                degree programs, completely Wi - Fi campus with state - of - the - art facilities and foreign faculty members have placed the university on the fast track to being truly world - class.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="{% static "media/images/about/neison_logo.jpg" %}" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 style="color:#000;">
+                                    AC Nielsen Impact Study</h4>
+                                <ul>
+                                    <li>
+                                        The Computer Science Engineering Department was rated No. 1 for excellence, while five other departments were graded within the top 5 in Tamil Nadu</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img alt="" src="{% static "media/images/about/out_look_logo.jpg" %}" style="width: 150px; height: 199px;" /></td>
+                            <td>
+                                <h4 style="color:#000;">
+                                    Outlook</h4>
+                                <ul>
+                                    <li>
+                                        Rated No.2 in placements</li>
+                                    <li>
+                                        Ranked within the top 5 institutions in Tamil Nadu</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class=" text-center top-space ">
+            <img src="{% static "media/images/index/footer-logo.png" %}">
+        </div>
+        <div class="row social text-center ">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/SRMUniversityOfficial "><img src="{% static "media/images/index/facebook-f.png" %}"></a>
+                </li>
+
+                <li>
+                    <a hre="https://www.instagram.com/SRMUniversityOfficial/ "><img src="{% static "media/images/index/instagram.png" %}"></a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/SRM_Univ "><img src="{% static "media/images/index/twitter.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/SRMeducation?ob=0 "><img src="{% static "media/images/index/youtube.png" %}"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/srm-ist-chennai/ "><img src="{% static "media/images/index/linkedin-in.png" %}"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class=" text-center gold "> GET CONNECTED</h2>
+                    <li> <span class="gold ">></span> International Alliances</li>
+                    <li>
+                        <span class="gold ">></span> International Advisory Board
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Corporate Advisory Board</li>
+                    <li>
+                        <span class="gold ">></span> Accreditations & Ranking</li>
+                    <li>
+                        <span class="gold ">></span> Placement</li>
+                    <li>
+                        <span class="gold ">></span> International Relations</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class="gold text-center ">INSIGHTS</h2>
+                    <li> <span class="gold ">></span> Innovation &Incubation Centre</li>
+                    <li>
+                        <span class="gold ">></span> Student Clubs
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Researgance</li>
+                    <li>
+                        <span class="gold ">></span> SRM Video</li>
+                    <li>
+                        <span class="gold ">></span> Virtual Tour</li>
+                    <li>
+                        <span class="gold ">></span> Spectrum</li>
+                    <li>
+                        <span class="gold ">></span>IQAC</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class=" text-center gold ">CAMPUSES</h2>
+                    <li> <span class="gold ">></span>SRM University,Kattankulathur</li>
+                    <li>
+                        <span class="gold ">></span> SRM University,Ramapuram
+                    </li>
+                    <li>
+                        <span class="gold ">></span>SRM University, Vadapalani</li>
+                    <li>
+                        <span class="gold ">></span> SRM University, Delhi-NCR</li>
+                    <li>
+                        <span class="gold ">></span>SRM University, Sikkim</li>
+                    <li>
+                        <span class="gold ">></span> SRM University, Haryana</li>
+                </ul>
+            </div>
+            <div class="col-lg-3 ">
+                <ul>
+                    <h2 class="text-center gold ">MORE</h2>
+                    <li> <span class="gold ">></span> Privacy Policy</li>
+                    <li>
+                        <span class="gold ">></span> Campus Mail
+                    </li>
+                    <li>
+                        <span class="gold ">></span> Terms & Conditions</li>
+                    <li>
+                        <span class="gold ">></span>Student Portal</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    (function(d, m){
+        var kommunicateSettings = 
+            {"appId":"386d5aac0d17276539cf62e1fb787f667","popupWidget":true,"automaticChatOpenOnNavigation":true};
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>  
+
+</body>
+
+</html>

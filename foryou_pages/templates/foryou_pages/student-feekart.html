@@ -1,0 +1,111 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>FOR STUDENTS</h1>
+                </div>
+                <div>
+                    <p>Home > For You > Students</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                    <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                    <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                    <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                    <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                    <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                    <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                        <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                        <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                        <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                        <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                        <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                        <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                        <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Students > Gateway For Student</h4>
+                <h1>GATEWAY FOR STUDENT</h1>
+
+                <p>For Students the payement portal is as follows:</p>
+                <p style="font-size:20px">
+                    <ul>
+                        <li><a href="https://feekart.srmist.edu.in/srmopp/">Feekart - Online Exam Fees payment</a></li>
+                    </ul>
+                </p>
+                <br>
+                <p>Senior students are directed to login to feekart to pay the Tuition Fees for the academic year . The CDC Fees have merged with College Fees.</p>
+                <p>
+                    <ul>
+                        <li><a href="https://academia.srmist.edu.in/">Pay Tuition Fee(Only For Seniors)</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/downloads/user_manual_SRM_feekart.pdf">User Guide</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

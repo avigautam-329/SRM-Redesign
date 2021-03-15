@@ -1,0 +1,127 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>FOR STUDENTS</h1>
+                </div>
+                <div>
+                    <p>Home > For You > Students</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'foryou_pages:studgateway' %}" class="active">GATEWAY FOR STUDENT</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                    <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                    <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                    <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                    <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                    <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                    <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studfeekart' %}">FEEKART - ONLINE EXAM FEES PAYMENT</a></li>
+                        <li><a href="{% url 'foryou_pages:studexaminations' %}">EXAMINATIONS</a></li>
+                        <li><a href="{% url 'foryou_pages:studbioinfo' %}">SRM BIO INFO</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studacademics' %}">ACADEMICS</a></li>
+                        <li><a href="{% url 'foryou_pages:studtwining' %}">TWINING/DUAL DEGREE</a></li>
+                        <li><a href="{% url 'foryou_pages:studplacements' %}">PLACEMENT</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studscholarship' %}">SCHOLARSHIP</a></li>
+                        <li><a href="{% url 'foryou_pages:studevents' %}">EVENTS & CLUBS</a></li>
+                        <li><a href="{% url 'foryou_pages:studachievements' %}">STUDENT ACHIEVEMENTS</a></li>
+                    </ul>
+
+                </div>
+                <div class="item">
+                    <ul>
+                        <li><a href="{% url 'foryou_pages:studlifeoncampus' %}">LIFE ON CAMPUS</a></li>
+                        <li><a href="{% url 'foryou_pages:studskilldev' %}">CENTER FOR SKILL DEVELOPMENT</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Students > Examinations</h4>
+                <h1>EXAMINATIONS</h1>
+                <p><img src="{% static "media/images/foryou/exam-tumb.jpg" %}"></p>
+                <p>SRM Institute of Science and Technology (formerly known as SRM University) students can access recent examination time tables, exam instructions, results and other recent examination announcements here.</p>
+                <p>
+                    <ul>
+                        <li><a href="https://evarsity.srmist.edu.in/srmwebonline/exam/HallTicket.jsp">Online Hall Ticket</a></li>
+                        <li><a href="https://www.srmist.edu.in/announcement/examination-results-march-11-2021">Results</a></li>
+                        <li><a href="https://www.srmist.edu.in/timetable">Timetable</a></li>
+                        <li><a href="https://www.srmist.edu.in/content/exam-instructions">Exam Instructions</a></li>
+                        <li><a href="https://evarsity.srmist.edu.in/srmcrp/">Online Certificate Application</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2018/User-manual-Online-Certificate-Application.pdf">Online Certificate Application- User Manual</a></li>
+                        <li><a href="https://www.srmist.edu.in/application-forms/exam-forms">Application Forms</a></li>
+                        <li><a href="https://www.srmist.edu.in/students/circulars">Circulars (Examinations)</a></li>
+                        <li><a href="https://evarsity.srmist.edu.in/esanad/">E-sanad Online Certificate Application Portal</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/downloads/2020/e-sanad-online-certificate-application-user-manual.pdf">E-sanad Online Certificate Application Portal - User Manual</a></li>
+                        <li><a href="https://www.srmist.edu.in/final-year-students-upload-photos-here">Photo for degree certificate - Final Year Students</a></li>
+                        <li><a href="#">National Academic Depository (NAD) Registration</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/nad-cell-details.pdf">National Academic Depository (NAD) Cell Details</a></li>
+                        <li><a href="https://www.srmist.edu.in/announcement/extended-duration-passed-out-students-campus">Extended Duration for Passed Out Students</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/calculators-list.pdf">Permissible Calculators</a></li>
+                        <li><a href="https://www.srmist.edu.in/rule-conversion-cgpa-percentage">Rule of Conversion CGPA into Percentage</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/medium-of-instruction-format.pdf">Medium of Instruction/Communication</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2019/procedure_cert-verification-srm-rev.pdf">Procedure for Certificate Verification</a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/srm_mainsite/files/2017/srm_all_certs_verification_form.pdf">Application for Certificate Verification </a></li>
+                        <li><a href="https://webstor.srmist.edu.in/web_assets/downloads/2020/application_for_improvement.pdf">Application for Improvement Examination</a></li>
+                        <li><a href="https://www.srmist.edu.in/students-portal/pending-unissued-deg-certificates-info">Degree Certificates - Not Collected: Except NCR Campus</a></li>
+                        <li><a href="https://www.srmist.edu.in/certificates/ncr-delhi">Degree Certificates - Not Collected: NCR Campus</a></li>
+                        <li><a href="https://evarsity.srmist.edu.in/certverify/">Degree Certificate Verification (Online)</a></li>
+                        <li><a href="https://evarsity.srmuniv.ac.in/srmwebonline/exam/convocationRegistration.jsp">Degree Certificate in Absentia</a></li>
+                        <li><a href="https://www.srmist.edu.in/16th-convocation/">Convocation Site</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

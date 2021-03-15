@@ -115,3 +115,8 @@ footer .row {
         padding: 0px 10px;
     }
 }
+
+.social ul li {
+    display: inline;
+    padding: 5px;
+}

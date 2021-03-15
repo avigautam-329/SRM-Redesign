@@ -9,3 +9,5 @@ class HomePage(TemplateView):
 class AboutPage(TemplateView):
     template_name = 'about.html'
 
+class CovidPage(TemplateView):
+    template_name = 'covid.html'

@@ -24,6 +24,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.HomePage.as_view(),name='home'),
+    url(r"Covid/",views.CovidPage.as_view(),name='covid'),
     url(r'^About/',include('about_pages.urls',namespace='aboutpages')),
     url(r'^More/',include('more_pages.urls',namespace='morepages')),
     url(r'^Academics/',include('academics_pages.urls',namespace='academicspages')),

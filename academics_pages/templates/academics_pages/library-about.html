@@ -1,0 +1,122 @@
+{% extends 'about-base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block content %}    
+    <div class="row">
+            <div class="about d-flex flex-lg-row flex-column flex-md-column
+            justify-content-between flex-sm-column">
+                <div>
+                    <h1>ACADEMICS</h1>
+                </div>
+                <div>
+                    <p>Home > Academics > Library</p>
+                </div>
+            </div>
+        </div>
+        <div class="row hide-on-small">
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'academics_pages:libabt' %}" class="active">ABOUT LIBRARY</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+        </div>
+        <button class="btn btn-primary d-lg-none sub-nav-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        
+          </button>
+
+        <div class="collapse" id="collapseExample">
+
+
+
+            <ul class="sub-nav">
+                <li>
+                    <a href="{% url 'academics_pages:libabt' %}" class="active">ABOUT LIBRARY</a>
+                </li>
+                <div class="rule"></div>
+            </ul>
+
+        </div>
+        <div class="row ">
+            <div class="col-lg-3 hide-on-small">
+                <ul class="side-nav">
+                    <li><a href="https://www.srmist.edu.in/aboutus/resources">RESOURCES</a></li>
+                    <li><a href="https://www.srmist.edu.in/aboutus/non-printed-materials">NON-PRINTED MATERIALS</a></li>
+                    <li><a href="https://www.srmist.edu.in/library/online-resources">ONLINE RESOURCES</a></li>
+                    <li><a href="https://www.srmist.edu.in/content/automation-and-services">AUTOMATION AND SERVICES</a></li>
+                    <li><a href="https://www.srmist.edu.in/aboutus/resource-sharing">RESOURCE SHARING</a></li>
+                    <li><a href="https://www.srmist.edu.in/aboutus/rules-and-regulations">RULES AND REGULATIONS</a></li>
+                    <li><a href="#">LIBRARY STAFF</a></li>
+                </ul>
+            </div>
+            <div class="owl-carousel owl-theme d-lg-none">
+                <div class="item">
+                    <ul>
+                        <li><a href="https://www.srmist.edu.in/aboutus/resources">RESOURCES</a></li>
+                        <li><a href="https://www.srmist.edu.in/aboutus/non-printed-materials">NON-PRINTED MATERIALS</a></li>
+                        <li><a href="https://www.srmist.edu.in/library/online-resources">ONLINE RESOURCES</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                    <li><a href="https://www.srmist.edu.in/content/automation-and-services">AUTOMATION AND SERVICES</a></li>
+                    <li><a href="https://www.srmist.edu.in/aboutus/resource-sharing">RESOURCE SHARING</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <ul>
+                    <li><a href="https://www.srmist.edu.in/aboutus/rules-and-regulations">RULES AND REGULATIONS</a></li>
+                    <li><a href="https://www.srmist.edu.in/aboutus/library-staff">LIBRARY STAFF</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-sm-12 content">
+                <h4>Library > About Library</h4>
+                <h1>ABOUT LIBRARY</h1>
+                <p>SRM Institute of Science and Technology (formerly known as SRM University) has an excellent library for the benefit of students, faculties and researchers. As one of the best established libraries according to International Standards, the University Library has a large collection of books covering various branches of Engineering and Technology, 
+                Medical and Health Sciences and Science and Humanities and its related fields. The library is nearly three decades old. 
+                It is fully Air Conditioned and automated with RFID (Radio Frequency Identification) technology. 
+                The library is well Protected with fire alarms and CCTV Security systems.</p>
+                <p style="font-size:20px"><b>Building</b></p>
+                <p>The library is located in the 15-Storey University Administrative Block, and is spread over Ground + 3 floors of 1.50 Lakh sq ft area. The library building is:</p>
+                <p>
+                    <ul>
+                        <li>Fully air-conditioned and automated with RFID (Radio Frequency Identification) technology.</li>
+                        <li>Well protected with fire alarms and CCTV security systems.</li>
+                        <li>Equipped with reading halls in all the floors, with reference collection.</li>
+                    </ul>
+                </p>
+                <p style="font-size:20px"><b>Floor Map</b></p>
+                <p>
+                    <ul>
+                        <li>Level 1 : Engineering and Technology: Reading Hall 1&2, Circulation Counter, Librarian, library Office and Cafeteria.</li>
+                        <li>Level 2 : Computer Science and Life Science books -Reading Hall, Own Book & Discussion Hall and Digital Library.</li>
+                        <li>Level 3 : Science & Humanities Including Arts, Management, Languages Text. Competitive Exam Books, etc.,</li>
+                        <li>Level 4 : Theses & Dissertations, Projects reports, Back Volumes, Reference Books, Reading Hall</li>
+                    </ul>
+                </p>
+                <br>
+                <p style="font-size:22px"><b>WORKING HOURS</b></p>
+                <br>
+                <p style="font-size:20px"><b>Central Library</b></p>
+                <p>
+                    <img src="{% static "media/images/academics/library-about-1.png" %}">
+                </p>
+                <p style="font-size:20px"><b>B.Arch Library</b></p>
+                <br>
+                <p>
+                    <img src="{% static "media/images/academics/library-about-2.png" %}">
+                </p>
+                <p>
+                    <img src="{% static "media/images/academics/library-about-3.png" %}">
+                </p>
+                <br>
+                <p>The Central Library is closed during all government and declared festival holidays.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+{% endblock %}
