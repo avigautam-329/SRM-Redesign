@@ -1,7 +1,12 @@
 # SRM-Redesign
 
 ![AWS LEX BADGE](https://img.shields.io/badge/AWS%20-Lex-orange)
+![Kommunicate](https://img.shields.io/badge/Kommunicate-AWS%20Lex-red)
+![Django](https://img.shields.io/badge/Django-v3.0.5-blue)
+![Django-Heroku](https://img.shields.io/badge/Django--Heroku-v0.3.1-blue)
+![Whitenoise](https://img.shields.io/badge/Whitenoise-v5.2.0-blue)
 ![Python Badge](https://img.shields.io/badge/Python-v3.7.8-yellowgreen)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-v5.0-lightgrey)
 
 -------------
 
@@ -51,3 +56,47 @@ Keeping in mind the pros and cons of the website, this is how we came up with th
 
 - For Navigation, we have come up with a single page structure/ design that fits all the criterias and the multiple types of information provided in the website. Each of these structures have information pulling from the backend as a result of which, it will be very easy to edit or add new information. We have reduced the 2 navbars into a single constant one which covers all the information required for the student/parent.
 
+![About-UI](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/About-UI.jpg)
+
+- To fix the landing page structure, we have added a short video giving a beautiful view to our campus and college life. It not only looks attractive but also gives a clear understanding or a first look to our college.
+
+![Index-UI](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/Index-UI.png)
+
+- We have added hovering features to the cards as well as links which lead to another page or are clickable. This not only gives the users an idea which element is a CTA but also, makes the UI of the web page look attractive.
+
+![Research-UI](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/Research-UI.jpg)
+
+- The About section is right next to the video of SRM in our current design. We have used elements such as icons and carousels to make it easier for the user to interact and dividing the load of information into easy accessible structure.
+
+![About-Home-UI](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/About-Home-UI.jpg)
+
+- Lastly, we have come up with an easy to maintain responsive design, keeping in mind the multiple navbars so that it is easy for the user to interact with the website and find what they are looking for.
+
+![About-Resposivness-UI](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/About-Responsive-UI.jpg)
+
+-------------
+
+## ADDITIONAL FEATURES THAT WE HAVE ADDED:
+
+- **AWS Chatbot**: Keeping in mind that the website is huge and has loads of information, we have designed a chatbot using services of AWS i.e AWS LEX which will help the visitors looking for a certain answer and if not, communicate with the officials. The bot was integrated with the website using Kommunicate.
+
+![Chatbot](https://github.com/avigautam-329/SRM-Redesign/blob/master/static/media/images/Chatbot.jpg)
+
+-------------
+
+## CONCLUSION OF THE PROJECT
+
+A college website contains a lot of information therefore, re-designing and putting it into a single structure has been a challenging task for us. We would like to thank you for giving us the opportunity to come up with this solution of ours. It’s been an amazing experience.
+
+-------------
+
+## DEVELOPERS INVOLVED AND ROLES
+
+- Anoushka Halder (UI/UX Designer)
+- Avi Gautam (Django Backend Developer)
+- Palveet Kaur Saluja (Frontend Developer)
+- Vaidehi Mahida (UI/UX Designer)
+
+-------------
+
+THANK YOU FOR READING AND VISITING THE REPOSITORY AND HAPPY CODING !
