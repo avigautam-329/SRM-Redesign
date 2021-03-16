@@ -90,6 +90,12 @@ A college website contains a lot of information therefore, re-designing and putt
 
 -------------
 
+## DEPLOYMENT ON HEROKU
+
+The Django Project was deployed on heroku.
+CLICK [HERE](https://srm-website.herokuapp.com/) TO VISIT THE DEPLOYED WEBSITE.
+
+-------------
 ## DEVELOPERS INVOLVED AND ROLES
 
 - Anoushka Halder (UI/UX Designer)
