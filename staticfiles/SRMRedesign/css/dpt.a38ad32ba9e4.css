@@ -1,0 +1,62 @@
+body {
+    padding-top: 90px;
+}
+
+.bg-light {
+    background: url("/static/media/images/about/header-2.35a1b7ee9c64.png");
+    height: 90px;
+}
+
+.navbar-brand img {
+    width: 80%;
+    padding: 10px 25px;
+}
+
+.nav-item a:hover {
+    font-weight: 700;
+    color: #fff!important;
+    text-decoration-line: underline;
+}
+
+.dropdown-menu a {
+    font-weight: 700;
+    color: #0b192c !important;
+}
+
+.dropdown-menu a:hover {
+    font-weight: 700;
+    color: #fff !important;
+    background-color: #0b192c;
+}
+
+.boxsecond {
+    background-color: #EBF4FF!important;
+}
+
+.boxfirst {
+    --bs-table-accent-bg: #fff!important;
+}
+
+.content {
+    width: 75%;
+    margin: 100px auto;
+}
+
+td a {
+    color: #000;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.underline {
+    width: 300px;
+    height: 9px;
+    background: #F3B141;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 1;
+}

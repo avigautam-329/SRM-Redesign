@@ -1,0 +1,48 @@
+.visit {
+    margin-top: 15%;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    font-variant: small-caps;
+    color: #0C4EA2;
+}
+
+.underline {
+    width: 250px;
+    height: 9px;
+    background: #F3B141;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+p {
+    margin-top: 40px;
+    text-align: justify;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 61px;
+    font-variant: small-caps;
+    color: #0C4EA2;
+}
+
+h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 61px;
+    font-variant: small-caps;
+    color: #0C4EA2;
+}
+
+.map {
+    width: 60%;
+    height: 75%;
+}

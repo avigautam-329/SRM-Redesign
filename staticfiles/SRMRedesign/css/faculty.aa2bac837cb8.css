@@ -1,0 +1,197 @@
+body {
+    padding-top: 90px;
+}
+
+.bg-light {
+    background: url("/static/media/images/about/header-2.35a1b7ee9c64.png");
+    height: 90px;
+}
+
+.navbar-brand img {
+    width: 80%;
+    padding: 10px 25px;
+}
+
+.nav-item a:hover {
+    font-weight: 700;
+    color: #fff!important;
+    text-decoration-line: underline;
+}
+
+.dropdown-menu a {
+    font-weight: 700;
+    color: #0b192c !important;
+}
+
+.dropdown-menu a:hover {
+    font-weight: 700;
+    color: #fff !important;
+    background-color: #0b192c;
+}
+
+.btmBorder {
+    border-bottom: 1px solid #b3b3b3;
+    float: left;
+    width: 100%;
+}
+
+.btmBorderDashed {
+    border-bottom: 1px dashed #b3b3b3;
+    float: left;
+    width: 100%;
+}
+
+.labelStyle {
+    font-weight: normal;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    margin: 0;
+}
+
+.btmSpace15px {
+    padding-bottom: 15px;
+}
+
+.radio-inline input[type="radio"] {
+    margin-top: 0;
+}
+
+.academicAreaSelect {
+    width: 100%;
+}
+
+ul.allSearchView {
+    clear: both;
+    float: right;
+    right: 50%;
+    position: relative;
+}
+
+ul.allSearchView li {
+    left: 50%;
+    position: relative;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.allSearchView li a {
+    float: left;
+    margin: 0;
+    padding: 0 5px;
+    background: #d1e9ff;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul.allSearchView li a:hover,
+ul.allSearchView li a:focus {
+    background: #0060C2;
+    color: #FFF;
+}
+
+h4.staffDeg {
+    font-size: 13px;
+}
+
+.staffDeg span {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #666
+}
+
+.staffDescription label {
+    font-weight: bold;
+}
+
+.view-faculty-directory table .topic-india {
+    height: 100px !important;
+    margin-top: 7px !important;
+}
+
+.view-faculty-directory table td:first-child {
+    width: 21% !important;
+}
+
+.view-faculty-directory table tr {
+    height: 120px !important;
+}
+
+.blueBtm {
+    background-color: #005cb1;
+    color: #ffffff;
+    display: block;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.blueBtm:hover {
+    background: #04467F;
+    color: #FFF;
+}
+
+.textBoxPart {
+    display: inline;
+}
+
+.textBoxPart .form-control {
+    border: 1px solid #9ec5e8;
+    font-size: 12px;
+    padding: 4px 9px;
+    color: #333;
+    height: 30px;
+}
+
+.textBoxPart .form-text,
+.textBoxPart .form-select {
+    border: 1px solid #9ec5e8;
+    font-size: 12px;
+    padding: 4px 9px;
+    color: #333;
+    height: 30px;
+    width: 100%;
+}
+
+#edit-submit-faculty-directory {
+    background: #005cb1 !important;
+    color: #ffffff !important;
+    display: block !important;
+    line-height: 16px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    border-radius: 0 !important;
+}
+
+#edit-submit-faculty-directory:hover {
+    background: #04467F !important;
+    color: #FFF !important;
+}
+
+ul.btnAlignCenter {
+    clear: both;
+    float: right;
+    right: 50%;
+    position: relative;
+}
+
+ul.btnAlignCenter li {
+    left: 50%;
+    position: relative;
+    float: left;
+    margin: 15px 5px 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pager li {
+    display: inline;
+}

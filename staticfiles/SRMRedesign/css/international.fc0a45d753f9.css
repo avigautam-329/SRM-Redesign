@@ -1,0 +1,21 @@
+.content {
+    margin-top: 20%;
+}
+
+.underline {
+    width: 50%;
+    height: 9px;
+    background: #F3B141;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.content p {
+    padding-right: 0;
+    margin-top: 50px;
+}
+
+table {
+    margin-top: 50px;
+}

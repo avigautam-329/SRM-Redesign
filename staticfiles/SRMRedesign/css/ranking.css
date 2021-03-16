@@ -1,0 +1,16 @@
+.content {
+    margin-top: 25%;
+}
+
+.underline {
+    width: 160px;
+    height: 9px;
+    background: #F3B141;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+table {
+    margin: 50px auto;
+}
